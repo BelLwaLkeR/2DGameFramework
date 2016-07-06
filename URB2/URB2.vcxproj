@@ -125,12 +125,16 @@
     <ClCompile Include="Source\Framework\Device\Input\InputManager.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\DxLibKeyboard.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\Keyboard.cpp" />
-    <ClCompile Include="Source\Framework\Utility\FPSManager.cpp" />
+    <ClCompile Include="Source\Framework\Task\IDrawTask.cpp" />
+    <ClCompile Include="Source\Utility\FPSManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Framework\Application\BaseApplication.h" />
     <ClInclude Include="Source\Framework\Application\GameApplication.h" />
     <ClInclude Include="Source\Framework\Application\DxLibApplication.h" />
+    <ClInclude Include="Source\Framework\Component\Component.h" />
+    <ClInclude Include="Source\Framework\Component\DrawComponent.h" />
+    <ClInclude Include="Source\Framework\Component\UpdateComponent.h" />
     <ClInclude Include="Source\Framework\Define.h" />
     <ClInclude Include="Source\Framework\Device\Input\eInputCode.h" />
     <ClInclude Include="Source\Framework\Device\Input\IInputDevice.h" />
@@ -138,8 +142,13 @@
     <ClInclude Include="Source\Framework\Device\Input\Keyboard\DxLibKeyboard.h" />
     <ClInclude Include="Source\Framework\Device\Input\Keyboard\eKeyboardCode.h" />
     <ClInclude Include="Source\Framework\Device\Input\Keyboard\Keyboard.h" />
-    <ClInclude Include="Source\Framework\Utility\DxLibUtility.h" />
-    <ClInclude Include="Source\Framework\Utility\FPSManager.h" />
+    <ClInclude Include="Source\Framework\Task\IDrawTask.h" />
+    <ClInclude Include="Source\Framework\Task\TaskManager.h" />
+    <ClInclude Include="Source\Framework\Task\IUpdateTask.h" />
+    <ClInclude Include="Source\Utility\DxLibUtility.h" />
+    <ClInclude Include="Source\Utility\FPSManager.h" />
+    <ClInclude Include="Source\Utility\Singleton.h" />
+    <ClInclude Include="Source\Utility\SmartPtr.h" />
     <ClInclude Include="Source\Framework\Window\Screen.h" />
     <ClInclude Include="Source\Framework\Window\WindowConfig.h" />
   </ItemGroup>

@@ -1,7 +1,7 @@
 #pragma once
 
 #include <DxLib.h>
-#include <Source/Framework/Utility/FPSManager.h>
+#include <Source/Utility/FPSManager.h>
 
 namespace framework {
 	struct WindowConfig;
