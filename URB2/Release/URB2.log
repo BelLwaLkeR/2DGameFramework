@@ -1,0 +1,5 @@
+﻿  main.cpp
+  DxLibApplication.cpp
+main.obj : error LNK2001: 外部シンボル ""public: __thiscall framework::GameApplication::~GameApplication(void)" (??1GameApplication@framework@@QAE@XZ)" は未解決です。
+main.obj : error LNK2001: 外部シンボル ""public: __thiscall framework::GameApplication::GameApplication(void)" (??0GameApplication@framework@@QAE@XZ)" は未解決です。
+C:\Users\BelL\documents\visual studio 2015\Projects\URB2\Release\URB2.exe : fatal error LNK1120: 2 件の未解決の外部参照
