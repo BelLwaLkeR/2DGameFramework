@@ -126,6 +126,8 @@
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\DxLibKeyboard.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\Keyboard.cpp" />
     <ClCompile Include="Source\Framework\Task\IDrawTask.cpp" />
+    <ClCompile Include="Source\Framework\Task\IUpdateTask.cpp" />
+    <ClCompile Include="Source\Framework\Task\TaskManager.cpp" />
     <ClCompile Include="Source\Utility\FPSManager.cpp" />
   </ItemGroup>
   <ItemGroup>

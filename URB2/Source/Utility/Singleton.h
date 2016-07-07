@@ -21,10 +21,11 @@ namespace util {
 
 		virtual void finalize() {}
 
+	protected:
+		Singleton() {}
+
 	private:
 		static SharedPtr<T> m_pInstance;
-
-		Singleton() {}
 
 		Singleton(const Singleton& other) {}
 

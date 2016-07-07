@@ -9,11 +9,3 @@ framework::IDrawTask::IDrawTask(){
 framework::IDrawTask::~IDrawTask(){
 	deActive();
 }
-
-void framework::IDrawTask::active(){
-	SGLT_TASKMANAGER.lock()->addDrawTask(util::SharedPtr<IDrawTask>(this));
-}
-
-void framework::IDrawTask::deActive(){
-	SGLT_TASKMANAGER->removeDrawTask(util::SharedPtr<IDrawTask>(this));
-}

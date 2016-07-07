@@ -1,5 +1,6 @@
 #include "GameApplication.h"
 #include <Source/Framework/Window/WindowConfig.h>
+#include <Source/Framework/Task/TaskManager.h>
 #include <Source/Framework/Define.h>
 
 framework::GameApplication::GameApplication(){
@@ -13,6 +14,7 @@ void framework::GameApplication::initialize(){
 
 void framework::GameApplication::update(){
 	input.update();
+	SGLT_TASKMANAGER->taskUpdate();
 }
 
 void framework::GameApplication::draw(){

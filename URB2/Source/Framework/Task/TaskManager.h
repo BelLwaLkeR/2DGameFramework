@@ -15,15 +15,18 @@ namespace framework {
 		TaskManager();
 		~TaskManager();
 
-		void addUpdateTask(util::SharedPtr<IUpdateTask> task);
-		void addDrawTask(util::SharedPtr<IDrawTask> task);
-		void removeUpdateTask(util::SharedPtr<IUpdateTask> task);
-		void removeDrawTask(util::SharedPtr<IDrawTask> task);
-		void updateTask();
-		void drawTask();
+		void addUpdateTask(util::WeakPtr<IUpdateTask> task);
+		void addDrawTask(util::WeakPtr<IDrawTask> task);
+		void removeUpdateTask(util::WeakPtr<IUpdateTask> task);
+		void removeDrawTask(util::WeakPtr<IDrawTask> task);
+		void taskUpdate();
+		void taskDraw();
 
 	private:
-		std::vector<util::SharedPtr<IUpdateTask>> m_pUpdateTaskList;
-		std::vector<util::SharedPtr<IDrawTask>> m_pDrawTaskList;
+		std::vector<util::WeakPtr<IUpdateTask>> m_pUpdateTaskList;
+		std::vector<util::WeakPtr<IDrawTask>> m_pDrawTaskList;
+
+		bool isInUpdateTaskList(util::WeakPtr<IUpdateTask> task);
+		bool isInDrawTaskList(util::WeakPtr<IDrawTask> task);
 	};
 }

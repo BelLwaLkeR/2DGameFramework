@@ -13,7 +13,7 @@ namespace framework {
 	private:
 		std::map<eKeyboardCode, int> eKeyCodeMap;
 		void setupEKeyCodeMap();
-};
+	};
 }
 
 
