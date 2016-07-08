@@ -1,8 +1,8 @@
 #include "InputManager.h"
 #include <Source/Framework/Device/Input/Keyboard/Keyboard.h>
-
+#include <Source/Utility/SmartPtr.h>
 framework::InputManager::InputManager(){
-	m_pInputDeviceList.emplace_back(std::make_shared<Keyboard>());
+	m_pInputDeviceList.emplace_back(util::makeShared<Keyboard>());
 }
 
 framework::InputManager::~InputManager()

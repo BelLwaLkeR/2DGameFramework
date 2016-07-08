@@ -9,3 +9,13 @@ framework::IDrawTask::IDrawTask(){
 framework::IDrawTask::~IDrawTask(){
 	deActive();
 }
+
+void framework::IDrawTask::active(){
+	
+
+}
+
+void framework::IDrawTask::deActive(){
+
+
+}

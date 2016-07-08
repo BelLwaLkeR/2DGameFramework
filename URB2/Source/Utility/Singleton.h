@@ -25,16 +25,17 @@ namespace util {
 		Singleton() {}
 
 	private:
-		static SharedPtr<T> m_pInstance;
+		static SharedPtr<T> m_pInstance;// = std::make_shared<T>();
 
 		Singleton(const Singleton& other) {}
 
 		const Singleton& operator=(const Singleton& other) {}
 
 		static void createInstance() {
-			m_pInstance = std::make_shared<T>();
+			m_pInstance = util::makeShared<T>();
 			m_pInstance->initialize();
 		}
 	};
-
+	template<typename T>
+	SharedPtr<T> Singleton<T>::m_pInstance =  util::makeShared<T>();
 }

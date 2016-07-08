@@ -23,10 +23,15 @@ void framework::TaskManager::addDrawTask(util::WeakPtr<IDrawTask> task){
 }
 
 void framework::TaskManager::removeUpdateTask(util::WeakPtr<IUpdateTask> task){
-	m_pUpdateTaskList.erase(task);
+	auto itr = std::find(m_pUpdateTaskList.begin(), m_pUpdateTaskList.end(), task);
+	if (itr == m_pUpdateTaskList.end()) { return; }
+	m_pUpdateTaskList.erase(itr);
 }
 
 void framework::TaskManager::removeDrawTask(util::WeakPtr<IDrawTask> task){
+	auto itr = std::find(m_pDrawTaskList.begin(), m_pDrawTaskList.end(), task);
+	if (itr == m_pDrawTaskList.end()) { return; }
+	m_pDrawTaskList.erase(itr);
 }
 
 void framework::TaskManager::taskUpdate(){

@@ -1,6 +1,5 @@
 #pragma once
 
-#include <Source/Framework/Task/TaskManager.h>
 namespace framework {
 	class IDrawTask{
 	public:
@@ -9,12 +8,10 @@ namespace framework {
 		virtual void draw()		= 0;
 
 	protected:
-		template<typename T>
-		virtual void active<T>();
-		virtual void deActive()	= 0;
+		virtual void active();
+		virtual void deActive();
+
+	private:
+
 	};
-	template<typename T>
-	inline void IDrawTask::active(){
-		SGLT_TASKMANAGER->addDrawTask(util::WeakPtr<T>());
-	}
 }

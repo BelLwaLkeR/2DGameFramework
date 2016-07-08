@@ -11,25 +11,25 @@ namespace util {
 	using SharedPtr = std::shared_ptr<T>;
 
 
-	//template<typename T>
-	//struct TWrapper : public T{
-	//	template<typename... Param>
-	//	TWrapper(Param&&... param) :
-	//		T(std::forward<Param>(param)...)
-	//	{
+	template<typename T>
+	struct TWrapper : public T{
+		template<typename... Param>
+		TWrapper(Param&&... param) :
+			T(std::forward<Param>(param)...)
+		{
 
-	//	}
-	//};
+		}
+	};
 
-	//template<typename T, typename... Param>
-	//UniquePtr<T> makeUnique(Param&&... param){
-	//	return std::move(std::make_unique<TWrapper<T>>(std::forward<Param>(param)...));
-	//}
+	template<typename T, typename... Param>
+	UniquePtr<T> makeUnique(Param&&... param){
+		return std::move(std::make_unique<TWrapper<T>>(std::forward<Param>(param)...));
+	}
 
-	//template<typename T, typename...Param>
-	//SharedPtr<T> makeShared(Param&&... param){
-	//	return std::move(std::make_shared< TWrapper<T>>(std::forward<Param>(param)...));
-	//}
+	template<typename T, typename...Param>
+	SharedPtr<T> makeShared(Param&&... param){
+		return std::move(std::make_shared< TWrapper<T>>(std::forward<Param>(param)...));
+	}
 
 	template<typename T>
 	struct WeakPtr {

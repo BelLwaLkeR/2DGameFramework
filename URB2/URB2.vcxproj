@@ -125,16 +125,23 @@
     <ClCompile Include="Source\Framework\Device\Input\InputManager.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\DxLibKeyboard.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\Keyboard.cpp" />
+    <ClCompile Include="Source\Framework\Entity\Entity.cpp" />
+    <ClCompile Include="Source\Framework\Entity\EntityManager.cpp" />
     <ClCompile Include="Source\Framework\Task\IDrawTask.cpp" />
     <ClCompile Include="Source\Framework\Task\IUpdateTask.cpp" />
     <ClCompile Include="Source\Framework\Task\TaskManager.cpp" />
     <ClCompile Include="Source\Utility\FPSManager.cpp" />
+    <ClCompile Include="Source\Utility\Math\VectorMath.cpp" />
+    <ClCompile Include="Source\Utility\Type\Hash.cpp" />
+    <ClCompile Include="Source\Utility\Type\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Framework\Application\BaseApplication.h" />
     <ClInclude Include="Source\Framework\Application\GameApplication.h" />
     <ClInclude Include="Source\Framework\Application\DxLibApplication.h" />
     <ClInclude Include="Source\Framework\Component\Component.h" />
+    <ClInclude Include="Source\Framework\Component\ComponentFactory.h" />
+    <ClInclude Include="Source\Framework\Component\CreateComponentInfomation.h" />
     <ClInclude Include="Source\Framework\Component\DrawComponent.h" />
     <ClInclude Include="Source\Framework\Component\UpdateComponent.h" />
     <ClInclude Include="Source\Framework\Define.h" />
@@ -144,11 +151,18 @@
     <ClInclude Include="Source\Framework\Device\Input\Keyboard\DxLibKeyboard.h" />
     <ClInclude Include="Source\Framework\Device\Input\Keyboard\eKeyboardCode.h" />
     <ClInclude Include="Source\Framework\Device\Input\Keyboard\Keyboard.h" />
+    <ClInclude Include="Source\Framework\Entity\Entity.h" />
+    <ClInclude Include="Source\Framework\Entity\EntityInfomation.h" />
+    <ClInclude Include="Source\Framework\Entity\EntityManager.h" />
+    <ClInclude Include="Source\Utility\Math\VectorMath.h" />
+    <ClInclude Include="Source\Utility\Type\Vector2.h" />
     <ClInclude Include="Source\Framework\Task\IDrawTask.h" />
     <ClInclude Include="Source\Framework\Task\TaskManager.h" />
     <ClInclude Include="Source\Framework\Task\IUpdateTask.h" />
     <ClInclude Include="Source\Utility\DxLibUtility.h" />
     <ClInclude Include="Source\Utility\FPSManager.h" />
+    <ClInclude Include="Source\Utility\Algorithm.h" />
+    <ClInclude Include="Source\Utility\Type\Hash.h" />
     <ClInclude Include="Source\Utility\Singleton.h" />
     <ClInclude Include="Source\Utility\SmartPtr.h" />
     <ClInclude Include="Source\Framework\Window\Screen.h" />
