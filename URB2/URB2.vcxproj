@@ -122,6 +122,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Source\Framework\Application\DxLibApplication.cpp" />
     <ClCompile Include="Source\Framework\Application\GameApplication.cpp" />
+    <ClCompile Include="Source\Framework\Component\ComponentFactory.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\InputManager.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\DxLibKeyboard.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\Keyboard.cpp" />
@@ -130,6 +131,7 @@
     <ClCompile Include="Source\Framework\Task\IDrawTask.cpp" />
     <ClCompile Include="Source\Framework\Task\IUpdateTask.cpp" />
     <ClCompile Include="Source\Framework\Task\TaskManager.cpp" />
+    <ClCompile Include="Source\Utility\Algorithm.cpp" />
     <ClCompile Include="Source\Utility\FPSManager.cpp" />
     <ClCompile Include="Source\Utility\Math\VectorMath.cpp" />
     <ClCompile Include="Source\Utility\Type\Hash.cpp" />

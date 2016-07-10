@@ -2,7 +2,6 @@
 #include <vector>
 #include <Source/Utility/SmartPtr.h>
 #include <Source/Framework/Entity/Entity.h>
-#include <Source/Utility/Algorithm.h>
 #include <Source/Framework/Component/ComponentFactory.h>
 
 namespace framework {

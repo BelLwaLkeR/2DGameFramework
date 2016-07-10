@@ -2,7 +2,7 @@
 
 #include <Source/Utility/Singleton.h>
 #include <Source/Utility/SmartPtr.h>
-#include <vector>
+#include <list>
 
 #define SGLT_TASKMANAGER framework::TaskManager::getInstance()
 
@@ -23,8 +23,8 @@ namespace framework {
 		void taskDraw();
 
 	private:
-		std::vector<util::WeakPtr<IUpdateTask>> m_pUpdateTaskList;
-		std::vector<util::WeakPtr<IDrawTask>> m_pDrawTaskList;
+		std::list<util::WeakPtr<IUpdateTask>>	m_pUpdateTaskList;
+		std::list<util::WeakPtr<IDrawTask>>		m_pDrawTaskList;
 
 		bool isInUpdateTaskList(util::WeakPtr<IUpdateTask> task);
 		bool isInDrawTaskList(util::WeakPtr<IDrawTask> task);

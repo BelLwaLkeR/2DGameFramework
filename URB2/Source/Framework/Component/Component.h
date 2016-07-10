@@ -5,8 +5,8 @@ namespace framework {
 	class Component
 	{
 	public:
-		Component();
-		~Component();
+		Component() {}
+		~Component() {}
 
 	private:
 
