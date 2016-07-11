@@ -120,9 +120,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Source\Component\ControllMove.cpp" />
+    <ClCompile Include="Source\Component\DrawRectangle.cpp" />
     <ClCompile Include="Source\Framework\Application\DxLibApplication.cpp" />
     <ClCompile Include="Source\Framework\Application\GameApplication.cpp" />
+    <ClCompile Include="Source\Framework\Component\Component.cpp" />
     <ClCompile Include="Source\Framework\Component\ComponentFactory.cpp" />
+    <ClCompile Include="Source\Framework\Component\DrawComponent.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\InputManager.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\DxLibKeyboard.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\Keyboard.cpp" />
@@ -138,11 +142,14 @@
     <ClCompile Include="Source\Utility\Type\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Component\ControllMove.h" />
+    <ClInclude Include="Source\Component\DrawRectangle.h" />
     <ClInclude Include="Source\Framework\Application\BaseApplication.h" />
     <ClInclude Include="Source\Framework\Application\GameApplication.h" />
     <ClInclude Include="Source\Framework\Application\DxLibApplication.h" />
     <ClInclude Include="Source\Framework\Component\Component.h" />
     <ClInclude Include="Source\Framework\Component\ComponentFactory.h" />
+    <ClInclude Include="Source\Framework\Component\ComponentCreator.h" />
     <ClInclude Include="Source\Framework\Component\CreateComponentInfomation.h" />
     <ClInclude Include="Source\Framework\Component\DrawComponent.h" />
     <ClInclude Include="Source\Framework\Component\UpdateComponent.h" />

@@ -3,9 +3,12 @@
 #include <Source/Utility/SmartPtr.h>
 #include <Source/Framework/Entity/Entity.h>
 #include <Source/Framework/Component/ComponentFactory.h>
+#include <Source/Utility/Singleton.h>
+
+#define SGLT_ENTITYMANAGER framework::EntityManager::getInstance()
 
 namespace framework {
-	class EntityManager
+	class EntityManager: public util::Singleton<EntityManager>
 	{
 	public:
 		EntityManager();

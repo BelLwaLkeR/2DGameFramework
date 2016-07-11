@@ -6,10 +6,10 @@
 
 namespace framework {
 	struct EntityInfomation {
-		std::string		m_Name;
-		util::Hash		m_Tag;
-		unsigned int	m_Id;
-		util::Vector2	m_Position;
+		std::string		name;
+		util::Hash		tag;
+		unsigned int	id;
+		util::Vector2	position;
 	};
 
 }

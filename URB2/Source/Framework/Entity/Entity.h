@@ -1,40 +1,45 @@
 #pragma once
 
-#include <vector>
+#include <list>
 #include <Source/Utility/SmartPtr.h>
 #include <Source/Framework/Entity/EntityInfomation.h>
 #include <Source/Framework/Component/Component.h>
 #include <Source/Utility/Algorithm.h>
 
 namespace framework {
-	class Entity
-	{
+	class Entity{
 	public:
-		Entity() {}
-		~Entity() {}
-		template<typename ComponentType>
-		void addComponent();
-		template<typename ComponentType>
-		util::WeakPtr<ComponentType> getComponent() const;
+		Entity()	{}
+		~Entity()	{}
+		void addComponent(const std::string& componentName);
+		void addParent(util::WeakPtr<Entity> parent);
+		void addChild(util::WeakPtr<Entity> child);
+		const util::WeakPtr<Entity>&			getParent();
+		const std::list<util::WeakPtr<Entity>>&	getChildList();
+		const EntityInfomation&					getInfomation();
 
 	private:
-		std::vector<util::SharedPtr<Component>> m_pComponentList;
-		util::SharedPtr<EntityInfomation> m_pInfomation;
+		std::list<util::SharedPtr<Component>>	m_pComponentList;
+		util::SharedPtr<EntityInfomation>		m_pInfomation;
+		util::WeakPtr<Entity>					m_pParent;
+		std::list<util::WeakPtr<Entity>>		m_pChildList;
 
+
+
+		//templateä÷êî
+	public:
+		template<typename ComponentType>
+		void addComponent() {
+			m_pComponentList.emplace_back(SGLT_COMPONENTFACTORY->create<ComponentType>(m_pInfomation));
+		}
+
+		template<typename ComponentType>
+		util::WeakPtr<ComponentType> getComponent() const {
+			for (auto& component : m_pComponentList) {
+				if (dynamic_cast<ComponentType*>(component.get() == nullptr)) { continue; }
+				return component;
+			}
+			return util::WeakPtr<ComponentType>();
+		}
 	};
-
-	template<typename ComponentType>
-	inline void Entity::addComponent(){
-		
-	}
-
-	template<typename ComponentType>
-	inline util::WeakPtr<ComponentType> Entity::getComponent() const{
-		auto& itr = util::Algorithm::Find<Component>(m_pComponentList, [&](Component& component) {
-			return dynamic_cast<ComponentType*>(component.get()) != nullptr;
-		});
-		if (itr == m_pComponentList.end()) { return util::WeakPtr<ComponentType>(); }
-
-		return util::WeakPtr<ComponentType>(m_pComponentList[itr]);
-	}
 }
