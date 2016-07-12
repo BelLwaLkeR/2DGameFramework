@@ -19,8 +19,9 @@ namespace framework {
 		void addDrawTask(util::WeakPtr<IDrawTask> task);
 		void removeUpdateTask(util::WeakPtr<IUpdateTask> task);
 		void removeDrawTask(util::WeakPtr<IDrawTask> task);
-		void taskUpdate();
-		void taskDraw();
+		void clearAllTask();
+		void updateTask();
+		void drawTask();
 
 	private:
 		std::list<util::WeakPtr<IUpdateTask>>	m_pUpdateTaskList;

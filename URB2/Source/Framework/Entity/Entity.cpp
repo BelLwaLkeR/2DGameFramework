@@ -23,6 +23,6 @@ const std::list<util::WeakPtr<framework::Entity>>& framework::Entity::getChildLi
 	return m_pChildList;
 }
 
-const framework::EntityInfomation & framework::Entity::getInfomation(){
-	return *m_pInfomation;
+const util::WeakPtr<framework::EntityInfomation> framework::Entity::getInfomation(){
+	return m_pInfomation;
 }

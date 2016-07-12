@@ -2,6 +2,8 @@
 #include <Source/Framework/Window/WindowConfig.h>
 #include <Source/Framework/Task/TaskManager.h>
 #include <Source/Framework/Define.h>
+#include <Source/Framework/Entity/EntityManager.h>
+#include <Source/Framework/Component/ComponentNameList.h>
 
 framework::GameApplication::GameApplication(){
 }
@@ -10,17 +12,23 @@ framework::GameApplication::~GameApplication(){
 }
 
 void framework::GameApplication::initialize(){
+//	sceneManager.load("testScene");
+	util::WeakPtr<framework::Entity> entity = SGLT_ENTITYMANAGER->addEntity();
+	entity->addComponent<component::ControllMove>();
+	entity->addComponent<component::DrawRectangle>();
 }
 
 void framework::GameApplication::update(){
 	input.update();
-	SGLT_TASKMANAGER->taskUpdate();
+	SGLT_TASKMANAGER->updateTask();
 }
 
 void framework::GameApplication::draw(){
+	
 }
 
 void framework::GameApplication::finalize(){
+	
 }
 
 bool framework::GameApplication::isEnd(){

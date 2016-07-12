@@ -14,9 +14,12 @@ namespace framework {
 		EntityManager();
 		~EntityManager();
 		
-		void addEntity(const std::vector<Component>& components);
-		void addEntity(util::SharedPtr<Component> components);
-		void removeEntity();
+		util::WeakPtr<Entity> addEntity();
+ 		util::WeakPtr<Entity> addEntity(util::SharedPtr<std::string> component);
+		util::WeakPtr<Entity> addEntity(const std::vector<std::string>& componentList);
+		void clearEntity();
+
+
 
 
 	private:

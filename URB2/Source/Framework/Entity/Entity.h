@@ -5,6 +5,7 @@
 #include <Source/Framework/Entity/EntityInfomation.h>
 #include <Source/Framework/Component/Component.h>
 #include <Source/Utility/Algorithm.h>
+#include <Source/Framework/Component/ComponentFactory.h>
 
 namespace framework {
 	class Entity{
@@ -16,7 +17,7 @@ namespace framework {
 		void addChild(util::WeakPtr<Entity> child);
 		const util::WeakPtr<Entity>&			getParent();
 		const std::list<util::WeakPtr<Entity>>&	getChildList();
-		const EntityInfomation&					getInfomation();
+		const util::WeakPtr<EntityInfomation>	getInfomation();
 
 	private:
 		std::list<util::SharedPtr<Component>>	m_pComponentList;
@@ -30,7 +31,7 @@ namespace framework {
 	public:
 		template<typename ComponentType>
 		void addComponent() {
-			m_pComponentList.emplace_back(SGLT_COMPONENTFACTORY->create<ComponentType>(m_pInfomation));
+			m_pComponentList.emplace_back(SGLT_COMPONENTFACTORY->createComponent<ComponentType>(m_pInfomation));
 		}
 
 		template<typename ComponentType>

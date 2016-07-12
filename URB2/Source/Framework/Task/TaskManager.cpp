@@ -34,13 +34,18 @@ void framework::TaskManager::removeDrawTask(util::WeakPtr<IDrawTask> task){
 	m_pDrawTaskList.erase(itr);
 }
 
-void framework::TaskManager::taskUpdate(){
+void framework::TaskManager::clearAllTask(){
+	m_pUpdateTaskList.clear();
+	m_pDrawTaskList.clear();
+}
+
+void framework::TaskManager::updateTask(){
 	for (auto& task : m_pUpdateTaskList) {
 		task->update();
 	}
 }
 
-void framework::TaskManager::taskDraw(){
+void framework::TaskManager::drawTask(){
 	for(auto& task: m_pDrawTaskList){
 		task->draw();
 	}

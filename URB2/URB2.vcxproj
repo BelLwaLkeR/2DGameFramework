@@ -132,10 +132,13 @@
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\Keyboard.cpp" />
     <ClCompile Include="Source\Framework\Entity\Entity.cpp" />
     <ClCompile Include="Source\Framework\Entity\EntityManager.cpp" />
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\DxLibImageRenderer.cpp" />
+    <ClCompile Include="Source\Framework\Scene\SceneManager.cpp" />
     <ClCompile Include="Source\Framework\Task\IDrawTask.cpp" />
     <ClCompile Include="Source\Framework\Task\IUpdateTask.cpp" />
     <ClCompile Include="Source\Framework\Task\TaskManager.cpp" />
     <ClCompile Include="Source\Utility\Algorithm.cpp" />
+    <ClCompile Include="Source\Utility\CSVLoader.cpp" />
     <ClCompile Include="Source\Utility\FPSManager.cpp" />
     <ClCompile Include="Source\Utility\Math\VectorMath.cpp" />
     <ClCompile Include="Source\Utility\Type\Hash.cpp" />
@@ -150,6 +153,7 @@
     <ClInclude Include="Source\Framework\Component\Component.h" />
     <ClInclude Include="Source\Framework\Component\ComponentFactory.h" />
     <ClInclude Include="Source\Framework\Component\ComponentCreator.h" />
+    <ClInclude Include="Source\Framework\Component\ComponentNameList.h" />
     <ClInclude Include="Source\Framework\Component\CreateComponentInfomation.h" />
     <ClInclude Include="Source\Framework\Component\DrawComponent.h" />
     <ClInclude Include="Source\Framework\Component\UpdateComponent.h" />
@@ -163,6 +167,12 @@
     <ClInclude Include="Source\Framework\Entity\Entity.h" />
     <ClInclude Include="Source\Framework\Entity\EntityInfomation.h" />
     <ClInclude Include="Source\Framework\Entity\EntityManager.h" />
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\DxLibImageRenderer.h" />
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\ImageRenderer.h" />
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Screen.h" />
+    <ClInclude Include="Source\Framework\Renderer\SoundRenderer\DxLibSoundRenderer.h" />
+    <ClInclude Include="Source\Framework\Scene\SceneManager.h" />
+    <ClInclude Include="Source\Utility\CSVLoader.h" />
     <ClInclude Include="Source\Utility\Math\VectorMath.h" />
     <ClInclude Include="Source\Utility\Type\Vector2.h" />
     <ClInclude Include="Source\Framework\Task\IDrawTask.h" />
