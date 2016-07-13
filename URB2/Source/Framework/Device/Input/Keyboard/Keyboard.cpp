@@ -52,9 +52,9 @@ void framework::Keyboard::setupKeyMap(){
 }
 
 bool framework::Keyboard::isDownCurState(eInputCode inputCode){
-	return (m_CurKeyState & std::bitset<(int)eInputCode::_END_>(std::pow(2, (int)inputCode))).any();
+	return (m_CurKeyState & std::bitset<static_cast<int>(eInputCode::_END_)>(std::pow(2, static_cast<int>(inputCode)))).any();
 }
 
 bool framework::Keyboard::isDownPreState(eInputCode inputCode){
-	return (m_PreKeyState & std::bitset<(int)eInputCode::_END_>(std::pow(2, (int)inputCode))).any();
+	return (m_PreKeyState & std::bitset<static_cast<int>(eInputCode::_END_)>(std::pow(2, static_cast<int>(inputCode)))).any();
 }

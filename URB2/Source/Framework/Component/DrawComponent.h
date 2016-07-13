@@ -4,13 +4,15 @@
 
 
 namespace framework {
-	class DrawComponent: public Component, IDrawTask
+	class DrawComponent: public Component
 	{
 	public:
-		DrawComponent()	{}
-		~DrawComponent() {}
+		DrawComponent();
+		~DrawComponent();
 
-	private:
+		virtual void draw() = 0;
+		void active();
+		void deActive();
 	};
 
 }

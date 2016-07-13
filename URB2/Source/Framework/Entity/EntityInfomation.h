@@ -9,7 +9,21 @@ namespace framework {
 		std::string		name;
 		util::Hash		tag;
 		unsigned int	id;
-		util::Vector2	position;
+
+		util::SharedPtr<util::Vector2>	pPosition;
+
+		EntityInfomation() {
+			name		= "GameObject";
+			tag			= util::Hash();
+			id			= 0;
+			pPosition	= util::makeShared<util::Vector2>();
+		}
+		EntityInfomation(const std::string& name, const util::Hash& hash, unsigned int id, const util::Vector2& position) {
+			this->name		= name;
+			this->tag		= hash;
+			this->id		= id;
+			this->pPosition	= util::makeShared<util::Vector2>(position);
+		}
 	};
 
 }

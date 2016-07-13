@@ -14,8 +14,8 @@ framework::GameApplication::~GameApplication(){
 void framework::GameApplication::initialize(){
 //	sceneManager.load("testScene");
 	util::WeakPtr<framework::Entity> entity = SGLT_ENTITYMANAGER->addEntity();
-	entity->addComponent<component::ControllMove>();
-	entity->addComponent<component::DrawRectangle>();
+	entity->addComponent("ControllMove");
+	entity->addComponent("DrawRectangle");
 }
 
 void framework::GameApplication::update(){
@@ -24,7 +24,7 @@ void framework::GameApplication::update(){
 }
 
 void framework::GameApplication::draw(){
-	
+	SGLT_TASKMANAGER->drawTask();
 }
 
 void framework::GameApplication::finalize(){

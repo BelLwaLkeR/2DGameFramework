@@ -1,17 +1,28 @@
 #pragma once
 #include <Source/Utility/SmartPtr.h>
-#include <Source/Framework/Entity/EntityInfomation.h>
+
+namespace util {
+	struct Vector2;
+}
+
 namespace framework {
-	class Component
-	{
+	class Entity;
+	class Component{
 	public:
 		Component();
-		Component(util::WeakPtr<EntityInfomation> entityInfo);
+		Component(util::WeakPtr<Entity> pEntity, util::WeakPtr<util::Vector2> pPosition);
 		~Component();
 
-		void setEntityInfomation(util::WeakPtr<EntityInfomation> entityInfomation);
+		void setup(util::WeakPtr<Entity> pEntity, util::WeakPtr<util::Vector2> pPosition);
+		virtual void active() {}
+		virtual void deactive() {}
+
 	protected:
-		util::WeakPtr<EntityInfomation> m_pEntityInfomation;
+		util::WeakPtr<Entity>			m_pEntity;
+		util::WeakPtr<util::Vector2>	m_pPosition;
+
+		void setEntityPtr(util::WeakPtr<Entity> pEntity);
+		void setPositionPtr(util::WeakPtr<util::Vector2> pPosition);
 
 	private:
 	};

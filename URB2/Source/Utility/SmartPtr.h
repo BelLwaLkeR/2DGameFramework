@@ -92,8 +92,6 @@ namespace util {
 		}
 
 		std::weak_ptr<T> m_pPtr;
-
-
 	};
 
 

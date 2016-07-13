@@ -3,6 +3,7 @@
 util::Hash::Hash():m_Hash(0){
 }
 
+
 util::Hash::Hash(const std::string & str){
 	m_Hash = toHash(str);
 }

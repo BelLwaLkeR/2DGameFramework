@@ -1,17 +1,13 @@
-#pragma once
-
-namespace framework {
-	class IDrawTask{
-	public:
-		IDrawTask();
-		~IDrawTask();
-		virtual void draw()		= 0;
-
-	protected:
-		virtual void active();
-		virtual void deActive();
-
-	private:
-
-	};
-}
+//#pragma once
+//
+//namespace framework {
+//	class IDrawTask{
+//	public:
+//		IDrawTask() {}
+//		~IDrawTask() {}
+//		virtual void draw()		= 0;
+//		virtual void active()	= 0;
+//		virtual void deActive() = 0;
+//
+//	};
+//}

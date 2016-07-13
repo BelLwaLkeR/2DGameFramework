@@ -9,7 +9,7 @@ namespace framework {
 	public:
 		IComponentCreator()	{}
 		~IComponentCreator(){}
-		virtual util::SharedPtr<Component> create(util::WeakPtr<EntityInfomation> entityInfo) = 0;
+		virtual util::SharedPtr<Component> create() = 0;
 	};
 
 	template<typename ComponentType>
@@ -17,10 +17,12 @@ namespace framework {
 	public:
 		ComponentCreator()	{}
 		~ComponentCreator()	{}
-		util::SharedPtr<Component> create(util::WeakPtr<EntityInfomation> entityInfo) override{
-			util::SharedPtr<Component> componentPointer = util::makeShared<ComponentType>();
-			componentPointer->setEntityInfomation(entityInfo);
-			return componentPointer;
+		util::SharedPtr<Component> create() override{
+			auto cpnPtr = this;
+			std::string componentName = util::StringEditor::getClassName<ComponentType>();
+			util::SharedPtr<ComponentType> testCreate = std::make_shared<ComponentType>();
+			util::SharedPtr<Component> testCreateConponent = util::makeShared<ComponentType>();
+			return std::static_pointer_cast<Component>(util::makeShared<ComponentType>());
 		}
 	};
 

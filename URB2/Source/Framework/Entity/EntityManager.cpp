@@ -16,16 +16,16 @@ util::WeakPtr<framework::Entity> framework::EntityManager::addEntity(){
 	return entity;
 }
 
-util::WeakPtr<framework::Entity> framework::EntityManager::addEntity(util::SharedPtr<std::string> component){
+util::WeakPtr<framework::Entity> framework::EntityManager::addEntity(const std::string& componentName){
 	util::WeakPtr<Entity> entity = addEntity();
-	SGLT_COMPONENTFACTORY->createComponent(*component, entity->getInfomation());
+	entity->addComponent(componentName);
 	return entity;
 }
 
-util::WeakPtr<framework::Entity> framework::EntityManager::addEntity(const std::vector<std::string>& componentList){
+util::WeakPtr<framework::Entity> framework::EntityManager::addEntity(const std::vector<std::string>& componentNameList){
 	util::WeakPtr<Entity> entity = addEntity();
-	for (auto& component : componentList) {
-		SGLT_COMPONENTFACTORY->createComponent(component, entity->getInfomation());
+	for (auto& componentName : componentNameList) {
+		entity->addComponent(componentName);
 	}
 	return entity;
 }

@@ -15,12 +15,9 @@ namespace framework {
 		~EntityManager();
 		
 		util::WeakPtr<Entity> addEntity();
- 		util::WeakPtr<Entity> addEntity(util::SharedPtr<std::string> component);
-		util::WeakPtr<Entity> addEntity(const std::vector<std::string>& componentList);
+ 		util::WeakPtr<Entity> addEntity(const std::string& componentName);
+		util::WeakPtr<Entity> addEntity(const std::vector<std::string>& componentNameList);
 		void clearEntity();
-
-
-
 
 	private:
 		std::vector<util::SharedPtr<Entity>> m_pEntityList;

@@ -11,20 +11,21 @@ namespace util {
 		Algorithm();
 		~Algorithm();
 
-		//template<typename T>
-		//static std::vector<T>::const_iterator Find(const std::vector<T>* vector, const T* value);
 
 	private:
 
+
+	//テンプレート関数
+	public:
+		template<typename container, typename T>
+		static typename container::const_iterator find(container vector, T value) {
+			auto itr = std::find(vector.begin(), vector.end(), value);
+			if (itr == vector.end()) { return vector.end(); }
+			return itr;
+		}
+
+
 	};
-
-
-	//template<typename T>
-	//inline static std::vector<T>::const_iterator Algorithm::Find(const std::vector<T>* vector, const T * value){
-	//	auto itr = std::find(vector.begin(), vector.end(), value);
-	//	if (itr == vector.end()) { return -1; }
-	//	return itr;
-	//}
 }
 
 

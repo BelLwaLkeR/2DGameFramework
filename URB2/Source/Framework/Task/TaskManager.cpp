@@ -1,6 +1,6 @@
 #include "TaskManager.h"
-#include <Source/Framework/Task/IUpdateTask.h>
-#include <Source/Framework/Task/IDrawTask.h>
+#include <Source/Framework/Component/UpdateComponent.h>
+#include <Source/Framework/Component/DrawComponent.h>
 
 framework::TaskManager::TaskManager(){
 
@@ -12,23 +12,23 @@ framework::TaskManager::~TaskManager(){
 
 }
 
-void framework::TaskManager::addUpdateTask(util::WeakPtr<IUpdateTask> task){
+void framework::TaskManager::addUpdateTask(util::WeakPtr<UpdateComponent> task){
 	if (isInUpdateTaskList(task)) { return; }
 	m_pUpdateTaskList.emplace_back(task);
 }
 
-void framework::TaskManager::addDrawTask(util::WeakPtr<IDrawTask> task){
+void framework::TaskManager::addDrawTask(util::WeakPtr<DrawComponent> task){
 	if (isInDrawTaskList(task)) { return; }
 	m_pDrawTaskList.emplace_back(task);
 }
 
-void framework::TaskManager::removeUpdateTask(util::WeakPtr<IUpdateTask> task){
+void framework::TaskManager::removeUpdateTask(util::WeakPtr<UpdateComponent> task){
 	auto itr = std::find(m_pUpdateTaskList.begin(), m_pUpdateTaskList.end(), task);
 	if (itr == m_pUpdateTaskList.end()) { return; }
 	m_pUpdateTaskList.erase(itr);
 }
 
-void framework::TaskManager::removeDrawTask(util::WeakPtr<IDrawTask> task){
+void framework::TaskManager::removeDrawTask(util::WeakPtr<DrawComponent> task){
 	auto itr = std::find(m_pDrawTaskList.begin(), m_pDrawTaskList.end(), task);
 	if (itr == m_pDrawTaskList.end()) { return; }
 	m_pDrawTaskList.erase(itr);
@@ -51,15 +51,12 @@ void framework::TaskManager::drawTask(){
 	}
 }
 
-bool framework::TaskManager::isInUpdateTaskList(util::WeakPtr<IUpdateTask> task){
+bool framework::TaskManager::isInUpdateTaskList(util::WeakPtr<UpdateComponent> task){
 	bool isFind = true;
-	
-
 	return false;
 }
 
-bool framework::TaskManager::isInDrawTaskList(util::WeakPtr<IDrawTask> task){
+bool framework::TaskManager::isInDrawTaskList(util::WeakPtr<DrawComponent> task){
 	bool isFind = true;
-
 	return false;
 }

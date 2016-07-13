@@ -1,5 +1,6 @@
 #include "ControllMove.h"
 #include <Source/Framework/Device/Input/InputManager.h>
+#include <Source/Utility/Type/Vector2.h>
 
 component::ControllMove::ControllMove(){
 	speed = 5.f;
@@ -21,17 +22,17 @@ void component::ControllMove::move(){
 }
 
 void component::ControllMove::moveUp(){
-	m_pEntityInfomation->position.Y -= speed;
+	m_pPosition->Y -= speed;
 }
 
 void component::ControllMove::moveDown(){
-	m_pEntityInfomation->position.Y += speed;
+	m_pPosition->Y += speed;
 }
 
 void component::ControllMove::moveLeft(){
-	m_pEntityInfomation->position.X -= speed;
+	m_pPosition->X -= speed;
 }
 
 void component::ControllMove::moveRight(){
-	m_pEntityInfomation->position.X += speed;
+	m_pPosition->X += speed;
 }
