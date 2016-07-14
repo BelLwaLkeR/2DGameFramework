@@ -11,11 +11,7 @@ namespace util {
 		static int clamp(int value, int max, int min);
 		static int loop(int value, int max, int min);
 		static const float PI;
-
-
-		static void swap(int* value1, int* value2);
-		static void swapMinMax(int* min, int* max);
-
+		
 		template<typename T>
 		static void swap(T* value1, T* value2);
 		template<typename T>
