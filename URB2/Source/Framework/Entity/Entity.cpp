@@ -5,8 +5,8 @@
 
 
 framework::Entity::Entity():m_pComponentList(){
-	m_pEntity = util::makeShared<Entity>(*this);
-	m_pInfomation = util::makeShared<EntityInfomation>();
+	m_pEntity		= util::SharedPtr<Entity>(this);
+	m_pInfomation	= util::makeShared<EntityInfomation>();
 }
 
 framework::Entity::~Entity(){
@@ -33,7 +33,7 @@ const util::WeakPtr<framework::Component> framework::Entity::getComponent(Compon
 	return util::WeakPtr<Component>();
 }
 
-const std::list<util::WeakPtr<framework::Component>> framework::Entity::getComponentList() const{
+const std::list<util::WeakPtr<framework::Component>>& framework::Entity::getComponentList() const{
 	return std::list<util::WeakPtr<Component>>();
 }
 

@@ -30,7 +30,7 @@ namespace framework {
 		void teardown();
 		void setupWindow(const WindowConfig& windowConfig);
 		void setLogOutput();
-
+		void setupGraphicConfig();
 	};
 
 }

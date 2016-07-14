@@ -60,3 +60,9 @@ bool framework::TaskManager::isInDrawTaskList(util::WeakPtr<DrawComponent> task)
 	bool isFind = true;
 	return false;
 }
+
+
+
+
+
+

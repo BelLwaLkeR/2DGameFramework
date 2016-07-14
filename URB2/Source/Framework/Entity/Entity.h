@@ -15,10 +15,10 @@ namespace framework {
 		void addComponent(const std::string& componentName);
 		void addParent(util::WeakPtr<Entity> parent);
 		void addChild(util::WeakPtr<Entity> child);
-		const util::WeakPtr<Entity>&			getParent()		const;
-		const std::list<util::WeakPtr<Entity>>&	getChildList()	const;
-		const util::WeakPtr<Component> getComponent(Component* component)	const;
-		const std::list<util::WeakPtr<Component>> getComponentList()		const;
+		const util::WeakPtr<Entity>&				getParent()		const;
+		const std::list<util::WeakPtr<Entity>>&		getChildList()	const;
+		const util::WeakPtr<Component>				getComponent(Component* component)	const;
+		const std::list<util::WeakPtr<Component>>&	getComponentList()		const;
 
 		template<typename ComponentType>
 		const util::WeakPtr<Component> getComponent()			const;

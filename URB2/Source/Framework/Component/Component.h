@@ -21,7 +21,7 @@ namespace framework {
 		util::WeakPtr<Entity>			m_pEntity;
 		util::WeakPtr<util::Vector2>	m_pPosition;
 
-		void setEntityPtr(util::WeakPtr<Entity> pEntity);
+		void setEntityPtr(const util::WeakPtr<Entity>& pEntity);
 		void setPositionPtr(util::WeakPtr<util::Vector2> pPosition);
 
 	private:

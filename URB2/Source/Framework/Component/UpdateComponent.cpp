@@ -3,9 +3,11 @@
 #include <Source/Framework/Task/TaskManager.h>
 
 framework::UpdateComponent::UpdateComponent(){
+
 }
 
 framework::UpdateComponent::~UpdateComponent(){
+
 }
 
 void framework::UpdateComponent::active(){
@@ -17,3 +19,12 @@ void framework::UpdateComponent::deActive(){
 	util::WeakPtr<UpdateComponent> updateTask = m_pEntity->getComponentCast<UpdateComponent>(this);
 	SGLT_TASKMANAGER->removeUpdateTask(updateTask);
 }
+
+
+
+
+
+
+
+
+

@@ -25,7 +25,7 @@ void framework::Component::setPositionPtr(util::WeakPtr<util::Vector2> pPosition
 	m_pPosition = pPosition;
 }
 
-void framework::Component::setEntityPtr(util::WeakPtr<Entity> pEntity){
+void framework::Component::setEntityPtr(const util::WeakPtr<Entity>& pEntity){
 	m_pEntity = pEntity;
 }
 

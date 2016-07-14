@@ -51,6 +51,10 @@ void framework::DxLibApplication::setLogOutput(){
 #endif
 }
 
+void framework::DxLibApplication::setupGraphicConfig(){
+	SetUseDirect3DVersion(DX_DIRECT3D_9);
+}
+
 bool framework::DxLibApplication::isApplicationEnd(){
 	return ProcessMessage()!=0;
 }
@@ -62,6 +66,7 @@ void framework::DxLibApplication::teardown(){
 void framework::DxLibApplication::setup(){
 	setLogOutput();
 	setupWindowConfig();
+	setupGraphicConfig();
 	if (DxLib_Init() == -1) { assert(!"DxLibÇÃèâä˙âªÇ…é∏îsÇµÇ‹ÇµÇΩÅB"); };
 
 }

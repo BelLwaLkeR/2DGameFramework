@@ -1,6 +1,7 @@
 #pragma once
 
 #include <memory>
+#include <cassert>
 
 namespace util {
 
@@ -71,13 +72,13 @@ namespace util {
 		WeakPtr<T>& operator=(const SharedPtr<T>& ptr)
 		{
 			assert(ptr.get() != nullptr && "ƒƒ‚ƒŠ‚ªŠm•Û‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ");
-			this->m_pPtr = ptr;
+			m_pPtr = ptr;
 			return *this;
 		}
 
 		WeakPtr<T>& operator=(const WeakPtr<T>& ptr)
 		{
-			this->m_pPtr = ptr.m_pPtr;
+			m_pPtr = ptr.m_pPtr;
 			return *this;
 		}
 
