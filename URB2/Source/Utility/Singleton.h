@@ -19,6 +19,7 @@ namespace util {
 		virtual void initialize() {}
 		virtual void finalize() {}
 
+
 	protected:
 		Singleton() {}
 

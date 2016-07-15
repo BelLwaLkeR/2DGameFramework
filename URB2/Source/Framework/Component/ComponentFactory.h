@@ -34,7 +34,6 @@ namespace framework {
 
 		template<typename ComponentType>
 		util::SharedPtr<Component> createComponent() {
-//			return util::makeShared<Component>();;
 			return createComponent(util::StringEditor::getClassName<ComponentType>());
 		}
 

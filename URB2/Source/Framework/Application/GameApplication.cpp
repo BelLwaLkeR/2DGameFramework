@@ -19,7 +19,7 @@ void framework::GameApplication::initialize(){
 }
 
 void framework::GameApplication::update(){
-	input.update();
+	SGLT_INPUTMANAGER->update();
 	SGLT_TASKMANAGER->updateTask();
 }
 
@@ -34,7 +34,7 @@ void framework::GameApplication::finalize(){
 bool framework::GameApplication::isEnd(){
 	bool isEnd = false;
 #ifdef DEBUG_MODE
-	isEnd |= input.isKeyDown(eInputCode::EXIT);
+	isEnd |= SGLT_INPUTMANAGER->isKeyDown(eInputCode::EXIT);
 #else
 #endif
 	return isEnd;

@@ -1,6 +1,7 @@
 #pragma once
 #include <Source/Utility/SmartPtr.h>
 
+
 namespace util {
 	struct Vector2;
 }
@@ -21,7 +22,7 @@ namespace framework {
 		util::WeakPtr<Entity>			m_pEntity;
 		util::WeakPtr<util::Vector2>	m_pPosition;
 
-		void setEntityPtr(const util::WeakPtr<Entity>& pEntity);
+		void setEntityPtr(util::WeakPtr<Entity> pEntity);
 		void setPositionPtr(util::WeakPtr<util::Vector2> pPosition);
 
 	private:

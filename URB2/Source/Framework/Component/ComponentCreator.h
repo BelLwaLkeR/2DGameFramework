@@ -18,10 +18,7 @@ namespace framework {
 		ComponentCreator()	{}
 		~ComponentCreator()	{}
 		util::SharedPtr<Component> create() override{
-			auto cpnPtr = this;
 			std::string componentName = util::StringEditor::getClassName<ComponentType>();
-			util::SharedPtr<ComponentType> testCreate = std::make_shared<ComponentType>();
-			util::SharedPtr<Component> testCreateConponent = util::makeShared<ComponentType>();
 			return std::static_pointer_cast<Component>(util::makeShared<ComponentType>());
 		}
 	};

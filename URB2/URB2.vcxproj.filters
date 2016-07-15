@@ -99,6 +99,15 @@
     <ClCompile Include="Source\Utility\Math\Math.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePad.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Device\Input\GamePad\DxLibGamePad.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePadManager.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Framework\Window\Screen.h">
@@ -246,6 +255,24 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Utility\Math\Math.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\DxLibGamePad.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\eGamePadCode.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePad.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePadManager.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\DxLibGamePadInfomation.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePadInfomationMediator.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

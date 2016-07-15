@@ -1,7 +1,7 @@
 #include "Keyboard.h"
 
 framework::Keyboard::Keyboard(){
-	
+	setupKeyMap();
 }
 
 framework::Keyboard::~Keyboard(){
@@ -9,6 +9,7 @@ framework::Keyboard::~Keyboard(){
 }
 
 void framework::Keyboard::update(){
+	m_DxLibKeyboard.updateKeyStateBuffer();
 	m_PreKeyState = m_CurKeyState;
 	updateCurKeyState();
 }
@@ -32,11 +33,10 @@ bool framework::Keyboard::isKeyRelease(eInputCode inputCode){
 void framework::Keyboard::updateCurKeyState(){
 	m_CurKeyState.reset();
 	for (int i = 0; i < (int)eInputCode::_END_; ++i) {
-		if (m_DxLibKeyboard.isKeyDown(m_KeyMap[(eInputCode)i])) { m_CurKeyState.set(i); }
+		if (m_DxLibKeyboard.isKeyDown(m_KeyMap[(eInputCode)i])) {
+			m_CurKeyState.set(i);
+		}
 	}
-
-
-
 }
 
 void framework::Keyboard::setupKeyMap(){

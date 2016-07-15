@@ -12,6 +12,7 @@ framework::EntityManager::~EntityManager(){
 
 util::WeakPtr<framework::Entity> framework::EntityManager::addEntity(){
 	util::SharedPtr<Entity> entity = util::makeShared<Entity>();
+	entity->setMyself(entity);
 	m_pEntityList.emplace_back(entity);
 	return entity;
 }
@@ -28,6 +29,13 @@ util::WeakPtr<framework::Entity> framework::EntityManager::addEntity(const std::
 		entity->addComponent(componentName);
 	}
 	return entity;
+}
+
+util::WeakPtr<framework::Entity> framework::EntityManager::getEntity(Entity* entity) {
+	for (auto& e : m_pEntityList) {
+		if (e.get() == entity) { return e; }
+	}
+	return util::WeakPtr<Entity>();
 }
 
 

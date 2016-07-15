@@ -1,8 +1,17 @@
 #include "InputManager.h"
 #include <Source/Framework/Device/Input/Keyboard/Keyboard.h>
+#include <Source/Framework/Device/Input/GamePad/GamePad.h>
 #include <Source/Utility/SmartPtr.h>
 framework::InputManager::InputManager(){
 	m_pInputDeviceList.emplace_back(util::makeShared<Keyboard>());
+	m_pInputDeviceList.emplace_back(util::makeShared<GamePad>(0));
+	m_pInputDeviceList.emplace_back(util::makeShared<GamePad>(1));
+	m_pInputDeviceList.emplace_back(util::makeShared<GamePad>(2));
+	m_pInputDeviceList.emplace_back(util::makeShared<GamePad>(3));
+	m_pInputDeviceList.emplace_back(util::makeShared<GamePad>(4));
+	m_pInputDeviceList.emplace_back(util::makeShared<GamePad>(5));
+	m_pInputDeviceList.emplace_back(util::makeShared<GamePad>(6));
+	m_pInputDeviceList.emplace_back(util::makeShared<GamePad>(7));
 }
 
 framework::InputManager::~InputManager()

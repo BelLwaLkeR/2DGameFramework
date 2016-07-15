@@ -73,8 +73,8 @@
     <LibraryPath>D:\Users\BelL\Documents\visual studio 2015\Library\DxLib;$(LibraryPath);$(SolutionDir)Library\DxLib\</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>D:\Users\BelL\Documents\visual studio 2015\Library\DxLib;$(ProjectDir);$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Users\BelL\Documents\visual studio 2015\Library\DxLib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Users\BelL\Documents\visual studio 2015\Library\DxLib;$(ProjectDir);$(SolutionDir)Library\DxLib\;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Users\BelL\Documents\visual studio 2015\Library\DxLib;$(SolutionDir)Library\DxLib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -128,6 +128,9 @@
     <ClCompile Include="Source\Framework\Component\ComponentFactory.cpp" />
     <ClCompile Include="Source\Framework\Component\DrawComponent.cpp" />
     <ClCompile Include="Source\Framework\Component\UpdateComponent.cpp" />
+    <ClCompile Include="Source\Framework\Device\Input\GamePad\DxLibGamePad.cpp" />
+    <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePad.cpp" />
+    <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePadManager.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\InputManager.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\DxLibKeyboard.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\Keyboard.cpp" />
@@ -163,6 +166,12 @@
     <ClInclude Include="Source\Framework\Component\UpdateComponent.h" />
     <ClInclude Include="Source\Framework\Define.h" />
     <ClInclude Include="Source\Framework\Device\Input\eInputCode.h" />
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\DxLibGamePad.h" />
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\DxLibGamePadInfomation.h" />
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\eGamePadCode.h" />
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePad.h" />
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePadManager.h" />
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePadInfomationMediator.h" />
     <ClInclude Include="Source\Framework\Device\Input\IInputDevice.h" />
     <ClInclude Include="Source\Framework\Device\Input\InputManager.h" />
     <ClInclude Include="Source\Framework\Device\Input\Keyboard\DxLibKeyboard.h" />

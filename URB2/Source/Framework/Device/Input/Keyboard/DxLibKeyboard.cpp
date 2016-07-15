@@ -1,4 +1,5 @@
 #include "DxLibKeyboard.h"
+#include <DxLib.h>
 
 framework::DxLibKeyboard::DxLibKeyboard(){
 	setupEKeyCodeMap();
@@ -6,12 +7,15 @@ framework::DxLibKeyboard::DxLibKeyboard(){
 
 framework::DxLibKeyboard::~DxLibKeyboard(){}
 
+void framework::DxLibKeyboard::updateKeyStateBuffer(){
+	GetHitKeyStateAll(&keyStateBuffer[0]);
+}
+
 bool framework::DxLibKeyboard::isKeyDown(eKeyboardCode keyCode){
-	return CheckHitKey(eKeyCodeMap[keyCode]) == 1;
+	return keyStateBuffer[eKeyCodeMap[keyCode]] == 1;
 }
 
 void framework::DxLibKeyboard::setupEKeyCodeMap(){
-
 	eKeyCodeMap.clear();
 	eKeyCodeMap[eKeyboardCode::ESC]				= KEY_INPUT_ESCAPE;
 	eKeyCodeMap[eKeyboardCode::F1]				= KEY_INPUT_F1;

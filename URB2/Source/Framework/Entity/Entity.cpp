@@ -5,15 +5,19 @@
 
 
 framework::Entity::Entity():m_pComponentList(){
-	m_pEntity		= util::SharedPtr<Entity>(this);
 	m_pInfomation	= util::makeShared<EntityInfomation>();
 }
 
 framework::Entity::~Entity(){
 }
 
+void framework::Entity::setMyself(util::WeakPtr<Entity> pMyselfEntity){
+	m_pEntity = pMyselfEntity;
+}
+
 void framework::Entity::addComponent(const std::string & componentName){
-	util::WeakPtr<Component> component = SGLT_COMPONENTFACTORY->createComponent(componentName);
+	util::SharedPtr<Component> component = SGLT_COMPONENTFACTORY->createComponent(componentName);
+	m_pComponentList.emplace_back(component);
 	component->setup(m_pEntity, m_pInfomation->pPosition);
 	component->active();
 }
@@ -24,6 +28,10 @@ void framework::Entity::addParent(util::WeakPtr<Entity> parent){
 
 void framework::Entity::addChild(util::WeakPtr<Entity> child){
 	m_pChildList.emplace_back(child);
+}
+
+const util::WeakPtr<framework::Entity>& framework::Entity::getEntity() const{
+	return m_pEntity;
 }
 
 const util::WeakPtr<framework::Component> framework::Entity::getComponent(Component* component) const{

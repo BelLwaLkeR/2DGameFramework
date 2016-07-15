@@ -17,6 +17,7 @@ namespace framework {
 		util::WeakPtr<Entity> addEntity();
  		util::WeakPtr<Entity> addEntity(const std::string& componentName);
 		util::WeakPtr<Entity> addEntity(const std::vector<std::string>& componentNameList);
+		util::WeakPtr<Entity> getEntity(Entity* entity);
 		void clearEntity();
 
 	private:

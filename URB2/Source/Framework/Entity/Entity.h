@@ -12,9 +12,11 @@ namespace framework {
 	public:
 		Entity();
 		~Entity();
+		void setMyself(util::WeakPtr<Entity> pMyselfEntity);
 		void addComponent(const std::string& componentName);
 		void addParent(util::WeakPtr<Entity> parent);
 		void addChild(util::WeakPtr<Entity> child);
+		const util::WeakPtr<Entity>&				getEntity()		const;
 		const util::WeakPtr<Entity>&				getParent()		const;
 		const std::list<util::WeakPtr<Entity>>&		getChildList()	const;
 		const util::WeakPtr<Component>				getComponent(Component* component)	const;
@@ -26,9 +28,9 @@ namespace framework {
 	private:
 		std::list<util::SharedPtr<Component>>	m_pComponentList;
 		util::SharedPtr<EntityInfomation>		m_pInfomation;
+		util::WeakPtr<Entity>					m_pEntity;
 		util::WeakPtr<Entity>					m_pParent;
 		std::list<util::WeakPtr<Entity>>		m_pChildList;
-		util::SharedPtr<Entity>					m_pEntity;
 
 
 
@@ -46,16 +48,12 @@ namespace framework {
 
 		template<typename CastType>
 		util::WeakPtr<CastType> getComponentCast(Component* component) {
-			auto& itr = std::find_if(m_pComponentList.begin(), m_pComponentList.end(), [&](util::SharedPtr<Component> thisComponent) {
-				return thisComponent.get() == component;
-			});
-			if (itr == m_pComponentList.end()) {
-				assert(!"コンポーネントが見つかりません。");
-				return util::WeakPtr<CastType>();
+			if (m_pComponentList.empty()) { return util::WeakPtr<CastType>(); }
+			for (auto& c : m_pComponentList) {
+				if (c.get() == component) { return std::static_pointer_cast<CastType>(c); }
 			}
-			return std::static_pointer_cast<CastType>(*itr);
-
-
+			assert(!"コンポーネントが見つかりません。");
+			return util::WeakPtr<CastType>();
 		}
 
 		template<typename ComponentType>

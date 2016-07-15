@@ -37,9 +37,9 @@ void framework::DxLibApplication::run(){
 void framework::DxLibApplication::setupWindow(const WindowConfig& windowConfig){
 	SetWindowSizeChangeEnableFlag(windowConfig.canChangeWindowSize);
 	SetMainWindowText(windowConfig.title.c_str());
-	SetDrawScreen(DX_SCREEN_BACK);
 	SetGraphMode(windowConfig.width, windowConfig.height, windowConfig.colorBit);
 	ChangeWindowMode(!windowConfig.isFullScreen);
+	SetDrawScreen(DX_SCREEN_BACK);
 
 }
 
