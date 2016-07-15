@@ -20,3 +20,9 @@ util::image_t util::DxLibDataLoader::loadImageData(const std::string & imageFile
 util::pshader_t util::DxLibDataLoader::loadPixelShaderData(const std::string & pshaderFilePath){
 	return LoadPixelShader(pshaderFilePath.c_str());
 }
+
+
+
+
+
+

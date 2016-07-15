@@ -10,6 +10,7 @@ namespace framework {
 	public:
 		GameApplication();
 		~GameApplication();
+		void run();
 
 	private:
 		InputManager input;

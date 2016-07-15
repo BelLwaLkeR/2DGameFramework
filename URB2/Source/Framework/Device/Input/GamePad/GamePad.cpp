@@ -1,5 +1,6 @@
 #include "GamePad.h"
 #include <cassert>
+#include <Source/Framework/Device/Input/GamePad/DxLibGamePad.h>
 
 framework::GamePad::GamePad():GamePad(-1){
 }
@@ -7,10 +8,14 @@ framework::GamePad::GamePad():GamePad(-1){
 framework::GamePad::GamePad(int padNo){
 	assert( padNo>=0 &&	"ゲームパッドのコンストラクタには、0以上のパッド番号を入力して下さい。\n\
 						デフォルトコンストラクタが呼び出された場合も、このassertが出力します。");
-	m_DxLibKeyboard.setPadNo(padNo);
+	m_PadNo = padNo;
 }
 
 framework::GamePad::~GamePad(){
+}
+
+void framework::GamePad::setupDxLibGamePad(util::WeakPtr<DxLibGamePad> pDxLibGamePad){
+	m_pDxLibGamePad = pDxLibGamePad;
 }
 
 void framework::GamePad::update(){
@@ -35,13 +40,18 @@ bool framework::GamePad::isKeyRelease(eInputCode inputCode){
 }
 
 void framework::GamePad::updateCurButtonState(){
-
+	m_CurButtonState.reset();
+	for (int i = 0; i < (int)eInputCode::_END_; ++i) {
+		if (m_pDxLibGamePad->isKeyDown(m_PadNo, (eInputCode)i)) {
+			m_CurButtonState.set(i);
+		}
+	}
 }
 
 bool framework::GamePad::isDownCurState(eInputCode inputCode){
-	return (m_CurButtonState & std::bitset<static_cast<int>(eInputCode::_END_)>(std::pow(2, static_cast<int>(inputCode)))).any();
+	return (m_CurButtonState & std::bitset<(int)eInputCode::_END_>(std::pow(2, (int)inputCode))).any();
 }
 
 bool framework::GamePad::isDownPreState(eInputCode inputCode){
-	return (m_PreButtonState & std::bitset<static_cast<int>(eInputCode::_END_)>(std::pow(2, static_cast<int>(inputCode)))).any();
+	return (m_PreButtonState & std::bitset<(int)eInputCode::_END_>(std::pow(2, (int)inputCode))).any();
 }

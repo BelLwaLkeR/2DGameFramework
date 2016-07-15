@@ -2,7 +2,11 @@
 
 #include <vector>
 #include <memory>
+#include <bitset>
+#include <Source/Framework/Define.h>
 #include <Source/Framework/Device/Input/eInputCode.h>
+#include <Source/Framework/Device/Input/eInputDeviceCode.h>
+#include <Source/Framework/Device/Input/GamePad/GamePadManager.h>
 #include <Source/Utility/Singleton.h>
 
 #define SGLT_INPUTMANAGER framework::InputManager::getInstance()
@@ -16,13 +20,26 @@ namespace framework {
 		~InputManager();
 
 		void update();
-		bool isKeyDown(eInputCode inputCode);
-		bool isKeyUp(eInputCode inputCode);
-		bool isKeyPush(eInputCode inputCode);
-		bool isKeyRelease(eInputCode inputCode);
+		std::bitset<INPUT_NUM> isKeyDown(eInputCode inputCode);
+		std::bitset<INPUT_NUM> isKeyUp(eInputCode inputCode);
+		std::bitset<INPUT_NUM> isKeyPush(eInputCode inputCode);
+		std::bitset<INPUT_NUM> isKeyRelease(eInputCode inputCode);
+
+		bool isKeyDown(eInputDeviceCode device, eInputCode inputCode);
+		bool isKeyUp(eInputDeviceCode device, eInputCode inputCode);
+		bool isKeyPush(eInputDeviceCode device, eInputCode inputCode);
+		bool isKeyRelease(eInputDeviceCode device, eInputCode inputCode);
+
+		bool isKeyDownAny(eInputCode inputCode);
+		bool isKeyUpAny(eInputCode inputCode);
+		bool isKeyPushAny(eInputCode inputCode);
+		bool isKeyReleaseAny(eInputCode inputCode);
 
 	private:
-		std::vector<std::shared_ptr<IInputDevice>> m_pInputDeviceList;
+		std::vector<util::SharedPtr<IInputDevice>>	m_pInputDeviceList;
+		GamePadManager								m_GamePadManager;
+		bool isKeyDownKeyboard();
+		bool isKeyDownGamePad();
 		
 
 	};

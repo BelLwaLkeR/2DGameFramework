@@ -1,4 +1,6 @@
 #include "DxLibGamePad.h"
+#include <DxLib.h>
+#include <Source/Framework/Device/Input/GamePad/GamePadInfomationMediator.h>
 
 framework::DxLibGamePad::DxLibGamePad(){
 
@@ -8,20 +10,10 @@ framework::DxLibGamePad::~DxLibGamePad(){
 
 }
 
-void framework::DxLibGamePad::setPadNo(int padNo){
-	m_PadNo = padNo;
+bool framework::DxLibGamePad::isKeyDown(int padNo, eInputCode code){
+	int padCode		= GamePadInfomationMediator::getPadButtonCode(code);
+	int deviceNo	= GamePadInfomationMediator::getDeviceNo(padNo);
+	return (GetJoypadInputState(deviceNo) & padCode) > 0;
 }
-
-void framework::DxLibGamePad::updateGamePadState(){
-	
-}
-
-void framework::DxLibGamePad::setupButtonMap(){
-	
-}
-
-
-
-
 
 

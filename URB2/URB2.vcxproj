@@ -129,7 +129,9 @@
     <ClCompile Include="Source\Framework\Component\DrawComponent.cpp" />
     <ClCompile Include="Source\Framework\Component\UpdateComponent.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\GamePad\DxLibGamePad.cpp" />
+    <ClCompile Include="Source\Framework\Device\Input\GamePad\DxLibGamePadInfomation.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePad.cpp" />
+    <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePadInfomationMediator.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePadManager.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\InputManager.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\DxLibKeyboard.cpp" />
@@ -166,9 +168,10 @@
     <ClInclude Include="Source\Framework\Component\UpdateComponent.h" />
     <ClInclude Include="Source\Framework\Define.h" />
     <ClInclude Include="Source\Framework\Device\Input\eInputCode.h" />
+    <ClInclude Include="Source\Framework\Device\Input\eInputDeviceCode.h" />
     <ClInclude Include="Source\Framework\Device\Input\GamePad\DxLibGamePad.h" />
     <ClInclude Include="Source\Framework\Device\Input\GamePad\DxLibGamePadInfomation.h" />
-    <ClInclude Include="Source\Framework\Device\Input\GamePad\eGamePadCode.h" />
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\ePadButtonCode.h" />
     <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePad.h" />
     <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePadManager.h" />
     <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePadInfomationMediator.h" />

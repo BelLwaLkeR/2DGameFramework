@@ -16,10 +16,10 @@ void component::ControllMove::update(){
 }
 
 void component::ControllMove::move(){
-	if (SGLT_INPUTMANAGER->isKeyDown(framework::eInputCode::UP))	{ moveUp();		}
-	if (SGLT_INPUTMANAGER->isKeyDown(framework::eInputCode::DOWN))	{ moveDown();	}
-	if (SGLT_INPUTMANAGER->isKeyDown(framework::eInputCode::LEFT))	{ moveLeft();	}
-	if (SGLT_INPUTMANAGER->isKeyDown(framework::eInputCode::RIGHT))	{ moveRight();	}
+	if (SGLT_INPUTMANAGER->isKeyDownAny(framework::eInputCode::UP))		{ moveUp();		}
+	if (SGLT_INPUTMANAGER->isKeyDownAny(framework::eInputCode::DOWN))	{ moveDown();	}
+	if (SGLT_INPUTMANAGER->isKeyDownAny(framework::eInputCode::LEFT))	{ moveLeft();	}
+	if (SGLT_INPUTMANAGER->isKeyDownAny(framework::eInputCode::RIGHT))	{ moveRight();	}
 }
 
 void component::ControllMove::moveUp(){

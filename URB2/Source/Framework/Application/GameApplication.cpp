@@ -11,6 +11,10 @@ framework::GameApplication::GameApplication(){
 framework::GameApplication::~GameApplication(){
 }
 
+void framework::GameApplication::run(){
+	DxLibApplication::run();
+}
+
 void framework::GameApplication::initialize(){
 //	sceneManager.load("testScene");
 	util::WeakPtr<framework::Entity> entity = SGLT_ENTITYMANAGER->addEntity();
@@ -34,7 +38,7 @@ void framework::GameApplication::finalize(){
 bool framework::GameApplication::isEnd(){
 	bool isEnd = false;
 #ifdef DEBUG_MODE
-	isEnd |= SGLT_INPUTMANAGER->isKeyDown(eInputCode::EXIT);
+	isEnd |= SGLT_INPUTMANAGER->isKeyDown(eInputCode::EXIT).any();
 #else
 #endif
 	return isEnd;

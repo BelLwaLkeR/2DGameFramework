@@ -1,22 +1,36 @@
 #pragma once
-#include <array>
+#include <vector>
 #include <map>
-#include <Source/Framework/Device/Input/GamePad/GamePad.h>
 #include <Source/Utility/SmartPtr.h>
+#include <Source/Framework/Define.h>
+#include <Source/Framework/Device/Input/eInputCode.h>
 
 namespace framework {
+	class IInputDevice;
+	class GamePad;
+	class DxLibGamePad;
 	class GamePadManager
 	{
 	public:
 		GamePadManager();
 		~GamePadManager();
+		void setup();
+		
+		//void update();
+		//bool isKeyDown(int padNo	, eInputCode inputCode);
+		//bool isKeyUp(int padNo		, eInputCode inputCode);
+		//bool isKeyPush(int padNo	, eInputCode inputCode);
+		//bool isKeyRelease(int padNo	, eInputCode inputCode);
+		void joinGamePadList(std::vector<util::SharedPtr<IInputDevice>>* inputList);
 
-		void addGamePad(int padNo);
-		util::WeakPtr<GamePad> getGamePad(int padNo);
 
 	private:
-		std::array<util::SharedPtr<GamePad>, 3> m_pGamePadList;
-		std::map<int, int>						m_DeviceNoMap;
+		std::vector<util::SharedPtr<GamePad>>	m_pGamePadList;
+		util::SharedPtr<DxLibGamePad>			m_pDxLibGamePad;
+
+		util::SharedPtr<GamePad> setupGamePad(int padNo);
+		void assertFallPadNo(int padNo);
+
 
 	};
 }

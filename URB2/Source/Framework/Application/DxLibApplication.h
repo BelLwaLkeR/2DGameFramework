@@ -11,19 +11,20 @@ namespace framework {
 	public:
 		DxLibApplication();
 		~DxLibApplication();
-		void run();
 	protected:
 
-		virtual void initialize()	= 0;
-		virtual void update()		= 0;
-		virtual void draw()			= 0;
-		virtual void finalize()		= 0;
+		virtual void initialize()			= 0;
+		virtual void update()				= 0;
+		virtual void draw()					= 0;
+		virtual void finalize()				= 0;
+		virtual void setupWindowConfig()	= 0;
 		virtual bool isEnd();
 		virtual void adjustFPS();
-		virtual void setupWindowConfig() = 0;
 		void setupWindowConfig(const WindowConfig& windowConfig);
+		void run();
 
 	private:
+
 		void setup();
 		void refreshScreen();
 		bool isApplicationEnd();
