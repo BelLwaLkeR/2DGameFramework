@@ -8,3 +8,7 @@ util::ImageData util::ImageLoader::loadImageData(const std::string & imageFilePa
 	image.size			= oneImageSize;
 	return image;
 }
+
+
+
+

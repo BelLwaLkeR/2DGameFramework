@@ -4,6 +4,7 @@
 
 
 component::DrawRectangle::DrawRectangle(){
+
 }
 
 component::DrawRectangle::~DrawRectangle(){

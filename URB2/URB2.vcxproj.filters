@@ -57,9 +57,6 @@
     <ClCompile Include="Source\Framework\Component\ComponentFactory.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Utility\Algorithm.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Framework\Component\Component.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -84,9 +81,6 @@
     <ClCompile Include="Source\Framework\Component\UpdateComponent.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Utility\DxLibUtility\DxLibDataLoader.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Utility\Type\ImageData.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -105,9 +99,6 @@
     <ClCompile Include="Source\Framework\Device\Input\GamePad\DxLibGamePad.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePadManager.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePadInfomationMediator.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -118,6 +109,27 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Source\Utility\DataLoader\ImageLoader.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePadAggregate.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\NormalMapShader.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utility\DxLibUtility\DxLibPixelShaderLoader.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\PixelShader.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\LightingAggregate.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderFactory.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Component\LightComponent.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -182,9 +194,6 @@
     <ClInclude Include="Source\Framework\Task\IUpdateTask.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Utility\Algorithm.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Framework\Entity\Entity.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -227,9 +236,6 @@
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\ImageRenderer.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Screen.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Framework\Scene\SceneManager.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -240,9 +246,6 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Utility\Type\ImageData.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Utility\DxLibUtility\DxLibDataLoader.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\eDrawLayer.h">
@@ -266,9 +269,6 @@
     <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePad.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePadManager.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Framework\Device\Input\GamePad\DxLibGamePadInfomation.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -281,9 +281,6 @@
     <ClInclude Include="Source\Framework\Device\Input\GamePad\ePadButtonCode.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\LightingManager.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Utility\DataLoader\DataLoader.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -293,8 +290,35 @@
     <ClInclude Include="Source\Utility\DxLibUtility\DxLibImageLoader.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePadAggregate.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\NormalMapShader.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Utility\DxLibUtility\DxLibImageTypename.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\PixelShader.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utility\DxLibUtility\DxLibPixelShaderLoader.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\LightingAggregate.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderFactory.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Component\DrawNormalMap.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Component\LightComponent.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\DxLibShaderTest\DxLibShaderTest\testLighting.pso" />
   </ItemGroup>
 </Project>

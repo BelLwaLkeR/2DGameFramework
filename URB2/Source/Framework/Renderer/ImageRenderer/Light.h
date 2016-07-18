@@ -6,13 +6,13 @@
 namespace framework {
 	struct Light
 	{
-		util::Vector2	position;
+		util::WeakPtr<util::Vector2>	pPosition;
 		util::Color		color;
 		float			intencity;
 
 		Light() {}
-		Light(const util::Vector2& position, const util::Color& color, float intencity) {
-			this->position	= position;
+		Light(util::WeakPtr<util::Vector2> pPosition, const util::Color& color, float intencity) {
+			this->pPosition	= pPosition;
 			this->color		= color;
 			this->intencity	= intencity;
 		}

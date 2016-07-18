@@ -6,7 +6,7 @@
 #include <Source/Framework/Define.h>
 #include <Source/Framework/Device/Input/eInputCode.h>
 #include <Source/Framework/Device/Input/eInputDeviceCode.h>
-#include <Source/Framework/Device/Input/GamePad/GamePadManager.h>
+#include <Source/Framework/Device/Input/GamePad/GamePadAggregate.h>
 #include <Source/Utility/Singleton.h>
 
 #define SGLT_INPUTMANAGER framework::InputManager::getInstance()
@@ -37,7 +37,7 @@ namespace framework {
 
 	private:
 		std::vector<util::SharedPtr<IInputDevice>>	m_pInputDeviceList;
-		GamePadManager								m_GamePadManager;
+		GamePadAggregate							m_GamePadManager;
 		bool isKeyDownKeyboard();
 		bool isKeyDownGamePad();
 		

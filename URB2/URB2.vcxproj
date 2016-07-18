@@ -127,25 +127,29 @@
     <ClCompile Include="Source\Framework\Component\Component.cpp" />
     <ClCompile Include="Source\Framework\Component\ComponentFactory.cpp" />
     <ClCompile Include="Source\Framework\Component\DrawComponent.cpp" />
+    <ClCompile Include="Source\Framework\Component\LightComponent.cpp" />
     <ClCompile Include="Source\Framework\Component\UpdateComponent.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\GamePad\DxLibGamePad.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\GamePad\DxLibGamePadInfomation.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePad.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePadInfomationMediator.cpp" />
-    <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePadManager.cpp" />
+    <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePadAggregate.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\InputManager.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\DxLibKeyboard.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\Keyboard.cpp" />
     <ClCompile Include="Source\Framework\Entity\Entity.cpp" />
     <ClCompile Include="Source\Framework\Entity\EntityManager.cpp" />
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\DxLibImageRenderer.cpp" />
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\LightingAggregate.cpp" />
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\NormalMapLighting.cpp" />
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\NormalMapShader.cpp" />
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\PixelShader.cpp" />
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderFactory.cpp" />
     <ClCompile Include="Source\Framework\Scene\SceneManager.cpp" />
     <ClCompile Include="Source\Framework\Task\TaskManager.cpp" />
-    <ClCompile Include="Source\Utility\Algorithm.cpp" />
     <ClCompile Include="Source\Utility\DataLoader\ImageLoader.cpp" />
-    <ClCompile Include="Source\Utility\DxLibUtility\DxLibDataLoader.cpp" />
     <ClCompile Include="Source\Utility\DxLibUtility\DxLibImageLoader.cpp" />
+    <ClCompile Include="Source\Utility\DxLibUtility\DxLibPixelShaderLoader.cpp" />
     <ClCompile Include="Source\Utility\FPSManager.cpp" />
     <ClCompile Include="Source\Utility\Math\Math.cpp" />
     <ClCompile Include="Source\Utility\Math\VectorMath.cpp" />
@@ -157,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Component\ControllMove.h" />
+    <ClInclude Include="Source\Component\DrawNormalMap.h" />
     <ClInclude Include="Source\Component\DrawRectangle.h" />
     <ClInclude Include="Source\Framework\Application\BaseApplication.h" />
     <ClInclude Include="Source\Framework\Application\GameApplication.h" />
@@ -167,6 +172,7 @@
     <ClInclude Include="Source\Framework\Component\ComponentNameList.h" />
     <ClInclude Include="Source\Framework\Component\CreateComponentInfomation.h" />
     <ClInclude Include="Source\Framework\Component\DrawComponent.h" />
+    <ClInclude Include="Source\Framework\Component\LightComponent.h" />
     <ClInclude Include="Source\Framework\Component\UpdateComponent.h" />
     <ClInclude Include="Source\Framework\Define.h" />
     <ClInclude Include="Source\Framework\Device\Input\eInputCode.h" />
@@ -175,7 +181,7 @@
     <ClInclude Include="Source\Framework\Device\Input\GamePad\DxLibGamePadInfomation.h" />
     <ClInclude Include="Source\Framework\Device\Input\GamePad\ePadButtonCode.h" />
     <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePad.h" />
-    <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePadManager.h" />
+    <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePadAggregate.h" />
     <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePadInfomationMediator.h" />
     <ClInclude Include="Source\Framework\Device\Input\IInputDevice.h" />
     <ClInclude Include="Source\Framework\Device\Input\InputManager.h" />
@@ -189,15 +195,17 @@
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\eDrawLayer.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\ImageRenderer.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Light.h" />
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\LightingManager.h" />
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\LightingAggregate.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\NormalMapLighting.h" />
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Screen.h" />
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\PixelShader.h" />
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\NormalMapShader.h" />
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderFactory.h" />
     <ClInclude Include="Source\Framework\Renderer\SoundRenderer\DxLibSoundRenderer.h" />
     <ClInclude Include="Source\Framework\Scene\SceneManager.h" />
     <ClInclude Include="Source\Utility\DataLoader\DataLoader.h" />
     <ClInclude Include="Source\Utility\DataLoader\ImageLoader.h" />
-    <ClInclude Include="Source\Utility\DxLibUtility\DxLibDataLoader.h" />
     <ClInclude Include="Source\Utility\DxLibUtility\DxLibImageLoader.h" />
+    <ClInclude Include="Source\Utility\DxLibUtility\DxLibPixelShaderLoader.h" />
     <ClInclude Include="Source\Utility\Math\Math.h" />
     <ClInclude Include="Source\Utility\Math\VectorMath.h" />
     <ClInclude Include="Source\Utility\StringEditor.h" />
@@ -208,12 +216,14 @@
     <ClInclude Include="Source\Framework\Task\TaskManager.h" />
     <ClInclude Include="Source\Framework\Task\IUpdateTask.h" />
     <ClInclude Include="Source\Utility\FPSManager.h" />
-    <ClInclude Include="Source\Utility\Algorithm.h" />
     <ClInclude Include="Source\Utility\Type\Hash.h" />
     <ClInclude Include="Source\Utility\Singleton.h" />
     <ClInclude Include="Source\Utility\SmartPtr.h" />
     <ClInclude Include="Source\Framework\Window\Screen.h" />
     <ClInclude Include="Source\Framework\Window\WindowConfig.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\DxLibShaderTest\DxLibShaderTest\testLighting.pso" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

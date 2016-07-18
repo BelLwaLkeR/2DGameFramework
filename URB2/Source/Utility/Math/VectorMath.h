@@ -12,6 +12,7 @@ namespace util {
 
 		static Vector2	normalize(const util::Vector2& vector);
 		static double	length(const Vector2& vector);
+		static double	length2(const Vector2& vector);
 		static double	dot(const Vector2& fromPos, const Vector2& toPos, const Vector2& posTarget);
 		static double	cross(const Vector2& fromPos, const Vector2& toPos, const Vector2& posTarget);
 
