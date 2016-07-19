@@ -81,9 +81,6 @@
     <ClCompile Include="Source\Framework\Component\UpdateComponent.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Utility\Type\ImageData.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\NormalMapLighting.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -117,9 +114,6 @@
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\NormalMapShader.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Utility\DxLibUtility\DxLibPixelShaderLoader.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\PixelShader.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -130,6 +124,12 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Source\Framework\Component\LightComponent.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utility\DxLibUtility\DxLibLoader.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utility\Type\ImageData.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -245,9 +245,6 @@
     <ClInclude Include="Source\Utility\StringEditor.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Utility\Type\ImageData.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\eDrawLayer.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -317,8 +314,14 @@
     <ClInclude Include="Source\Framework\Component\LightComponent.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\DxLibShaderTest\DxLibShaderTest\testLighting.pso" />
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\DxLibDrawShader.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\IPixelShader.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utility\Type\ImageData.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,6 +1,9 @@
 #include "DxLibImageRenderer.h"
+#include <DxLib.h>
+#include <Source/Utility/Type/Vector2.h>
 
-void framework::DxLibImageRenderer::drawSimpleBox(const util::Vector2 & centerPosition, int width, int height, float angleDeg){
+
+void framework::DxLibImageRenderer::drawSimpleBox(const util::Vector2& centerPosition, int width, int height, float angleDeg){
 	DrawBox(centerPosition.getIntX() - width/2,
 			centerPosition.getIntX() + width/2,
 			centerPosition.getIntX() - height/2,
@@ -10,21 +13,13 @@ void framework::DxLibImageRenderer::drawSimpleBox(const util::Vector2 & centerPo
 		);
 }
 
-void framework::DxLibImageRenderer::beginRendaring(){
+void framework::DxLibImageRenderer::drawImage(util::WeakPtr<util::ImageData> pImageData){
+	DrawPolygon2DToShader(pImageData->getVertexPointer(), 2);
 
 }
 
-void framework::DxLibImageRenderer::endRendaring(){
 
-}
 
-void framework::DxLibImageRenderer::drawShader(const util::ImageData & image, const util::Vector2 & position, eDrawLayer layer, const util::pshader_t & pixelShader, const std::vector<int>& param){
-	
-}
-
-void framework::DxLibImageRenderer::drawImage(const util::ImageData & image, const util::Vector2 & position, eDrawLayer layer){
-
-}
 
 
 

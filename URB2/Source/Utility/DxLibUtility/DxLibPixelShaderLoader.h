@@ -1,16 +1,16 @@
 #pragma once
 
 #include <string>
-#include <DxLib.h>
 #include <Source/Utility/DxLibUtility/DxLibImageTypeName.h>
 
 namespace util {
-	class DxLibPixelShaderLoader
+	class DxLibShaderLoader
 	{
 	public:
-		DxLibPixelShaderLoader()	{}
-		~DxLibPixelShaderLoader(){}
-		static pshader_t loadPixelShader(const std::string& pixelShaderFilePath);
+		DxLibShaderLoader()	{}
+		~DxLibShaderLoader()	{}
+		static pshader_t loadPixelShader(const std::string& shaderName);
+		static void deletePixelShader(const pshader_t pixelShaderHandle);
 
 
 	private:

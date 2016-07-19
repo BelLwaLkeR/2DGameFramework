@@ -149,7 +149,7 @@
     <ClCompile Include="Source\Framework\Task\TaskManager.cpp" />
     <ClCompile Include="Source\Utility\DataLoader\ImageLoader.cpp" />
     <ClCompile Include="Source\Utility\DxLibUtility\DxLibImageLoader.cpp" />
-    <ClCompile Include="Source\Utility\DxLibUtility\DxLibPixelShaderLoader.cpp" />
+    <ClCompile Include="Source\Utility\DxLibUtility\DxLibLoader.cpp" />
     <ClCompile Include="Source\Utility\FPSManager.cpp" />
     <ClCompile Include="Source\Utility\Math\Math.cpp" />
     <ClCompile Include="Source\Utility\Math\VectorMath.cpp" />
@@ -197,6 +197,8 @@
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Light.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\LightingAggregate.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\NormalMapLighting.h" />
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\DxLibDrawShader.h" />
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\IPixelShader.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\PixelShader.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\NormalMapShader.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderFactory.h" />
@@ -221,9 +223,6 @@
     <ClInclude Include="Source\Utility\SmartPtr.h" />
     <ClInclude Include="Source\Framework\Window\Screen.h" />
     <ClInclude Include="Source\Framework\Window\WindowConfig.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\DxLibShaderTest\DxLibShaderTest\testLighting.pso" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

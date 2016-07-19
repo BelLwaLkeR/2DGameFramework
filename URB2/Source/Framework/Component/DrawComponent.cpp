@@ -11,6 +11,12 @@ framework::DrawComponent::DrawComponent(eDrawLayer layer){
 }
 
 framework::DrawComponent::~DrawComponent(){
+
+}
+
+void framework::DrawComponent::draw(){
+	
+
 }
 
 void framework::DrawComponent::active() {

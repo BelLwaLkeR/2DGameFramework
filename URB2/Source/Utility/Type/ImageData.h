@@ -5,15 +5,21 @@
 #include <Source/Utility/DxLibUtility/DxLibImageTypename.h>
 
 namespace util {
-	struct ImageData{
+	class ImageData{
+	public:
 		ImageData();
-		ImageData(const std::string& imageName, const Vector2& oneImageSize = {0, 0}, int imageNum = 0);
-		void setVertex(const Vector2& position);
+		ImageData(util::WeakPtr<util::Vector2> pPosition, const std::string& imageName, const Vector2& oneImageSize = {0, 0}, int imageNum = 0);
+		vertex_t*	getVertexPointer();
+
+	private:
 		void setup();
-		Vector2					size;
-		std::vector<image_t>	image;
-		std::vector<image_t>	normalMap;
-		std::vector<image_t>	reflectionMap;
-		std::array<vertex_t, 6>	vertex;
+		void reloadVertex();
+
+		util::WeakPtr<util::Vector2>	m_pPosition;
+		util::Vector2					m_Size;
+		std::vector<util::image_t>		m_Image;
+		std::vector<util::image_t>		m_NormalMap;
+		std::vector<util::image_t>		m_ReflectionMap;
+		std::array<vertex_t, 6>			m_Vertex;
 	};
 }

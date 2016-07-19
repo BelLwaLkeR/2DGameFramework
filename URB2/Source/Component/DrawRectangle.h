@@ -8,7 +8,7 @@ namespace component {
 	public:
 		DrawRectangle();
 		~DrawRectangle();
-		virtual void draw() override;
+		void draw();
 	private:
 
 	};
