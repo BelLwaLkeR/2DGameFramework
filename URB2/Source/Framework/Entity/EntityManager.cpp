@@ -10,21 +10,21 @@ framework::EntityManager::~EntityManager(){
 
 }
 
-util::WeakPtr<framework::Entity> framework::EntityManager::addEntity(){
-	util::SharedPtr<Entity> entity = util::makeShared<Entity>();
+util::WeakPtr<framework::Entity> framework::EntityManager::addEntity(const EntityInfomation& entityInfomation){
+	util::SharedPtr<Entity> entity = util::makeShared<Entity>(entityInfomation);
 	entity->setMyself(entity);
 	m_pEntityList.emplace_back(entity);
 	return entity;
 }
 
-util::WeakPtr<framework::Entity> framework::EntityManager::addEntity(const std::string& componentName){
-	util::WeakPtr<Entity> entity = addEntity();
+util::WeakPtr<framework::Entity> framework::EntityManager::addEntity(const EntityInfomation& entityInfomation, const std::string& componentName){
+	util::WeakPtr<Entity> entity = addEntity(entityInfomation);
 	entity->addComponent(componentName);
 	return entity;
 }
 
-util::WeakPtr<framework::Entity> framework::EntityManager::addEntity(const std::vector<std::string>& componentNameList){
-	util::WeakPtr<Entity> entity = addEntity();
+util::WeakPtr<framework::Entity> framework::EntityManager::addEntity(const EntityInfomation& entityInfomation, const std::vector<std::string>& componentNameList){
+	util::WeakPtr<Entity> entity = addEntity(entityInfomation);
 	for (auto& componentName : componentNameList) {
 		entity->addComponent(componentName);
 	}

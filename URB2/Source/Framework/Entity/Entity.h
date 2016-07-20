@@ -4,13 +4,14 @@
 #include <Source/Utility/SmartPtr.h>
 #include <Source/Framework/Entity/EntityInfomation.h>
 #include <Source/Framework/Component/ComponentFactory.h>
+#include <Source/Framework/Define.h>
 #include <algorithm>
 
 namespace framework {
 	class Component;
 	class Entity{
 	public:
-		Entity();
+		Entity(EntityInfomation entityInfomation = {});
 		~Entity();
 		void setMyself(util::WeakPtr<Entity> pMyselfEntity);
 		void addComponent(const std::string& componentName);

@@ -4,8 +4,8 @@
 #include <algorithm>
 
 
-framework::Entity::Entity():m_pComponentList(){
-	m_pInfomation	= util::makeShared<EntityInfomation>();
+framework::Entity::Entity(EntityInfomation entityInfomation):m_pComponentList(){
+	m_pInfomation	= util::makeShared<EntityInfomation>(entityInfomation);
 }
 
 framework::Entity::~Entity(){

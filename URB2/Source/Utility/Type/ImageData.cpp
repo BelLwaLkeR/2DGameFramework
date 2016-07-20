@@ -50,7 +50,10 @@ void util::ImageData::setup(){
 
 void util::ImageData::reloadVertex() const{
 	for (int i = 0; i < 6; ++i) {
-		m_Vertex[i].pos = VGet((i % 2)*m_Size.getIntX() + m_pPosition->getIntX(), (((i + 1)/3)%2)*m_Size.getIntY() +m_pPosition->getIntY(), 0);
+		float vertexX = (i % 2)*m_Size.getIntX() + m_pPosition->getIntX();
+		float vertexY = (((i + 1) / 3) % 2)*m_Size.getIntY() + m_pPosition->getIntY();
+		m_Vertex[i].pos = VGet(vertexX, vertexY, 0.f);
+//		m_Vertex[i].pos = VGet((i % 2)*m_Size.getIntX() + m_pPosition->getIntX(), (((i + 1)/3)%2)*m_Size.getIntY() +m_pPosition->getIntY(), 0);
 	}
 }
 

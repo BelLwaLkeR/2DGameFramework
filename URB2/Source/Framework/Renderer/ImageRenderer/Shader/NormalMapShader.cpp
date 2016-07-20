@@ -36,6 +36,7 @@ void framework::NormalMapShader::attachShader(util::SharedPtr<util::ImageData>* 
 	SetPSConstSFArray(5, &LightColor[0], 3);
 	SetPSConstSFArray(8, &relativeLightPosition[0], 3);
 	SetPSConstSF(11, 5.f);
+
 	util::DxLibShaderLoader::deletePixelShader(shaderHandle);
 }
 

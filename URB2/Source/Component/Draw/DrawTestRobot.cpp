@@ -5,7 +5,7 @@
 
 
 component::DrawTestRobot::DrawTestRobot(){
-	m_ImageParameters = framework::ImageParameters(framework::eDrawLayer::FIELD, "testRobot", 32, 1);
+	m_ImageParameters = framework::ImageParameters(framework::eDrawLayer::FIELD, "testRobot", { 32, 32 }, 1);
 }
 
 component::DrawTestRobot::~DrawTestRobot(){

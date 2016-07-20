@@ -18,7 +18,8 @@ void framework::GameApplication::run(){
 
 void framework::GameApplication::initialize(){
 	SGLT_SHADER_MANAGER->initialize();
-	util::WeakPtr<framework::Entity> entity = SGLT_ENTITY_MANAGER->addEntity();
+	util::WeakPtr<framework::Entity> entity = SGLT_ENTITY_MANAGER->addEntity({ "testObject", "player", 0, { 500, 500 } });
+//	const std::string& name, const util::Hash& hash, unsigned int id, const util::Vector2& position;
 	entity->addComponent("ControllMove");
 	entity->addComponent("DrawTestRobot");
 }

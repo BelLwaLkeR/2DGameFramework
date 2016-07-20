@@ -18,9 +18,9 @@ namespace framework {
 			id			= 0;
 			pPosition	= util::makeShared<util::Vector2>();
 		}
-		EntityInfomation(const std::string& name, const util::Hash& hash, unsigned int id, const util::Vector2& position) {
+		EntityInfomation(const std::string& name, const util::Hash& tag, unsigned int id, const util::Vector2& position) {
 			this->name		= name;
-			this->tag		= hash;
+			this->tag		= tag;
 			this->id		= id;
 			this->pPosition	= util::makeShared<util::Vector2>(position);
 		}
