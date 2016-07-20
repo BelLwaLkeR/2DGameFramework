@@ -22,15 +22,15 @@ void framework::SceneManager::start(){
 }
 
 void framework::SceneManager::update(){
-	SGLT_TASKMANAGER->updateTask();
+	SGLT_TASK_MANAGER->updateTask();
 }
 
 void framework::SceneManager::draw(){
-	SGLT_TASKMANAGER->drawTask();
+	SGLT_TASK_MANAGER->drawTask();
 }
 
 void framework::SceneManager::changeScene(const std::string& nextSceneName){
-	SGLT_TASKMANAGER->clearAllTask();
+	SGLT_TASK_MANAGER->clearAllTask();
 
 }
 

@@ -43,6 +43,7 @@ namespace framework {
 				assert(!"コンポーネントが見つかりません。");
 				return;
 			}
+			component->setup(m_pEntity, m_pInfomation->pPosition);
 			m_pComponentList.emplace_back(component);
 		}
 

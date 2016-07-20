@@ -5,8 +5,9 @@
 #include <Source/Utility/Singleton.h>
 #include <Source/Utility/SmartPtr.h>
 #include <Source/Framework/Renderer/ImageRenderer/eDrawLayer.h>
+#include <Source/Framework/Renderer/ImageRenderer/Screen.h>
 
-#define SGLT_TASKMANAGER framework::TaskManager::getInstance()
+#define SGLT_TASK_MANAGER framework::TaskManager::getInstance()
 
 namespace framework {
 	class UpdateComponent;
@@ -17,6 +18,7 @@ namespace framework {
 		TaskManager();
 		~TaskManager();
 
+		void initialize() override;
 		void addUpdateTask(util::WeakPtr<UpdateComponent> task);
 		void addDrawTask(eDrawLayer layer, util::WeakPtr<DrawComponent> task);
 		void removeUpdateTask(util::WeakPtr<UpdateComponent> task);
@@ -28,6 +30,7 @@ namespace framework {
 	private:
 		std::list<util::WeakPtr<UpdateComponent>>							m_pUpdateTaskList;
 		std::map<eDrawLayer, std::list<util::WeakPtr<DrawComponent>>>		m_pDrawTaskList;
+		Screen																m_Screen;
 
 		void drawTaskLayerd(eDrawLayer layer);
 		bool isInUpdateTaskList(util::WeakPtr<UpdateComponent> task);

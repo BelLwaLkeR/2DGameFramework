@@ -11,6 +11,16 @@ std::list<util::WeakPtr<framework::Light>> framework::LightAggregate::getAffectL
 	return lightList;
 }
 
+util::WeakPtr<util::Color> framework::LightAggregate::setAmbientLight(const util::Color & color)
+{
+	return util::WeakPtr<util::Color>();
+}
+
+util::WeakPtr<util::Color> framework::LightAggregate::getAmbientLight()
+{
+	return util::WeakPtr<util::Color>();
+}
+
 void framework::LightAggregate::addLight(util::WeakPtr<Light> light){
 	m_pLightList.emplace_back(light);
 }

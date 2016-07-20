@@ -4,12 +4,14 @@
 
 framework::TaskManager::TaskManager(){
 
-
 }
 
 framework::TaskManager::~TaskManager(){
 
+}
 
+void framework::TaskManager::initialize(){
+	m_Screen.initialize();
 }
 
 void framework::TaskManager::addUpdateTask(util::WeakPtr<UpdateComponent> task){
@@ -33,8 +35,7 @@ void framework::TaskManager::removeDrawTask(framework::eDrawLayer layer, util::W
 	if (itr != m_pDrawTaskList[layer].end()) {
 		m_pDrawTaskList[layer].erase(itr);
 		return;
-	}
-	
+	}	
 }
 
 void framework::TaskManager::clearAllTask(){
@@ -49,16 +50,17 @@ void framework::TaskManager::updateTask(){
 }
 
 void framework::TaskManager::drawTask(){
+	m_Screen.changeDrawTargetGameScreen();
 	for (int i = 0; i < (int)eDrawLayer::_END_; ++i) {
 		drawTaskLayerd((eDrawLayer)i);
 	}
+	m_Screen.drawToApplication();
 }
 
 void framework::TaskManager::drawTaskLayerd(eDrawLayer layer){
 	for (auto& task : m_pDrawTaskList[layer]) {
 		task->draw();
 	}
-
 }
 
 bool framework::TaskManager::isInUpdateTaskList(util::WeakPtr<UpdateComponent> task){

@@ -120,8 +120,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Source\Component\ControllMove.cpp" />
-    <ClCompile Include="Source\Component\DrawRectangle.cpp" />
+    <ClCompile Include="Source\Component\Draw\DrawTestRobot.cpp" />
+    <ClCompile Include="Source\Component\UPdate\ControllMove.cpp" />
+    <ClCompile Include="Source\Component\Draw\DrawRectangle.cpp" />
     <ClCompile Include="Source\Framework\Application\DxLibApplication.cpp" />
     <ClCompile Include="Source\Framework\Application\GameApplication.cpp" />
     <ClCompile Include="Source\Framework\Component\Component.cpp" />
@@ -140,11 +141,15 @@
     <ClCompile Include="Source\Framework\Entity\Entity.cpp" />
     <ClCompile Include="Source\Framework\Entity\EntityManager.cpp" />
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\DxLibImageRenderer.cpp" />
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\ImageRenderer.cpp" />
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Scren.cpp" />
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\LightingAggregate.cpp" />
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\NormalMapLighting.cpp" />
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\DxLibDrawShader.cpp" />
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\IPixelShader.cpp" />
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\NormalMapShader.cpp" />
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\PixelShader.cpp" />
-    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderFactory.cpp" />
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderManager.cpp" />
     <ClCompile Include="Source\Framework\Scene\SceneManager.cpp" />
     <ClCompile Include="Source\Framework\Task\TaskManager.cpp" />
     <ClCompile Include="Source\Utility\DataLoader\ImageLoader.cpp" />
@@ -160,9 +165,9 @@
     <ClCompile Include="Source\Utility\Type\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Component\ControllMove.h" />
-    <ClInclude Include="Source\Component\DrawNormalMap.h" />
-    <ClInclude Include="Source\Component\DrawRectangle.h" />
+    <ClInclude Include="Source\Component\UPdate\ControllMove.h" />
+    <ClInclude Include="Source\Component\Draw\DrawRectangle.h" />
+    <ClInclude Include="Source\Component\Draw\DrawTestRobot.h" />
     <ClInclude Include="Source\Framework\Application\BaseApplication.h" />
     <ClInclude Include="Source\Framework\Application\GameApplication.h" />
     <ClInclude Include="Source\Framework\Application\DxLibApplication.h" />
@@ -194,6 +199,7 @@
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\DxLibImageRenderer.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\eDrawLayer.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\ImageRenderer.h" />
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Screen.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Light.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\LightingAggregate.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\NormalMapLighting.h" />
@@ -201,7 +207,7 @@
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\IPixelShader.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\PixelShader.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\NormalMapShader.h" />
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderFactory.h" />
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderManager.h" />
     <ClInclude Include="Source\Framework\Renderer\SoundRenderer\DxLibSoundRenderer.h" />
     <ClInclude Include="Source\Framework\Scene\SceneManager.h" />
     <ClInclude Include="Source\Utility\DataLoader\DataLoader.h" />

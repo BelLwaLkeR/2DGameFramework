@@ -2,7 +2,7 @@
 #include <Source/Framework/Device/Input/Keyboard/Keyboard.h>
 #include <Source/Utility/SmartPtr.h>
 framework::InputManager::InputManager() {
-//	m_pInputDeviceList.emplace_back(util::makeShared<Keyboard>());
+	m_pInputDeviceList.emplace_back(util::makeShared<Keyboard>());
 	m_GamePadManager.joinGamePadList(&m_pInputDeviceList);
 
 }

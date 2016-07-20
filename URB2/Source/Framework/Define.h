@@ -4,6 +4,11 @@
 #define DEBUG_MODE
 #endif // DEBUG || _DEBUG
 
+#define WINDOW_WIDTH			1280
+#define WINDOW_HEIGHT			720
+#define SCREEN_WIDTH			1280
+#define SCREEN_HEIGHT			720
+
 #define EMPTY_VALUE				-1
 
 #define USE_KEYBOARD_NUM		1

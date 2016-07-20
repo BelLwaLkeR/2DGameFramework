@@ -1,15 +1,21 @@
 #pragma once
+#include <Source/Framework/Renderer/ImageRenderer/DxLibImageRenderer.h>
 
-#include <Source/Utility/Type/ImageData.h>
 
+namespace util{
+	class ImageData;
+}
 namespace framework {
-	class ImageRenderer {
-		ImageRenderer()		{}
-		~ImageRenderer()	{}
+	class ImageRenderer{
+	public:
+		ImageRenderer();
+		~ImageRenderer();
+
+		static void drawImage(util::WeakPtr<util::ImageData> pImage);
 
 
 
-
+	private:
 
 	};
 }

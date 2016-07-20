@@ -9,14 +9,6 @@
 #include <Source/Utility/SmartPtr.h>
 #include <Source/Utility/StringEditor.h>
 
-namespace component {
-	class tmpComponent: public framework::Component{
-	public:
-		tmpComponent() {}
-		~tmpComponent() {}
-	};
-}
-
 #define SGLT_COMPONENTFACTORY framework::ComponentFactory::getInstance()
 
 namespace framework {

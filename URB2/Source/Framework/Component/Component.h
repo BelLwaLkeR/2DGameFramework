@@ -14,9 +14,9 @@ namespace framework {
 		Component(util::WeakPtr<Entity> pEntity, util::WeakPtr<util::Vector2> pPosition);
 		~Component();
 
-		void setup(util::WeakPtr<Entity> pEntity, util::WeakPtr<util::Vector2> pPosition);
+		virtual void setup(util::WeakPtr<Entity> pEntity, util::WeakPtr<util::Vector2> pPosition);
 		virtual void active() {}
-		virtual void deactive() {}
+		virtual void deActive() {}
 
 	protected:
 		util::WeakPtr<Entity>			m_pEntity;

@@ -5,7 +5,7 @@
 #include <Source/Framework/Component/ComponentFactory.h>
 #include <Source/Utility/Singleton.h>
 
-#define SGLT_ENTITYMANAGER framework::EntityManager::getInstance()
+#define SGLT_ENTITY_MANAGER framework::EntityManager::getInstance()
 
 namespace framework {
 	class EntityManager: public util::Singleton<EntityManager>

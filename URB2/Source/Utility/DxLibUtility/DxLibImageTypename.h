@@ -7,5 +7,6 @@ namespace util {
 	using image_t	= int;
 	using pshader_t	= int;
 	using vertex_t	= VERTEX2DSHADER;
+	using screen_t	= int;
 }
 

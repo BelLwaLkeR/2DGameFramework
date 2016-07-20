@@ -4,6 +4,7 @@
 #include <Source/Framework/Define.h>
 #include <Source/Framework/Entity/EntityManager.h>
 #include <Source/Framework/Component/ComponentNameList.h>
+#include <Source/Framework/Renderer/ImageRenderer/Shader/ShaderManager.h>
 
 framework::GameApplication::GameApplication(){
 }
@@ -16,19 +17,19 @@ void framework::GameApplication::run(){
 }
 
 void framework::GameApplication::initialize(){
-//	sceneManager.load("testScene");
-	util::WeakPtr<framework::Entity> entity = SGLT_ENTITYMANAGER->addEntity();
+	SGLT_SHADER_MANAGER->initialize();
+	util::WeakPtr<framework::Entity> entity = SGLT_ENTITY_MANAGER->addEntity();
 	entity->addComponent("ControllMove");
-	entity->addComponent("DrawRectangle");
+	entity->addComponent("DrawTestRobot");
 }
 
 void framework::GameApplication::update(){
 	SGLT_INPUTMANAGER->update();
-	SGLT_TASKMANAGER->updateTask();
+	SGLT_TASK_MANAGER->updateTask();
 }
 
 void framework::GameApplication::draw(){
-	SGLT_TASKMANAGER->drawTask();
+	SGLT_TASK_MANAGER->drawTask();
 }
 
 void framework::GameApplication::finalize(){

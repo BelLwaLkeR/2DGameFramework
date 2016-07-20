@@ -12,12 +12,12 @@ framework::UpdateComponent::~UpdateComponent(){
 
 void framework::UpdateComponent::active(){
 	util::WeakPtr<UpdateComponent> updateTask = m_pEntity->getComponentCast<UpdateComponent>(this);
-	SGLT_TASKMANAGER->addUpdateTask(updateTask);
+	SGLT_TASK_MANAGER->addUpdateTask(updateTask);
 }
 
 void framework::UpdateComponent::deActive(){
 	util::WeakPtr<UpdateComponent> updateTask = m_pEntity->getComponentCast<UpdateComponent>(this);
-	SGLT_TASKMANAGER->removeUpdateTask(updateTask);
+	SGLT_TASK_MANAGER->removeUpdateTask(updateTask);
 }
 
 

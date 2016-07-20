@@ -92,6 +92,10 @@ namespace util {
 			return m_pPtr.lock();
 		}
 
+		T&	operator*() const {
+			return *m_pPtr.lock();
+		}
+
 		std::weak_ptr<T> m_pPtr;
 	};
 

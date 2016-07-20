@@ -7,7 +7,7 @@ util::ImageData::ImageData(){
 }
 
 util::ImageData::ImageData(WeakPtr<Vector2> pPosition, const std::string & imageName, const Vector2 & oneImageSize, int imageNum){
-	m_Image			= util::DxLibImageLoader::loadImageDiv(IMAGEDATA_DIR + imageName + TEXTURE_FOOTER		, oneImageSize, imageNum);
+	m_Texture			= util::DxLibImageLoader::loadImageDiv(IMAGEDATA_DIR + imageName + TEXTURE_FOOTER		, oneImageSize, imageNum);
 	m_NormalMap		= util::DxLibImageLoader::loadImageDiv(IMAGEDATA_DIR + imageName + NORMALMAP_FOOTER		, oneImageSize, imageNum);
 	m_ReflectionMap	= util::DxLibImageLoader::loadImageDiv(IMAGEDATA_DIR + imageName + REFLECTIONMAP_FOOTER	, oneImageSize, imageNum);
 	m_Size			= oneImageSize;
@@ -15,9 +15,25 @@ util::ImageData::ImageData(WeakPtr<Vector2> pPosition, const std::string & image
 	setup();
 }
 
-util::vertex_t* util::ImageData::getVertexPointer(){
+util::vertex_t* util::ImageData::getVertexPointer() const{
 	reloadVertex();
 	return &m_Vertex[0];
+}
+
+const util::image_t & util::ImageData::getTexture(){
+	return m_Texture[0];
+}
+
+const util::image_t & util::ImageData::getNormalMap(){
+	return m_NormalMap[0];
+}
+
+const util::image_t & util::ImageData::getReflectionMap(){
+	return m_ReflectionMap[0];
+}
+
+const util::Vector2 & util::ImageData::getSize(){
+	return m_Size;
 }
 
 void util::ImageData::setup(){
@@ -32,7 +48,7 @@ void util::ImageData::setup(){
 	}
 }
 
-void util::ImageData::reloadVertex(){
+void util::ImageData::reloadVertex() const{
 	for (int i = 0; i < 6; ++i) {
 		m_Vertex[i].pos = VGet((i % 2)*m_Size.getIntX() + m_pPosition->getIntX(), (((i + 1)/3)%2)*m_Size.getIntY() +m_pPosition->getIntY(), 0);
 	}

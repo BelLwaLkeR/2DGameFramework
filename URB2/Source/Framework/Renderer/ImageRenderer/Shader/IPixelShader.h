@@ -5,12 +5,14 @@
 namespace framework {
 	class IPixelShader{
 	public:
-		IPixelShader()	{}
-		~IPixelShader()	{}
-
+		IPixelShader();
+		IPixelShader(util::WeakPtr<util::Vector2> pPosition);
+		~IPixelShader();
+		void setPixelShader(util::WeakPtr<util::Vector2> pPosition);
+		virtual void attachShader(util::SharedPtr<util::ImageData>* targetImage) = 0;
 
 	private:
-		util::WeakPtr<util::ImageData> test;
+		util::WeakPtr<util::Vector2> m_pPosition;
 	};
 }
 

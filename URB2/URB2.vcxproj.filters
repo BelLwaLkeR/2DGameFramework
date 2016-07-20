@@ -60,13 +60,7 @@
     <ClCompile Include="Source\Framework\Component\Component.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Component\ControllMove.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Framework\Component\DrawComponent.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Component\DrawRectangle.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Source\Framework\Scene\SceneManager.cpp">
@@ -120,9 +114,6 @@
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\LightingAggregate.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderFactory.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Framework\Component\LightComponent.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -130,6 +121,30 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Source\Utility\Type\ImageData.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\DxLibDrawShader.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\IPixelShader.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Scren.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\ImageRenderer.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Component\Draw\DrawRectangle.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Component\Draw\DrawTestRobot.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Component\UPdate\ControllMove.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderManager.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -221,19 +236,10 @@
     <ClInclude Include="Source\Framework\Component\ComponentCreator.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Component\ControllMove.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Component\DrawRectangle.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\DxLibImageRenderer.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Framework\Renderer\SoundRenderer\DxLibSoundRenderer.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\ImageRenderer.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Framework\Scene\SceneManager.h">
@@ -305,12 +311,6 @@
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\LightingAggregate.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderFactory.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Component\DrawNormalMap.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Framework\Component\LightComponent.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -321,6 +321,24 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Utility\Type\ImageData.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderManager.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Screen.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\ImageRenderer.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Component\Draw\DrawRectangle.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Component\Draw\DrawTestRobot.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Component\UPdate\ControllMove.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
