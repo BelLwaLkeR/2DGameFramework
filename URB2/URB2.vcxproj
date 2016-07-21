@@ -76,6 +76,14 @@
     <IncludePath>D:\Users\BelL\Documents\visual studio 2015\Library\DxLib;$(ProjectDir);$(SolutionDir)Library\DxLib\;$(IncludePath)</IncludePath>
     <LibraryPath>D:\Users\BelL\Documents\visual studio 2015\Library\DxLib;$(SolutionDir)Library\DxLib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)Library\DxLib;$(ProjectDir);</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;$(SolutionDir)Library\DxLib;</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)Library\DxLib;$(ProjectDir);</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;$(SolutionDir)Library\DxLib;</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -89,6 +97,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -112,6 +121,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -123,8 +133,10 @@
     <ClCompile Include="Source\Component\Draw\DrawTestRobot.cpp" />
     <ClCompile Include="Source\Component\UPdate\ControllMove.cpp" />
     <ClCompile Include="Source\Component\Draw\DrawRectangle.cpp" />
+    <ClCompile Include="Source\Component\Update\Torch.cpp" />
     <ClCompile Include="Source\Framework\Application\DxLibApplication.cpp" />
     <ClCompile Include="Source\Framework\Application\GameApplication.cpp" />
+    <ClCompile Include="Source\Framework\Application\GlobalParameters.cpp" />
     <ClCompile Include="Source\Framework\Component\Component.cpp" />
     <ClCompile Include="Source\Framework\Component\ComponentFactory.cpp" />
     <ClCompile Include="Source\Framework\Component\DrawComponent.cpp" />
@@ -140,15 +152,15 @@
     <ClCompile Include="Source\Framework\Device\Input\Keyboard\Keyboard.cpp" />
     <ClCompile Include="Source\Framework\Entity\Entity.cpp" />
     <ClCompile Include="Source\Framework\Entity\EntityManager.cpp" />
+    <ClCompile Include="Source\Framework\Level\LevelManager.cpp" />
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\DxLibImageRenderer.cpp" />
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\ImageRenderer.cpp" />
-    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Scren.cpp" />
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Screen.cpp" />
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\LightingAggregate.cpp" />
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\NormalMapLighting.cpp" />
-    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\DxLibDrawShader.cpp" />
+    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\DxLibShader.cpp" />
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\IPixelShader.cpp" />
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\NormalMapShader.cpp" />
-    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\PixelShader.cpp" />
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderManager.cpp" />
     <ClCompile Include="Source\Framework\Scene\SceneManager.cpp" />
     <ClCompile Include="Source\Framework\Task\TaskManager.cpp" />
@@ -168,9 +180,11 @@
     <ClInclude Include="Source\Component\UPdate\ControllMove.h" />
     <ClInclude Include="Source\Component\Draw\DrawRectangle.h" />
     <ClInclude Include="Source\Component\Draw\DrawTestRobot.h" />
+    <ClInclude Include="Source\Component\Update\Torch.h" />
     <ClInclude Include="Source\Framework\Application\BaseApplication.h" />
     <ClInclude Include="Source\Framework\Application\GameApplication.h" />
     <ClInclude Include="Source\Framework\Application\DxLibApplication.h" />
+    <ClInclude Include="Source\Framework\Application\GlobalParameters.h" />
     <ClInclude Include="Source\Framework\Component\Component.h" />
     <ClInclude Include="Source\Framework\Component\ComponentFactory.h" />
     <ClInclude Include="Source\Framework\Component\ComponentCreator.h" />
@@ -196,6 +210,8 @@
     <ClInclude Include="Source\Framework\Entity\Entity.h" />
     <ClInclude Include="Source\Framework\Entity\EntityInfomation.h" />
     <ClInclude Include="Source\Framework\Entity\EntityManager.h" />
+    <ClInclude Include="Source\Framework\Level\ILevel.h" />
+    <ClInclude Include="Source\Framework\Level\LevelManager.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\DxLibImageRenderer.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\eDrawLayer.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\ImageRenderer.h" />
@@ -203,9 +219,8 @@
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Light.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\LightingAggregate.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\NormalMapLighting.h" />
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\DxLibDrawShader.h" />
+    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\DxLibShader.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\IPixelShader.h" />
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\PixelShader.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\NormalMapShader.h" />
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderManager.h" />
     <ClInclude Include="Source\Framework\Renderer\SoundRenderer\DxLibSoundRenderer.h" />
@@ -227,7 +242,6 @@
     <ClInclude Include="Source\Utility\Type\Hash.h" />
     <ClInclude Include="Source\Utility\Singleton.h" />
     <ClInclude Include="Source\Utility\SmartPtr.h" />
-    <ClInclude Include="Source\Framework\Window\Screen.h" />
     <ClInclude Include="Source\Framework\Window\WindowConfig.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -10,6 +10,7 @@
 #define SCREEN_HEIGHT			720
 
 #define EMPTY_VALUE				-1
+#define INTCOLOR_MAX			255
 
 #define USE_KEYBOARD_NUM		1
 #define USE_PAD_NUM				12

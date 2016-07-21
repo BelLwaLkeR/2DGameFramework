@@ -9,7 +9,7 @@
 #include <Source/Framework/Device/Input/GamePad/GamePadAggregate.h>
 #include <Source/Utility/Singleton.h>
 
-#define SGLT_INPUTMANAGER framework::InputManager::getInstance()
+#define SGLT_INPUT_MANAGER framework::InputManager::getInstance()
 
 namespace framework {
 	class IInputDevice;

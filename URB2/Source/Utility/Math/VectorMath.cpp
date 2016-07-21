@@ -1,13 +1,8 @@
 #include "VectorMath.h"
 #include <Source/Utility/Type/Vector2.h>
 
-void test(const util::Vector2& test) {
-
-}
-
-
 util::Vector2 util::VectorMath::normalize(const util::Vector2 & vector){
-	if (vector == Vector2::zero()) { return Vector2(); }
+	if (vector == Vector2::Zero()) { return Vector2(); }
 	return vector / (float)length(vector);
 }
 

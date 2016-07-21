@@ -20,21 +20,26 @@ util::vertex_t* util::ImageData::getVertexPointer() const{
 	return &m_Vertex[0];
 }
 
-const util::image_t & util::ImageData::getTexture(){
+const util::image_t & util::ImageData::getTexture() const{
 	return m_Texture[0];
 }
 
-const util::image_t & util::ImageData::getNormalMap(){
+const util::image_t & util::ImageData::getNormalMap() const{
 	return m_NormalMap[0];
 }
 
-const util::image_t & util::ImageData::getReflectionMap(){
+const util::image_t & util::ImageData::getReflectionMap() const{
 	return m_ReflectionMap[0];
 }
 
-const util::Vector2 & util::ImageData::getSize(){
+const util::Vector2 & util::ImageData::getSize() const{
 	return m_Size;
 }
+
+const util::Vector2 & util::ImageData::getPosition() const{
+	return *m_pPosition;
+}
+
 
 void util::ImageData::setup(){
 	for (int i = 0; i < 6; ++i) {

@@ -1,21 +1,21 @@
 #pragma once
-#include <Source/Framework/Component/UpdateComponent.h>
+
+#include <Source/Utility/SmartPtr.h>
+#include <Source/Utility/Type/Vector2.h>
 #include <Source/Utility/Type/Color.h>
 
 namespace framework{
 	struct Light;
-	class LightComponent: framework::UpdateComponent{
+	class LightComponent{
 	public:
 		LightComponent();
-		LightComponent(const util::Color& color, float intencity);
 		~LightComponent();
 
-
-
-	protected:
-		util::SharedPtr<Light> m_pLight;
+		void initialize(util::WeakPtr<util::Vector2> pPosition, const util::Color color, float intencity);
 
 	private:
+		util::SharedPtr<Light>			m_pLight;
+		util::WeakPtr<util::Vector2>	m_pPosition;
 
 	};
 

@@ -9,7 +9,7 @@
 #include <Source/Utility/SmartPtr.h>
 #include <Source/Utility/StringEditor.h>
 
-#define SGLT_COMPONENTFACTORY framework::ComponentFactory::getInstance()
+#define SGLT_COMPONENT_FACTORY framework::ComponentFactory::getInstance()
 
 namespace framework {
 	#define CREATE_COMPONENT_TYPE(namespace_less_type) util::makeShared<ComponentCreator<namespace_less_type>>()

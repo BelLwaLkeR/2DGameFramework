@@ -48,6 +48,10 @@ void framework::DxLibImageRenderer::clearScreen(){
 	ClearDrawScreen();
 }
 
+void framework::DxLibImageRenderer::screenFlip(){
+	ScreenFlip();
+}
+
 
 
 

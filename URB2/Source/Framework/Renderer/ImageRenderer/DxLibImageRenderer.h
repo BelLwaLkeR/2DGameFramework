@@ -19,6 +19,7 @@ namespace framework {
 		static void setScreenAplicationBack();
 		static void standbyScreenApplicationBack();
 		static void clearScreen();
+		static void screenFlip();
 	};
 
 

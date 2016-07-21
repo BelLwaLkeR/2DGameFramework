@@ -4,12 +4,28 @@
 	
  }
 
- util::Vector2 util::Vector2::zero() {
-	return Vector2();
+ util::Vector2 util::Vector2::Zero() {
+	return {0, 0};
 }
 
-util::Vector2 util::Vector2::one() {
-	return util::Vector2(1.f, 1.f);
+util::Vector2 util::Vector2::One() {
+	return {1, 1};
+}
+
+util::Vector2 util::Vector2::Left(){
+	return {-1, 0};
+}
+
+util::Vector2 util::Vector2::Right(){
+	return {1, 0};
+}
+
+util::Vector2 util::Vector2::Top(){
+	return {0, -1};
+}
+
+util::Vector2 util::Vector2::Bottom(){
+	return {0, 1};
 }
 
 int	util::Vector2::getIntX() const{

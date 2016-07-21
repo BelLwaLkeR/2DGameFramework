@@ -5,6 +5,9 @@
 #include <Source/Framework/Entity/EntityManager.h>
 #include <Source/Framework/Component/ComponentNameList.h>
 #include <Source/Framework/Renderer/ImageRenderer/Shader/ShaderManager.h>
+#include <Source/Component/Draw/DrawTestRobot.h>
+#include <Source/Component/Update/Torch.h>
+
 
 framework::GameApplication::GameApplication(){
 }
@@ -18,14 +21,20 @@ void framework::GameApplication::run(){
 
 void framework::GameApplication::initialize(){
 	SGLT_SHADER_MANAGER->initialize();
-	util::WeakPtr<framework::Entity> entity = SGLT_ENTITY_MANAGER->addEntity({ "testObject", "player", 0, { 500, 500 } });
+	SGLT_TASK_MANAGER->initialize();
+	util::WeakPtr<framework::Entity> player = SGLT_ENTITY_MANAGER->addEntity({ "testObject", "player", 0, { 500, 500 } });
 //	const std::string& name, const util::Hash& hash, unsigned int id, const util::Vector2& position;
-	entity->addComponent("ControllMove");
-	entity->addComponent("DrawTestRobot");
+	player->addComponent("ControllMove");
+	player->addComponent("DrawTestRobot");
+	player->addComponent("Torch");
+
+	util::WeakPtr<framework::Entity> TreasureBox = SGLT_ENTITY_MANAGER->addEntity({ "testObject", "Object", 0,{ 500, 200 } });
+	TreasureBox->addComponent("DrawTestRobot");
+
 }
 
 void framework::GameApplication::update(){
-	SGLT_INPUTMANAGER->update();
+	SGLT_INPUT_MANAGER->update();
 	SGLT_TASK_MANAGER->updateTask();
 }
 
@@ -40,7 +49,7 @@ void framework::GameApplication::finalize(){
 bool framework::GameApplication::isEnd(){
 	bool isEnd = false;
 #ifdef DEBUG_MODE
-	isEnd |= SGLT_INPUTMANAGER->isKeyDown(eInputCode::EXIT).any();
+	isEnd |= SGLT_INPUT_MANAGER->isKeyDown(eInputCode::EXIT).any();
 #else
 #endif
 	return isEnd;

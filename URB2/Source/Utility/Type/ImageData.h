@@ -9,11 +9,12 @@ namespace util {
 	public:
 		ImageData();
 		ImageData(util::WeakPtr<util::Vector2> pPosition, const std::string& imageName, const Vector2& oneImageSize = {0, 0}, int imageNum = 0);
-		vertex_t*	getVertexPointer() const;
-		const util::image_t& getTexture();
-		const util::image_t& getNormalMap();
-		const util::image_t& getReflectionMap();
-		const util::Vector2& getSize();
+		vertex_t*	getVertexPointer()			const;
+		const util::image_t& getTexture()		const;
+		const util::image_t& getNormalMap()		const;
+		const util::image_t& getReflectionMap()	const;
+		const util::Vector2& getSize()			const;
+		const util::Vector2& getPosition()		const;
 
 	private:
 		void setup();

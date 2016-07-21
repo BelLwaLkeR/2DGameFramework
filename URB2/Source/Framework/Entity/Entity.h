@@ -39,7 +39,7 @@ namespace framework {
 	public:
 		template<typename ComponentType>
 		void addComponent() {
-			util::WeakPtr<Component> component = SGLT_COMPONENTFACTORY->createComponent<ComponentType>();
+			util::WeakPtr<Component> component = SGLT_COMPONENT_FACTORY->createComponent<ComponentType>();
 			if (!component.lock()) {
 				assert(!"コンポーネントが見つかりません。");
 				return;

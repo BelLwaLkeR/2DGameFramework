@@ -1,0 +1,136 @@
+﻿  main.cpp
+  DrawTestRobot.cpp
+  ControllMove.cpp
+  DrawRectangle.cpp
+  Torch.cpp
+  DxLibApplication.cpp
+  GameApplication.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(655): error C2664: 'std::shared_ptr<framework::Component>::shared_ptr(std::shared_ptr<framework::Component> &&) noexcept': 引数 1 を 'util::WeakPtr<framework::Component>' から 'std::nullptr_t' へ変換できません。
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(655): note: nullptr は、ポインターまたはハンドル型にのみ変換できます
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(773): note: コンパイル対象の関数 テンプレート インスタンス化 'void std::allocator<_Other>::construct<_Objty,util::WeakPtr<framework::Component>&>(_Objty *,util::WeakPtr<framework::Component> &)' のリファレンスを確認してください
+          with
+          [
+              _Other=std::_List_node<std::shared_ptr<framework::Component>,void *>,
+              _Objty=std::shared_ptr<framework::Component>
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(773): note: コンパイル対象の関数 テンプレート インスタンス化 'void std::allocator<_Other>::construct<_Objty,util::WeakPtr<framework::Component>&>(_Objty *,util::WeakPtr<framework::Component> &)' のリファレンスを確認してください
+          with
+          [
+              _Other=std::_List_node<std::shared_ptr<framework::Component>,void *>,
+              _Objty=std::shared_ptr<framework::Component>
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(918): note: コンパイル対象の関数 テンプレート インスタンス化 'void std::allocator_traits<_Alloc>::construct<_Ty,util::WeakPtr<framework::Component>&>(std::allocator<_Other> &,_Objty *,util::WeakPtr<framework::Component> &)' のリファレンスを確認してください
+          with
+          [
+              _Alloc=std::allocator<std::_List_node<std::shared_ptr<framework::Component>,void *>>,
+              _Ty=std::shared_ptr<framework::Component>,
+              _Other=std::_List_node<std::shared_ptr<framework::Component>,void *>,
+              _Objty=std::shared_ptr<framework::Component>
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(917): note: コンパイル対象の関数 テンプレート インスタンス化 'void std::allocator_traits<_Alloc>::construct<_Ty,util::WeakPtr<framework::Component>&>(std::allocator<_Other> &,_Objty *,util::WeakPtr<framework::Component> &)' のリファレンスを確認してください
+          with
+          [
+              _Alloc=std::allocator<std::_List_node<std::shared_ptr<framework::Component>,void *>>,
+              _Ty=std::shared_ptr<framework::Component>,
+              _Other=std::_List_node<std::shared_ptr<framework::Component>,void *>,
+              _Objty=std::shared_ptr<framework::Component>
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\list(834): note: コンパイル対象の関数 テンプレート インスタンス化 'void std::_Wrap_alloc<std::allocator<_Other>>::construct<_Ty,util::WeakPtr<framework::Component>&>(_Ty *,util::WeakPtr<framework::Component> &)' のリファレンスを確認してください
+          with
+          [
+              _Other=std::_List_node<std::shared_ptr<framework::Component>,void *>,
+              _Ty=std::shared_ptr<framework::Component>
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\list(832): note: コンパイル対象の関数 テンプレート インスタンス化 'void std::_Wrap_alloc<std::allocator<_Other>>::construct<_Ty,util::WeakPtr<framework::Component>&>(_Ty *,util::WeakPtr<framework::Component> &)' のリファレンスを確認してください
+          with
+          [
+              _Other=std::_List_node<std::shared_ptr<framework::Component>,void *>,
+              _Ty=std::shared_ptr<framework::Component>
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\list(1062): note: コンパイル対象の関数 テンプレート インスタンス化 'std::_List_node<std::shared_ptr<framework::Component>,void *> *std::_List_buy<_Ty,_Alloc>::_Buynode<util::WeakPtr<framework::Component>&>(std::_List_node<std::shared_ptr<framework::Component>,void *> *,std::_List_node<std::shared_ptr<framework::Component>,void *> *,util::WeakPtr<framework::Component> &)' のリファレンスを確認してください
+          with
+          [
+              _Ty=std::shared_ptr<framework::Component>,
+              _Alloc=std::allocator<std::shared_ptr<framework::Component>>
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\list(1061): note: コンパイル対象の関数 テンプレート インスタンス化 'std::_List_node<std::shared_ptr<framework::Component>,void *> *std::_List_buy<_Ty,_Alloc>::_Buynode<util::WeakPtr<framework::Component>&>(std::_List_node<std::shared_ptr<framework::Component>,void *> *,std::_List_node<std::shared_ptr<framework::Component>,void *> *,util::WeakPtr<framework::Component> &)' のリファレンスを確認してください
+          with
+          [
+              _Ty=std::shared_ptr<framework::Component>,
+              _Alloc=std::allocator<std::shared_ptr<framework::Component>>
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\list(1040): note: コンパイル対象の関数 テンプレート インスタンス化 'void std::list<std::shared_ptr<framework::Component>,std::allocator<_Ty>>::_Insert<util::WeakPtr<framework::Component>&>(std::_List_unchecked_const_iterator<std::_List_val<std::_List_simple_types<_Ty>>,std::_Iterator_base0>,util::WeakPtr<framework::Component> &)' のリファレンスを確認してください
+          with
+          [
+              _Ty=std::shared_ptr<framework::Component>
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\list(1040): note: コンパイル対象の関数 テンプレート インスタンス化 'void std::list<std::shared_ptr<framework::Component>,std::allocator<_Ty>>::_Insert<util::WeakPtr<framework::Component>&>(std::_List_unchecked_const_iterator<std::_List_val<std::_List_simple_types<_Ty>>,std::_Iterator_base0>,util::WeakPtr<framework::Component> &)' のリファレンスを確認してください
+          with
+          [
+              _Ty=std::shared_ptr<framework::Component>
+          ]
+  C:\Users\GSGuest\Desktop\URB2\URB2\Source/Framework/Entity/Entity.h(48): note: コンパイル対象の関数 テンプレート インスタンス化 'void std::list<std::shared_ptr<framework::Component>,std::allocator<_Ty>>::emplace_back<util::WeakPtr<framework::Component>&>(util::WeakPtr<framework::Component> &)' のリファレンスを確認してください
+          with
+          [
+              _Ty=std::shared_ptr<framework::Component>
+          ]
+  C:\Users\GSGuest\Desktop\URB2\URB2\Source/Framework/Entity/Entity.h(48): note: コンパイル対象の関数 テンプレート インスタンス化 'void std::list<std::shared_ptr<framework::Component>,std::allocator<_Ty>>::emplace_back<util::WeakPtr<framework::Component>&>(util::WeakPtr<framework::Component> &)' のリファレンスを確認してください
+          with
+          [
+              _Ty=std::shared_ptr<framework::Component>
+          ]
+  Source\Framework\Application\GameApplication.cpp(27): note: コンパイル対象の関数 テンプレート インスタンス化 'void framework::Entity::addComponent<component::ControllMove>(void)' のリファレンスを確認してください
+  GlobalParameters.cpp
+  Component.cpp
+  ComponentFactory.cpp
+  DrawComponent.cpp
+  LightComponent.cpp
+  UpdateComponent.cpp
+  DxLibGamePad.cpp
+  DxLibGamePadInfomation.cpp
+  GamePad.cpp
+Source\Framework\Device\Input\GamePad\GamePad.cpp(52): warning C4244: '引数': 'double' から '_ULonglong' への変換です。データが失われる可能性があります。
+Source\Framework\Device\Input\GamePad\GamePad.cpp(56): warning C4244: '引数': 'double' から '_ULonglong' への変換です。データが失われる可能性があります。
+  GamePadInfomationMediator.cpp
+  GamePadAggregate.cpp
+  InputManager.cpp
+Source\Framework\Device\Input\InputManager.cpp(61): warning C4244: '引数': 'double' から '_ULonglong' への変換です。データが失われる可能性があります。
+Source\Framework\Device\Input\InputManager.cpp(65): warning C4244: '引数': 'double' から '_ULonglong' への変換です。データが失われる可能性があります。
+Source\Framework\Device\Input\InputManager.cpp(70): warning C4244: '引数': 'double' から '_ULonglong' への変換です。データが失われる可能性があります。
+Source\Framework\Device\Input\InputManager.cpp(74): warning C4244: '引数': 'double' から '_ULonglong' への変換です。データが失われる可能性があります。
+  DxLibKeyboard.cpp
+  コンパイル中...
+  Keyboard.cpp
+Source\Framework\Device\Input\Keyboard\Keyboard.cpp(55): warning C4244: '引数': 'double' から '_ULonglong' への変換です。データが失われる可能性があります。
+Source\Framework\Device\Input\Keyboard\Keyboard.cpp(59): warning C4244: '引数': 'double' から '_ULonglong' への変換です。データが失われる可能性があります。
+  Entity.cpp
+  EntityManager.cpp
+  LevelManager.cpp
+  DxLibImageRenderer.cpp
+  ImageRenderer.cpp
+  Screen.cpp
+  LightingAggregate.cpp
+  NormalMapLighting.cpp
+  DxLibShader.cpp
+Source\Framework\Renderer\ImageRenderer\Shader\DxLibShader.cpp(45): warning C4267: '初期化中': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+  IPixelShader.cpp
+  NormalMapShader.cpp
+  ShaderManager.cpp
+  SceneManager.cpp
+  TaskManager.cpp
+  ImageLoader.cpp
+  DxLibImageLoader.cpp
+  DxLibLoader.cpp
+  FPSManager.cpp
+  Math.cpp
+Source\Utility\Math\Math.cpp(6): warning C4305: '初期化中': 'double' から 'float' へ切り詰めます。
+Source\Utility\Math\Math.cpp(10): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  コンパイル中...
+  VectorMath.cpp
+  StringEditor.cpp
+  Color.cpp
+  Hash.cpp
+  ImageData.cpp
+Source\Utility\Type\ImageData.cpp(58): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+Source\Utility\Type\ImageData.cpp(59): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+  Vector2.cpp

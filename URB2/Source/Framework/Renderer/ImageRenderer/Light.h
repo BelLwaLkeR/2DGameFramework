@@ -11,10 +11,20 @@ namespace framework {
 		float			intencity;
 
 		Light() {}
+		Light(util::WeakPtr<util::Vector2> pPosition) {
+			this->pPosition = pPosition;
+		}
 		Light(util::WeakPtr<util::Vector2> pPosition, const util::Color& color, float intencity) {
 			this->pPosition	= pPosition;
 			this->color		= color;
 			this->intencity	= intencity;
 		}
+
+		void setup(util::WeakPtr<util::Vector2> pPosition, const util::Color& color, float intencity) {
+			this->pPosition	= pPosition;
+			this->color		= color;
+			this->intencity	= intencity;
+		}
+
 	};
 }

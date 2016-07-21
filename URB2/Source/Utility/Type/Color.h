@@ -2,20 +2,17 @@
 
 namespace util {
 	struct Color{
-		int r;
-		int g;
-		int b;
-		int a;
+		int R;
+		int G;
+		int B;
+		int A;
 
-		float getRedF();
-		float getGreenF();
-		float getBlueF();
-		float getAlphaF();
+		float getRedF()		const;
+		float getGreenF()	const;
+		float getBlueF()	const;
+		float getAlphaF()	const;
 
 		void setup(int red, int green, int blue, int alpha = 255);
 		void setFromFloat(float red, float green, float blue, float alpha = 1.f);
-
-	private:
-		static const int maxValue;
 	};
 }

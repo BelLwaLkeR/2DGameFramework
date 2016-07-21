@@ -13,14 +13,7 @@ namespace framework {
 	public:
 		NormalMapShader();
 		~NormalMapShader();
-		void changeImageData(util::WeakPtr<util::ImageData> pImageData);
 		virtual void attachShader(util::SharedPtr<util::ImageData>* targetImage) override;
-
-	private:
-		util::WeakPtr<util::ImageData> m_pImageData;
-		void setup();
-		void drawBegin();
-		void drawEnd();
 	};
 
 }

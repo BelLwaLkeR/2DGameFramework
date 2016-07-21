@@ -26,7 +26,7 @@ void framework::DxLibApplication::run(){
 	setup();
 	initialize();
 	while (!isApplicationEnd() && !isEnd()) {
-		refreshScreen();
+//		refreshScreen();
 		update();
 		draw();
 		adjustFPS();
@@ -39,7 +39,6 @@ void framework::DxLibApplication::setupWindow(const WindowConfig& windowConfig){
 	SetMainWindowText(windowConfig.title.c_str());
 	SetGraphMode(windowConfig.width, windowConfig.height, windowConfig.colorBit);
 	ChangeWindowMode(!windowConfig.isFullScreen);
-	SetDrawScreen(DX_SCREEN_BACK);
 
 }
 

@@ -16,7 +16,7 @@ void framework::Entity::setMyself(util::WeakPtr<Entity> pMyselfEntity){
 }
 
 void framework::Entity::addComponent(const std::string & componentName){
-	util::SharedPtr<Component> component = SGLT_COMPONENTFACTORY->createComponent(componentName);
+	util::SharedPtr<Component> component = SGLT_COMPONENT_FACTORY->createComponent(componentName);
 	m_pComponentList.emplace_back(component);
 	component->setup(m_pEntity, m_pInfomation->pPosition);
 	component->active();
