@@ -3,9 +3,15 @@
 #include <Source/Utility/Type/Vector2.h>
 #include <Source/Utility/Type/Color.h>
 
+/**
+* @class		Light
+* @namespace	framework
+* @brief		ポイントライトクラス
+* @author		大森 健司
+*/
+
 namespace framework {
-	struct Light
-	{
+	struct Light{
 		util::WeakPtr<util::Vector2>	pPosition;
 		util::Color		color;
 		float			intencity;

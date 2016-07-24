@@ -5,6 +5,13 @@
 #include <Source/Framework/Define.h>
 #include <Source/Framework/Device/Input/eInputCode.h>
 
+/**
+* @class		GamePadAggregate
+* @namespace	framework
+* @brief		複数のゲームパッドをまとめる
+* @author		大森 健司
+*/
+
 namespace framework {
 	class IInputDevice;
 	class GamePad;

@@ -3,6 +3,13 @@
 #include <Source/Framework/Window/WindowConfig.h>
 #include <Source/Framework/Define.h>
 
+/**
+* @file			DxLibApplication.cpp
+* @namespace	framework
+* @brief		DxLibを用いたメインループの原型。
+* @author		大森 健司
+*/
+
 
 framework::DxLibApplication::DxLibApplication(){
 
@@ -26,7 +33,6 @@ void framework::DxLibApplication::run(){
 	setup();
 	initialize();
 	while (!isApplicationEnd() && !isEnd()) {
-//		refreshScreen();
 		update();
 		draw();
 		adjustFPS();
@@ -70,7 +76,8 @@ void framework::DxLibApplication::setup(){
 
 }
 
-void framework::DxLibApplication::refreshScreen(){
-	ScreenFlip();
-	ClearDrawScreen();
-}
+
+
+
+
+

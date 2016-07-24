@@ -6,6 +6,23 @@
 #include <Source/Framework/Renderer/ImageRenderer/Shader/IPixelShader.h>
 #include <Source/Utility/Type/Vector2.h>
 
+/**
+* @struct		ImageParameters
+* @namespace	framework
+* @brief		画像用のパラメータ
+* @author		大森 健司
+*/
+
+
+/**
+* @class		DrawComponent
+* @inheritance	Component
+* @namespace	framework
+* @brief		描画用コンポーネントを生成する
+* @author		大森 健司
+*/
+
+
 namespace framework {
 	struct ImageParameters {
 		eDrawLayer		layer;

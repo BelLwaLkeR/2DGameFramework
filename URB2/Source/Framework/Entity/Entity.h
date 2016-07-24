@@ -7,6 +7,13 @@
 #include <Source/Framework/Define.h>
 #include <algorithm>
 
+/**
+* @class		Entity
+* @namespace	framework
+* @brief		コンポーネントをアタッチするためのクラス
+* @author		大森 健司
+*/
+
 namespace framework {
 	class Component;
 	class Entity{

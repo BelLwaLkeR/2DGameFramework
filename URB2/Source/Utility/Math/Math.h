@@ -1,9 +1,16 @@
 #pragma once
 #include <cassert>
 
+/**
+* @class		Math
+* @namespace	util
+* @brief		汎用的な計算クラス
+* @author		大森 健司
+*/
+
+
 namespace util {
-	class Math
-	{
+	class Math{
 	public:
 		Math()	{}
 		~Math()	{}
@@ -19,7 +26,6 @@ namespace util {
 		static void swapMinMax(T* min, T* max);
 		template<typename T>
 		static bool isFall(const T& value, const T& min, const T& max);
-
 	};
 
 

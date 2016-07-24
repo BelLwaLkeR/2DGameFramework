@@ -4,6 +4,13 @@
 #include <Source/Utility/Type/Vector2.h>
 #include <Source/Utility/Type/Hash.h>
 
+/**
+* @class		EntityInfomation
+* @namespace	framework
+* @brief		Entity‚Ìî•ñ‚ğ‚Ü‚Æ‚ß‚½ƒNƒ‰ƒX
+* @author		‘åX Œ’i
+*/
+
 namespace framework {
 	struct EntityInfomation {
 		std::string		name;

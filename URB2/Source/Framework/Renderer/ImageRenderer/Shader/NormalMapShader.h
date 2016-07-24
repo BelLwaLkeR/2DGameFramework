@@ -3,6 +3,14 @@
 #include <Source/Framework/Renderer/ImageRenderer/Shader/IPixelShader.h>
 #include <Source/Utility/SmartPtr.h>
 
+/**
+* @class		NormalMapShader
+* @inheritance	IPixelShader
+* @namespace	framework
+* @brief		ノーマルマップシェーダクラス
+* @author		大森 健司
+*/
+
 namespace util {
 	class ImageData;
 }
@@ -14,6 +22,13 @@ namespace framework {
 		NormalMapShader();
 		~NormalMapShader();
 		virtual void attachShader(util::SharedPtr<util::ImageData>* targetImage) override;
+		virtual void deleteShader() override;
+
+	private:
+		util::pshader_t m_Shader;
+
+
+
 	};
 
 }

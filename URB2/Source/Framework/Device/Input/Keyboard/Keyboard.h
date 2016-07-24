@@ -5,6 +5,14 @@
 #include <Source/Framework/Device/Input/Keyboard/DxLibKeyboard.h>
 #include <Source/Framework/Device/Input/IInputDevice.h>
 
+/**
+* @class		Keyboard
+* @inheritance	IInputDevice
+* @namespace	framework
+* @brief		キーボードクラス
+* @author		大森 健司
+*/
+
 namespace framework {
 	class Keyboard: public IInputDevice{
 	public:

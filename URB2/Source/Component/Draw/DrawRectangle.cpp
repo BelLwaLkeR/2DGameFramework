@@ -12,7 +12,6 @@ component::DrawRectangle::~DrawRectangle(){
 }
 
 void component::DrawRectangle::draw(){
-
 	int width		= 20;
 	int height		= 20;
 	int posTop		= m_pPosition->getIntY() - height / 2;

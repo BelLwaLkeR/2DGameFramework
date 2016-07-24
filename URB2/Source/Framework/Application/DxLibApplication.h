@@ -3,6 +3,14 @@
 #include <DxLib.h>
 #include <Source/Utility/FPSManager.h>
 
+/**
+* @class		DxLibApplication
+* @namespace	framework
+* @brief		DxLibを用いたメインループの原型。
+* @author		大森 健司
+*/
+
+
 namespace framework {
 	struct WindowConfig;
 
@@ -26,7 +34,6 @@ namespace framework {
 	private:
 
 		void setup();
-		void refreshScreen();
 		bool isApplicationEnd();
 		void teardown();
 		void setupWindow(const WindowConfig& windowConfig);

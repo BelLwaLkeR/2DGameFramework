@@ -1,5 +1,12 @@
 #pragma once
 
+/**
+* @enum			eInputDeviceCode
+* @namespace	framework
+* @brief		InputDeviceˆê——
+* @author		‘åX Œ’i
+*/
+
 namespace framework {
 	enum class eInputDeviceCode{
 		KEYBOARD,

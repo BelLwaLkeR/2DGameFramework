@@ -1,5 +1,13 @@
 #pragma once
 
+/**
+* @struct		Color
+* @namespace	util
+* @brief		F—p‚Ì\‘¢‘Ì
+* @author		‘åX Œ’i
+*/
+
+
 namespace util {
 	struct Color{
 		int R;

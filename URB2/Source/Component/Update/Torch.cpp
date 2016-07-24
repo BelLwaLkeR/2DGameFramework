@@ -2,6 +2,7 @@
 #include <Source/Framework/Component/LightComponent.h>
 #include <Source/Framework/Renderer/ImageRenderer/LightingAggregate.h>
 
+
 component::Torch::Torch(){
 
 }

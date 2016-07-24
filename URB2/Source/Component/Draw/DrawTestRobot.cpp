@@ -13,5 +13,6 @@ component::DrawTestRobot::~DrawTestRobot(){
 
 void component::DrawTestRobot::draw(){
 	SGLT_SHADER_MANAGER->attachShader<framework::NormalMapShader>(&m_pImageData);
-	DrawComponent::draw();
+//	DrawComponent::draw();
+//	SGLT_SHADER_MANAGER->deleteShader<framework::NormalMapShader>();
 }

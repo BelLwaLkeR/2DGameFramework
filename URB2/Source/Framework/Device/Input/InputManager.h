@@ -9,6 +9,14 @@
 #include <Source/Framework/Device/Input/GamePad/GamePadAggregate.h>
 #include <Source/Utility/Singleton.h>
 
+/**
+* @class		InputManager
+* @inheritance	Singleton<InputManager>
+* @namespace	framework
+* @brief		入力マネージャ
+* @author		大森 健司
+*/
+
 #define SGLT_INPUT_MANAGER framework::InputManager::getInstance()
 
 namespace framework {
@@ -20,19 +28,19 @@ namespace framework {
 		~InputManager();
 
 		void update();
-		std::bitset<INPUT_NUM> isKeyDown(eInputCode inputCode);
-		std::bitset<INPUT_NUM> isKeyUp(eInputCode inputCode);
-		std::bitset<INPUT_NUM> isKeyPush(eInputCode inputCode);
-		std::bitset<INPUT_NUM> isKeyRelease(eInputCode inputCode);
+		std::bitset<INPUT_NUM> isKeyDown	(eInputCode inputCode);
+		std::bitset<INPUT_NUM> isKeyUp		(eInputCode inputCode);
+		std::bitset<INPUT_NUM> isKeyPush	(eInputCode inputCode);
+		std::bitset<INPUT_NUM> isKeyRelease	(eInputCode inputCode);
 
-		bool isKeyDown(eInputDeviceCode device, eInputCode inputCode);
-		bool isKeyUp(eInputDeviceCode device, eInputCode inputCode);
-		bool isKeyPush(eInputDeviceCode device, eInputCode inputCode);
-		bool isKeyRelease(eInputDeviceCode device, eInputCode inputCode);
+		bool isKeyDown		(eInputDeviceCode device, eInputCode inputCode);
+		bool isKeyUp		(eInputDeviceCode device, eInputCode inputCode);
+		bool isKeyPush		(eInputDeviceCode device, eInputCode inputCode);
+		bool isKeyRelease	(eInputDeviceCode device, eInputCode inputCode);
 
-		bool isKeyDownAny(eInputCode inputCode);
-		bool isKeyUpAny(eInputCode inputCode);
-		bool isKeyPushAny(eInputCode inputCode);
+		bool isKeyDownAny	(eInputCode inputCode);
+		bool isKeyUpAny		(eInputCode inputCode);
+		bool isKeyPushAny	(eInputCode inputCode);
 		bool isKeyReleaseAny(eInputCode inputCode);
 
 	private:

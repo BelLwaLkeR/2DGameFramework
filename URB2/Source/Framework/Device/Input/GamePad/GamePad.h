@@ -6,6 +6,14 @@
 #include <Source/Framework/Device/Input/GamePad/ePadButtonCode.h>
 #include <Source/Utility/SmartPtr.h>
 
+/**
+* @class		GamePad
+* @inheritance	IInputDevice
+* @namespace	framework
+* @brief		ゲームパッドクラス
+* @author		大森 健司
+*/
+
 namespace framework {
 	class DxLibGamePad;
 	class GamePad: public IInputDevice

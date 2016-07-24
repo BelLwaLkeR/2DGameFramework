@@ -75,9 +75,6 @@
     <ClCompile Include="Source\Framework\Component\UpdateComponent.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\NormalMapLighting.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Utility\Type\Color.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -97,9 +94,6 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Source\Utility\DxLibUtility\DxLibImageLoader.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Utility\DataLoader\ImageLoader.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePadAggregate.cpp">
@@ -141,9 +135,6 @@
     <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Screen.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Framework\Level\LevelManager.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Framework\Application\GlobalParameters.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -162,9 +153,6 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Framework\Application\GameApplication.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Framework\Application\BaseApplication.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Framework\Define.h">
@@ -209,9 +197,6 @@
     <ClInclude Include="Source\Framework\Component\UpdateComponent.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Framework\Task\IUpdateTask.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Framework\Entity\Entity.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -233,9 +218,6 @@
     <ClInclude Include="Source\Framework\Component\ComponentFactory.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Framework\Component\CreateComponentInfomation.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Framework\Component\ComponentCreator.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -255,9 +237,6 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\eDrawLayer.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\NormalMapLighting.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Light.h">
@@ -285,12 +264,6 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Framework\Device\Input\GamePad\ePadButtonCode.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Utility\DataLoader\DataLoader.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Utility\DataLoader\ImageLoader.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Utility\DxLibUtility\DxLibImageLoader.h">
@@ -336,12 +309,6 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Component\UPdate\ControllMove.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Framework\Level\LevelManager.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Framework\Level\ILevel.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Framework\Application\GlobalParameters.h">

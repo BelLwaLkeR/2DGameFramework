@@ -4,6 +4,14 @@
 #include <Source/Utility/SmartPtr.h>
 #include <Source/Utility/DxLibUtility/DxLibImageTypename.h>
 
+/**
+* @class		ImageData
+* @namespace	util
+* @brief		‰æ‘œ—pƒNƒ‰ƒX
+* @author		‘åX Œ’i
+*/
+
+
 namespace util {
 	class ImageData{
 	public:

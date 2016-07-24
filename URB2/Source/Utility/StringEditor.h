@@ -2,6 +2,13 @@
 #include <string>
 #include <vector>
 
+/**
+* @class		StringEditor
+* @namespace	util
+* @brief		string•¶š—ñ‚ğ•ÒW‚·‚éŠÖ”ƒNƒ‰ƒX
+* @author		‘åX Œ’i
+*/
+
 namespace util {
 	class StringEditor
 	{

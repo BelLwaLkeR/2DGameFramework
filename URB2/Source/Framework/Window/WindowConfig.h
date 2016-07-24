@@ -2,9 +2,15 @@
 
 #include <string>
 
+/**
+* @struct		WindowConfig
+* @namespace	framework
+* @brief		Window¶¬—p‚Ìİ’è‚ğ‚Ü‚Æ‚ß‚½\‘¢‘Ì
+* @author		‘åX Œ’i
+*/
+
 namespace framework {
-	struct WindowConfig
-	{
+	struct WindowConfig{
 		std::string		title;
 		unsigned int	width;
 		unsigned int	height;

@@ -1,6 +1,13 @@
 #pragma once
 #include <Source/Utility/SmartPtr.h>
 
+/**
+* @class		Component
+* @namespace	framework
+* @brief		コンポーネントの原型クラス
+* @author		大森 健司
+*/
+
 
 namespace util {
 	struct Vector2;

@@ -37,7 +37,7 @@ void framework::DxLibShaderFunction::setValue(int valueIndex, const util::Vector
 }
 
 void framework::DxLibShaderFunction::setValue(int valueIndex, const util::Color& value){
-	std::vector<float> valueList = { value.getRedF(), value.getGreenF(), value.getBlueF(), value.getAlphaF() };
+	std::vector<float> valueList = { value.getRedF(), value.getGreenF(), value.getBlueF() };
 	setValueArray(valueIndex, valueList);
 }
 

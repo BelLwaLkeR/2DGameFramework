@@ -4,6 +4,14 @@
 #include <Source/Utility/Type/Vector2.h>
 #include <Source/Utility/Type/Color.h>
 
+/**
+* @class		LightComponent
+* @namespace	framework
+* @brief		ライトコンポーネント用クラス
+* @author		大森 健司
+*/
+
+
 namespace framework{
 	struct Light;
 	class LightComponent{

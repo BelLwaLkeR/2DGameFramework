@@ -1,6 +1,13 @@
 #pragma once
 #include <Source/Framework/Device/Input/eInputCode.h>
 
+/**
+* @class		IInputDevice
+* @namespace	framework
+* @brief		入力デバイス用インターフェース
+* @author		大森 健司
+*/
+
 namespace framework {
 	class IInputDevice
 	{

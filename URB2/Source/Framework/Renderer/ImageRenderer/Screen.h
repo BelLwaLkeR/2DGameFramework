@@ -4,6 +4,13 @@
 #include <Source/Utility/DxLibUtility/DxLibImageTypeName.h>
 #include <Source/Framework/Renderer/ImageRenderer/DxLibImageRenderer.h>
 
+/**
+* @class		IPいぇScreen
+* @namespace	framework
+* @brief		レンダスクリーン管理・切り替え用クラス
+* @author		大森 健司
+*/
+
 namespace framework {
 	class IPixelShader;
 	class Screen{

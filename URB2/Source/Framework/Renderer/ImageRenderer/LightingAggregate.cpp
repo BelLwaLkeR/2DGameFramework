@@ -3,9 +3,11 @@
 
 framework::LightAggregate::LightAggregate(){
 	setAmbientLight({});
+	m_pLightList.clear();
 }
 
 framework::LightAggregate::~LightAggregate(){
+	int a = 0;
 }
 
 std::list<util::WeakPtr<framework::Light>> framework::LightAggregate::getAffectLight(const util::Vector2 &position){
@@ -35,7 +37,8 @@ void framework::LightAggregate::addLight(util::WeakPtr<Light> light){
 }
 
 void framework::LightAggregate::removeLight(util::WeakPtr<Light> light){
-	
+	auto& itr = find(m_pLightList.begin(), m_pLightList.end(), light);
+	if (itr == m_pLightList.end()) { return; }
 	m_pLightList.remove(light);
 }
 

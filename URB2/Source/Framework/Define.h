@@ -1,5 +1,11 @@
 #pragma once
 
+/**
+* @file			Define.h
+* @brief		各定数をまとめたファイル
+* @author		大森 健司
+*/
+
 #if defined(DEBUG) || defined(_DEBUG)
 #define DEBUG_MODE
 #endif // DEBUG || _DEBUG

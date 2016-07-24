@@ -20,7 +20,7 @@ void framework::TaskManager::addUpdateTask(util::WeakPtr<UpdateComponent> task){
 }
 
 void framework::TaskManager::addDrawTask(framework::eDrawLayer layer, util::WeakPtr<DrawComponent> task){
-	if (isInDrawTaskList(task)) { return; }
+//	if (isInDrawTaskList(task)) { return; }
 	m_pDrawTaskList[layer].emplace_back(task);
 }
 

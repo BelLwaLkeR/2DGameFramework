@@ -1,6 +1,14 @@
 #pragma once
 #include <string>
 
+/**
+* @struct		Hash
+* @namespace	util
+* @brief		ハッシュ数列用の構造体
+* @author		大森 健司
+*/
+
+
 namespace util {
 	struct Hash{
 		std::size_t m_Hash;

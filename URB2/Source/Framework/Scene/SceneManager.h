@@ -2,6 +2,13 @@
 #include <unordered_map>
 #include <Source/Utility/SmartPtr.h>
 
+/**
+* @class		SceneManager
+* @namespace	framework
+* @brief		ゲームシーンの管理クラス(未実装)
+* @author		大森 健司
+*/
+
 namespace framework {
 	class SceneManager{
 

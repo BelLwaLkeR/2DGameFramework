@@ -4,6 +4,14 @@
 #include <Source/Framework/Device/Input/InputManager.h>
 #include <Source/Framework/Scene/SceneManager.h>
 
+/**
+* @class		GameApplication
+* @inheritance	DxLibApplication
+* @namespace	framework
+* @brief		ゲームループの最低限の実装用クラス。
+* @author		大森 健司
+*/
+
 
 namespace framework {
 	class GameApplication: public DxLibApplication {

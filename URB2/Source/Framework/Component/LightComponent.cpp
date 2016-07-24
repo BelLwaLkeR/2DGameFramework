@@ -7,7 +7,6 @@ framework::LightComponent::LightComponent(){
 }
 
 framework::LightComponent::~LightComponent(){
-	SGLT_LIGHT_AGGREGATE->removeLight(m_pLight);
 }
 
 void framework::LightComponent::initialize(util::WeakPtr<util::Vector2> pPosition, const util::Color color, float intencity){

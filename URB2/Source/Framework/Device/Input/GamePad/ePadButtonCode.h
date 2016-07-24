@@ -1,5 +1,13 @@
 #pragma once
 
+/**
+* @enum			ePadButtonCode
+* @namespace	framework
+* @brief		ゲームパッド用ボタンコード
+* @author		大森 健司
+*/
+
+
 namespace framework {
 	enum class ePadButtonCode {
 		UP,

@@ -1,6 +1,13 @@
 #pragma once
 #include <Source/Framework/Renderer/ImageRenderer/DxLibImageRenderer.h>
 
+/**
+* @class		ImageRenderer
+* @namespace	framework
+* @brief		DxLibImageRenderer‚ğ’¼Úg‚í‚È‚¢‚æ‚¤‚É‚µ‚½’‡‰îƒNƒ‰ƒX
+* @author		‘åX Œ’i
+*/
+
 
 namespace util{
 	class ImageData;

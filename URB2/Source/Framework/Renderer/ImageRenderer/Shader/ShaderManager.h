@@ -1,3 +1,4 @@
+
 #pragma once
 
 #include <map>
@@ -7,6 +8,14 @@
 #include <Source/Utility/Singleton.h>
 #include <Source/Utility/StringEditor.h>
 #include <Source/Framework/Renderer/ImageRenderer/Shader/IPixelShader.h>
+
+/**
+* @class		Shadermanager
+* @inheritance	Singleton<ShaderManager>
+* @namespace	framework
+* @brief		シェーダクラスをまとめるクラス
+* @author		大森 健司
+*/
 
 #define SGLT_SHADER_MANAGER	framework::ShaderManager::getInstance()
 
@@ -21,6 +30,8 @@ namespace framework {
 		void setShader();
 		template<typename ShaderType>
 		void attachShader(util::SharedPtr<util::ImageData>* image);
+		template<typename ShaderType>
+		void deleteShader();
 
 	private:
 		std::map<std::string, util::SharedPtr<IPixelShader>> m_pShaderMap;
@@ -34,8 +45,13 @@ namespace framework {
 
 	template<typename ShaderType>
 	inline void ShaderManager::attachShader(util::SharedPtr<util::ImageData>* image){
-		assert(m_pShaderMap.find(util::StringEditor::getClassName<ShaderType>()) != m_pShaderMap.end() && "利用しようとしたシェーダがsetされていませんでした。");
+		assert(m_pShaderMap.find(util::StringEditor::getClassName<ShaderType>()) != m_pShaderMap.end() && "attachShaderで利用しようとしたシェーダがsetされていませんでした。");
 		m_pShaderMap[util::StringEditor::getClassName<ShaderType>()]->attachShader(image);
 
+	}
+	template<typename ShaderType>
+	inline void ShaderManager::deleteShader(){
+		assert(m_pShaderMap.find(util::StringEditor::getClassName<ShaderType>()) != m_pShaderMap.end() && "deleteShaderで削除しようとしたシェーダがsetされていませんでした。");
+		m_pShaderMap[util::StringEditor::getClassName<ShaderType>()]->deleteShader();
 	}
 }

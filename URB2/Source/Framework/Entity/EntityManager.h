@@ -5,6 +5,14 @@
 #include <Source/Framework/Component/ComponentFactory.h>
 #include <Source/Utility/Singleton.h>
 
+/**
+* @class		EntityManager
+* @inheritance	Singleton<EntityManager>
+* @namespace	framework
+* @brief		Entity‚ğ‚Ü‚Æ‚ß‚éƒNƒ‰ƒX
+* @author		‘åX Œ’i
+*/
+
 #define SGLT_ENTITY_MANAGER framework::EntityManager::getInstance()
 
 namespace framework {

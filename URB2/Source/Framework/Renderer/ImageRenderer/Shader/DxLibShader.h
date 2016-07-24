@@ -3,6 +3,13 @@
 #include <vector>
 #include <Source/Utility/DxLibUtility/DxLibImageTypeName.h>
 
+/**
+* @class		DxLibShaderFunction
+* @namespace	framework
+* @brief		DxLibのシェーダ関係関数をまとめたクラス
+* @author		大森 健司
+*/
+
 namespace util {
 	struct Color;
 	class ImageData;

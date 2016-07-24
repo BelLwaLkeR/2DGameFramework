@@ -1,6 +1,14 @@
 #pragma once
 #include <Source/Utility/SmartPtr.h>
 
+/**
+* @class		Singleton<>
+* @namespace	util
+* @brief		継承先をシングルトンにするクラス
+* @author		大森 健司
+*/
+
+
 namespace util {
 	template<typename T>
 	class Singleton {

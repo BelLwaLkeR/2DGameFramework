@@ -4,6 +4,14 @@
 #include <Source/Utility/Singleton.h>
 #include <Source/Framework/Renderer/ImageRenderer/Light.h>
 
+/**
+* @class		LightAggreage
+* @inheritance	Singleton<LightAggregate>
+* @namespace	framework
+* @brief		Light‚Ìî•ñ‚ğ‚Ğ‚Æ‚Ü‚Æ‚ß‚É‚µ‚½ƒNƒ‰ƒX
+* @author		‘åX Œ’i
+*/
+
 #define SGLT_LIGHT_AGGREGATE framework::LightAggregate::getInstance()
 
 namespace framework {

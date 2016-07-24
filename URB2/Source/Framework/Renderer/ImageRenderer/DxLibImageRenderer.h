@@ -3,6 +3,14 @@
 #include <Source/Utility/SmartPtr.h>
 #include <Source/Utility/Type/ImageData.h>
 #include <Source/Utility/Type/Vector2.h>
+
+/**
+* @class		DxLibImageRenderer
+* @namespace	framework
+* @brief		DxLibを用いた描画関数のラッパクラス
+* @author		大森 健司
+*/
+
 namespace util {
 	struct Vector2;
 }

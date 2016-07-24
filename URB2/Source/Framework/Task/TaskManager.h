@@ -7,18 +7,25 @@
 #include <Source/Framework/Renderer/ImageRenderer/eDrawLayer.h>
 #include <Source/Framework/Renderer/ImageRenderer/Screen.h>
 
+/**
+* @class		TaskManager
+* @inheritance	Singleton<TaskManager>
+* @namespace	framework
+* @brief		¶¬‚³‚ê‚½UpdaterComponent‚âDrawComponent‚ğ‚Ü‚Æ‚ß‚ÄUpdateEDraw‚ğs‚¤
+* @author		‘åX Œ’i
+*/
+
 #define SGLT_TASK_MANAGER framework::TaskManager::getInstance()
 
 namespace framework {
 	class UpdateComponent;
 	class DrawComponent;
-	class TaskManager: public util::Singleton<TaskManager>
-	{
+	class TaskManager: public util::Singleton<TaskManager>{
 	public:
 		TaskManager();
 		~TaskManager();
 
-		void initialize() override;
+		void initialize	() override;
 		void addUpdateTask(util::WeakPtr<UpdateComponent> task);
 		void addDrawTask(eDrawLayer layer, util::WeakPtr<DrawComponent> task);
 		void removeUpdateTask(util::WeakPtr<UpdateComponent> task);
@@ -28,9 +35,9 @@ namespace framework {
 		void drawTask();
 
 	private:
-		std::list<util::WeakPtr<UpdateComponent>>							m_pUpdateTaskList;
-		std::map<eDrawLayer, std::list<util::WeakPtr<DrawComponent>>>		m_pDrawTaskList;
-		Screen																m_Screen;
+		std::list<util::WeakPtr<UpdateComponent>>						m_pUpdateTaskList;
+		std::map<eDrawLayer, std::list<util::WeakPtr<DrawComponent>>>	m_pDrawTaskList;
+		Screen															m_Screen;
 
 		void drawTaskLayerd(eDrawLayer layer);
 		bool isInUpdateTaskList(util::WeakPtr<UpdateComponent> task);

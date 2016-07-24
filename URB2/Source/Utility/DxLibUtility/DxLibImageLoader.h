@@ -5,9 +5,15 @@
 #include <Source/Utility/DxLibUtility/DxLibImageTypeName.h>
 #include <Source/Utility/Type/Vector2.h>
 
+/**
+* @class		DxLibImageLoader
+* @namespace	util
+* @brief		DxLibの機能を使い、画像データを読み込む関数クラス
+* @author		大森 健司
+*/
+
 namespace util {
-	class DxLibImageLoader
-	{
+	class DxLibImageLoader{
 	public:
 		DxLibImageLoader()	{}
 		~DxLibImageLoader()	{}

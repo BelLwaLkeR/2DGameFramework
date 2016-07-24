@@ -1,5 +1,12 @@
 #pragma once
 
+
+/**
+* @enum			eKeyboardCode
+* @namespace	framework
+* @brief		キーボードのコード一覧
+* @author		大森 健司
+*/
 namespace framework {
 
 	enum class eKeyboardCode {

@@ -3,6 +3,7 @@
 #include <Source/Utility/Type/Vector2.h>
 #include <DxLib.h>
 
+
 component::ControllMove::ControllMove(){
 	speed = 5.f;
 }

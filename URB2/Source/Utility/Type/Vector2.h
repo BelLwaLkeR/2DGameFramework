@@ -1,6 +1,14 @@
 #pragma once
 #include <string>
 
+/**
+* @struct		Vector2
+* @namespace	util
+* @brief		二次元用の座標用構造体
+* @author		大森 健司
+*/
+
+
 namespace util {
 	struct Vector2 {
 		float X;
@@ -14,7 +22,6 @@ namespace util {
 		static	Vector2	Right();
 		static	Vector2	Top();
 		static	Vector2	Bottom();
-
 
 		int		getIntX() const;
 		int		getIntY() const;

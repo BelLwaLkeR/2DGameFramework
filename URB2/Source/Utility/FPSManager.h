@@ -1,6 +1,15 @@
 #pragma once
 #include <Windows.h>
 #include <vector>
+
+/**
+* @class		FPSマネージャ
+* @namespace	util
+* @brief		FPS管理用クラス(未実装)
+* @author		大森 健司
+*/
+
+
 namespace util {
 	class FPSManager{
 	public:

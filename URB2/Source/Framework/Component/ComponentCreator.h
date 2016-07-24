@@ -4,6 +4,24 @@
 #include <Source/Framework/Component/Component.h>
 #include <Source/Framework/Entity/EntityInfomation.h>
 
+/**
+* @class		IComponentCreator
+* @namespace	framework
+* @brief		コンポーネント生成クラスのインターフェース
+* @author		大森 健司
+*/
+
+
+
+/**
+* @class		ComponentCreator
+* @inheritance	IComponentCreator
+* @namespace	framework
+* @brief		指定されたコンポーネントを生成する
+* @author		大森 健司
+*/
+
+
 namespace framework {
 	class IComponentCreator {
 	public:

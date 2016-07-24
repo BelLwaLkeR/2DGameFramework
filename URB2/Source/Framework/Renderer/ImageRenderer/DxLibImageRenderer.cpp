@@ -24,7 +24,8 @@ void framework::DxLibImageRenderer::drawImage(const util::ImageData& imageData){
 }
 
 void framework::DxLibImageRenderer::setDrawScreen(const util::screen_t & screen){
-	SetDrawScreen(screen);
+//	SetDrawScreen(screen);
+	SetDrawScreen(DX_SCREEN_FRONT);
 }
 
 void framework::DxLibImageRenderer::drawScreen(const util::screen_t & screen, util::Vector2& position){

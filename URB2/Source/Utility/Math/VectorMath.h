@@ -1,11 +1,18 @@
 #pragma once
 
+/**
+* @class		VectorMath
+* @namespace	util
+* @brief		ベクトル用の計算クラス
+* @author		大森 健司
+*/
+
+
 
 
 namespace util {
 	struct Vector2;
-	class VectorMath
-	{
+	class VectorMath{
 	public:
 		VectorMath() {}
 		~VectorMath() {}

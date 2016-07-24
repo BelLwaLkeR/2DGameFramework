@@ -3,8 +3,15 @@
 #include <memory>
 #include <cassert>
 
-namespace util {
+/**
+* @file			SmartPtr.h
+* @namespace	util
+* @brief		各スマートポインタをラップしたクラス。主にweak_ptrを利用しやすくするために。
+* @author		大森 健司
+*/
 
+
+namespace util {
 	template<typename T>
 	using UniquePtr = std::unique_ptr<T>;
 

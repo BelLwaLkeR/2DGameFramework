@@ -9,6 +9,15 @@
 #include <Source/Utility/SmartPtr.h>
 #include <Source/Utility/StringEditor.h>
 
+/**
+* @class		ComponentFactory
+* @inheritance	Singleton<ComponentFactory>
+* @namespace	framework
+* @brief		コンポーネントを生成するクラス
+* @author		大森 健司
+*/
+
+
 #define SGLT_COMPONENT_FACTORY framework::ComponentFactory::getInstance()
 
 namespace framework {
