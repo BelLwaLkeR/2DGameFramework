@@ -16,35 +16,30 @@ void framework::TaskManager::initialize(){
 
 void framework::TaskManager::addUpdateTask(util::WeakPtr<UpdateComponent> task){
 	if (isInUpdateTaskList(task)) { return; }
-	m_pUpdateTaskList.emplace_back(task);
+	m_pUpdateTaskList.addTask(task);
 }
 
 void framework::TaskManager::addDrawTask(framework::eDrawLayer layer, util::WeakPtr<DrawComponent> task){
 //	if (isInDrawTaskList(task)) { return; }
-	m_pDrawTaskList[layer].emplace_back(task);
+	m_pDrawTaskList[layer].addTask(task);
 }
 
 void framework::TaskManager::removeUpdateTask(util::WeakPtr<UpdateComponent> task){
-	auto itr = std::find(m_pUpdateTaskList.begin(), m_pUpdateTaskList.end(), task);
-	if (itr == m_pUpdateTaskList.end()) { return; }
-	m_pUpdateTaskList.erase(itr);
+	m_pUpdateTaskList.removeTask(task);
 }
 
 void framework::TaskManager::removeDrawTask(framework::eDrawLayer layer, util::WeakPtr<DrawComponent> task){
-	auto itr = std::find(m_pDrawTaskList[layer].begin(), m_pDrawTaskList[layer].end(), task);
-	if (itr != m_pDrawTaskList[layer].end()) {
-		m_pDrawTaskList[layer].erase(itr);
-		return;
-	}	
+	m_pDrawTaskList[layer].removeTask(task);
 }
 
 void framework::TaskManager::clearAllTask(){
-	m_pUpdateTaskList.clear();
+	m_pUpdateTaskList.clearAllTask();
 	m_pDrawTaskList.clear();
 }
 
 void framework::TaskManager::updateTask(){
-	for (auto& task : m_pUpdateTaskList) {
+	m_pUpdateTaskList.refleshTask();
+	for (auto& task : m_pUpdateTaskList.getTaskList()) {
 		task->update();
 	}
 }
@@ -58,14 +53,15 @@ void framework::TaskManager::drawTask(){
 }
 
 void framework::TaskManager::drawTaskLayerd(eDrawLayer layer){
-	for (auto& task : m_pDrawTaskList[layer]) {
+	m_pDrawTaskList[layer].refleshTask();
+	for (auto& task : m_pDrawTaskList[layer].getTaskList()) {
 		task->draw();
 	}
 }
 
 bool framework::TaskManager::isInUpdateTaskList(util::WeakPtr<UpdateComponent> task){
-	const auto& itr = std::find(m_pUpdateTaskList.begin(), m_pUpdateTaskList.end(), task);
-	return itr != m_pUpdateTaskList.end();
+	const auto& itr = std::find(m_pUpdateTaskList.getTaskList().begin(), m_pUpdateTaskList.getTaskList().end(), task);
+	return itr != m_pUpdateTaskList.getTaskList().end();
 }
 
 bool framework::TaskManager::isInDrawTaskList(util::WeakPtr<DrawComponent> task){
@@ -76,8 +72,8 @@ bool framework::TaskManager::isInDrawTaskList(util::WeakPtr<DrawComponent> task)
 }
 
 bool framework::TaskManager::isInDrawTaskList(eDrawLayer layer, util::WeakPtr<DrawComponent> task){
-	const auto& itr = std::find(m_pDrawTaskList[layer].begin(), m_pDrawTaskList[layer].end(),task);
-	return itr != m_pDrawTaskList[layer].end();
+	const auto& itr = std::find(m_pDrawTaskList[layer].getTaskList().begin(), m_pDrawTaskList[layer].getTaskList().end(),task);
+	return itr != m_pDrawTaskList[layer].getTaskList().end();
 
 }
 

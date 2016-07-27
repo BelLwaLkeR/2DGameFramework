@@ -22,23 +22,25 @@ void framework::NormalMapShader::attachShader(util::SharedPtr<util::ImageData>* 
 	DxLibShaderFunction::setTexture(1, pTargetImage->getNormalMap());
 	DxLibShaderFunction::setTexture(2, pTargetImage->getReflectionMap());
 
-	const Light&			light						= *SGLT_LIGHT_AGGREGATE->getAffectLight((*targetImage)->getPosition()).front();
-	const util::Color&		lightColor					= light.color;
-	const util::Vector2&	lightPosition				= *(light.pPosition);
-	const util::Vector2&	targetPosition				= pTargetImage->getPosition();
-	float					lightPositionZ				= 10.f;
-	std::vector<float>		relativeLightPosition		= { lightPosition.X - targetPosition.X, lightPosition.Y - targetPosition.Y, lightPositionZ };
+	std::list<util::WeakPtr<Light>>	pLightList					= SGLT_LIGHT_AGGREGATE->getAffectLight((*targetImage)->getPosition());
+	if(pLightList.empty()) { return; }
+	util::WeakPtr<Light>			pLight						= pLightList.front();
+	const util::Color&				lightColor					= pLight->color;
+	const util::Vector2&			lightPosition				= *(pLight->pPosition);
+	const util::Vector2&			targetPosition				= pTargetImage->getPosition();
+	float							lightPositionZ				= 10.f;
+	std::vector<float>				relativeLightPosition		= { lightPosition.X - targetPosition.X, lightPosition.Y - targetPosition.Y, lightPositionZ };
 
-	const util::Color&		ambientLight				= *SGLT_LIGHT_AGGREGATE->getAmbientLight();
-	std::vector<float>		toShaderAmbientLightColor	= { ambientLight.getRedF()	, ambientLight.getGreenF()	, ambientLight.getBlueF() };
-	std::vector<float>		toShaderLightColor			= { lightColor.getRedF()	, lightColor.getGreenF()	, lightColor.getBlueF() };
+	const util::Color&				ambientLight				= *SGLT_LIGHT_AGGREGATE->getAmbientLight();
+	std::vector<float>				toShaderAmbientLightColor	= { ambientLight.getRedF()	, ambientLight.getGreenF()	, ambientLight.getBlueF() };
+	std::vector<float>				toShaderLightColor			= { lightColor.getRedF()	, lightColor.getGreenF()	, lightColor.getBlueF() };
 
 	DxLibShaderFunction::setValue		(0	, pTargetImage->getSize().X	);
 	DxLibShaderFunction::setValue		(1	, pTargetImage->getSize().Y	);
 	DxLibShaderFunction::setValueArray	(2	, toShaderAmbientLightColor	);
 	DxLibShaderFunction::setValueArray	(5	, toShaderLightColor		);
 	DxLibShaderFunction::setValueArray	(8	, relativeLightPosition		);
-	DxLibShaderFunction::setValue		(11	, light.intencity);
+	DxLibShaderFunction::setValue		(11	, pLight->intencity);
 
 	DxLibImageRenderer::drawImage(*pTargetImage);
 }

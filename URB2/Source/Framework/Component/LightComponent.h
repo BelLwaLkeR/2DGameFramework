@@ -19,7 +19,9 @@ namespace framework{
 		LightComponent();
 		~LightComponent();
 
-		void initialize(util::WeakPtr<util::Vector2> pPosition, const util::Color color, float intencity);
+		void setup(util::WeakPtr<util::Vector2> pPosition, const util::Color& color, float intencity);
+		void changeColor(const util::Color& color);
+		void changeIntencity(float intencity);
 
 	private:
 		util::SharedPtr<Light>			m_pLight;

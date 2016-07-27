@@ -6,6 +6,7 @@
 #include <Source/Utility/SmartPtr.h>
 #include <Source/Framework/Device/Renderer/ImageRenderer/eDrawLayer.h>
 #include <Source/Framework/Device/Renderer/ImageRenderer/Screen.h>
+#include <Source/Utility/TaskList.h>
 
 /**
 * @class		TaskManager
@@ -35,9 +36,11 @@ namespace framework {
 		void drawTask();
 
 	private:
-		std::list<util::WeakPtr<UpdateComponent>>						m_pUpdateTaskList;
-		std::map<eDrawLayer, std::list<util::WeakPtr<DrawComponent>>>	m_pDrawTaskList;
-		Screen															m_Screen;
+//		std::list<util::WeakPtr<UpdateComponent>>						m_pUpdateTaskList;
+//		std::map<eDrawLayer, std::list<util::WeakPtr<DrawComponent>>>	m_pDrawTaskList;
+		util::TaskList<UpdateComponent>						m_pUpdateTaskList;
+		std::map<eDrawLayer, util::TaskList<DrawComponent>>	m_pDrawTaskList;
+		Screen												m_Screen;
 
 		void drawTaskLayerd(eDrawLayer layer);
 		bool isInUpdateTaskList(util::WeakPtr<UpdateComponent> task);

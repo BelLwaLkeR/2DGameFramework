@@ -9,12 +9,19 @@ framework::LightComponent::LightComponent(){
 framework::LightComponent::~LightComponent(){
 }
 
-void framework::LightComponent::initialize(util::WeakPtr<util::Vector2> pPosition, const util::Color color, float intencity){
+void framework::LightComponent::setup(util::WeakPtr<util::Vector2> pPosition, const util::Color& color, float intencity){
 	m_pPosition = pPosition;
 	m_pLight->setup(pPosition, color, intencity);
 	SGLT_LIGHT_AGGREGATE->addLight(m_pLight);
 }
 
+void framework::LightComponent::changeColor(const util::Color & color){
+	m_pLight->color = color;
+}
+
+void framework::LightComponent::changeIntencity(float intencity){
+	m_pLight->intencity = intencity;
+}
 
 
 

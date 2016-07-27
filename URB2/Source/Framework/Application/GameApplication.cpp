@@ -3,6 +3,7 @@
 #include <Source/Framework/Task/TaskManager.h>
 #include <Source/Framework/Define.h>
 #include <Source/Framework/Entity/EntityManager.h>
+#include <Source/Framework/Device/Renderer/ImageRenderer/LightingAggregate.h>
 #include <Source/Framework/Component/ComponentNameList.h>
 #include <Source/Framework/Device/Renderer/ImageRenderer/Shader/ShaderManager.h>
 #include <Source/Component/Draw/DrawTestRobot.h>
@@ -37,6 +38,7 @@ void framework::GameApplication::initialize(){
 
 void framework::GameApplication::update(){
 	SGLT_INPUT_MANAGER->update();
+	SGLT_LIGHT_AGGREGATE->reloadLight();
 	SGLT_TASK_MANAGER->updateTask();
 }
 

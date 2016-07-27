@@ -326,5 +326,8 @@
     <ClInclude Include="Source\Component\Draw\DrawTreasureBox.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Utility\TaskList.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

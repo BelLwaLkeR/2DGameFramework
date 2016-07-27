@@ -18,6 +18,8 @@ namespace component {
 		void update() override;
 	private:
 		framework::LightComponent	m_LightComponent;
+		util::Color					m_DefaultLightColor;
+		float						m_DefaultLightIntencity;
 
 	};
 }

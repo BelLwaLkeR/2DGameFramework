@@ -225,6 +225,7 @@
     <ClInclude Include="Source\Utility\Math\VectorMath.h" />
     <ClInclude Include="Source\Utility\StringEditor.h" />
     <ClInclude Include="Source\Utility\DxLibUtility\DxLibImageTypename.h" />
+    <ClInclude Include="Source\Utility\TaskList.h" />
     <ClInclude Include="Source\Utility\Type\Color.h" />
     <ClInclude Include="Source\Utility\Type\ImageData.h" />
     <ClInclude Include="Source\Utility\Type\Vector2.h" />
