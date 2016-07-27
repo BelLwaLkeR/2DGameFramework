@@ -66,9 +66,6 @@
     <ClCompile Include="Source\Framework\Scene\SceneManager.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\DxLibImageRenderer.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Utility\StringEditor.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -99,12 +96,6 @@
     <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePadAggregate.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\NormalMapShader.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\LightingAggregate.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Framework\Component\LightComponent.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -112,12 +103,6 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Source\Utility\Type\ImageData.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\IPixelShader.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\ImageRenderer.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Source\Component\Draw\DrawRectangle.cpp">
@@ -129,19 +114,37 @@
     <ClCompile Include="Source\Component\UPdate\ControllMove.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderManager.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Screen.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Framework\Application\GlobalParameters.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Framework\Renderer\ImageRenderer\Shader\DxLibShader.cpp">
+    <ClCompile Include="Source\Component\Update\Torch.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Component\Update\Torch.cpp">
+    <ClCompile Include="Source\Framework\Device\Renderer\ImageRenderer\Shader\DxLibShader.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Device\Renderer\ImageRenderer\Shader\IPixelShader.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Device\Renderer\ImageRenderer\Shader\NormalMapShader.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Device\Renderer\ImageRenderer\Shader\ShaderManager.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Device\Renderer\ImageRenderer\DxLibImageRenderer.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Device\Renderer\ImageRenderer\ImageRenderer.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Device\Renderer\ImageRenderer\LightingAggregate.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Framework\Device\Renderer\ImageRenderer\Screen.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Component\Draw\DrawTreasureBox.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -221,12 +224,6 @@
     <ClInclude Include="Source\Framework\Component\ComponentCreator.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\DxLibImageRenderer.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\SoundRenderer\DxLibSoundRenderer.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Framework\Scene\SceneManager.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -234,12 +231,6 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Utility\StringEditor.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\eDrawLayer.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Light.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Utility\Type\Color.h">
@@ -272,34 +263,16 @@
     <ClInclude Include="Source\Framework\Device\Input\GamePad\GamePadAggregate.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\NormalMapShader.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Utility\DxLibUtility\DxLibImageTypename.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Utility\DxLibUtility\DxLibPixelShaderLoader.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\LightingAggregate.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Framework\Component\LightComponent.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\IPixelShader.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Utility\Type\ImageData.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\ShaderManager.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Screen.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\ImageRenderer.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Component\Draw\DrawRectangle.h">
@@ -314,10 +287,43 @@
     <ClInclude Include="Source\Framework\Application\GlobalParameters.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Framework\Renderer\ImageRenderer\Shader\DxLibShader.h">
+    <ClInclude Include="Source\Component\Update\Torch.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Component\Update\Torch.h">
+    <ClInclude Include="Source\Framework\Device\Renderer\ImageRenderer\Shader\DxLibShader.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Renderer\ImageRenderer\Shader\IPixelShader.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Renderer\ImageRenderer\Shader\NormalMapShader.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Renderer\ImageRenderer\Shader\ShaderManager.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Renderer\ImageRenderer\DxLibImageRenderer.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Renderer\ImageRenderer\eDrawLayer.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Renderer\ImageRenderer\ImageRenderer.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Renderer\ImageRenderer\Light.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Renderer\ImageRenderer\LightingAggregate.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Renderer\ImageRenderer\Screen.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Framework\Device\Renderer\SoundRenderer\DxLibSoundRenderer.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Component\Draw\DrawTreasureBox.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,7 +4,7 @@
 #include <Source/Framework/Define.h>
 #include <Source/Framework/Entity/EntityManager.h>
 #include <Source/Framework/Component/ComponentNameList.h>
-#include <Source/Framework/Renderer/ImageRenderer/Shader/ShaderManager.h>
+#include <Source/Framework/Device/Renderer/ImageRenderer/Shader/ShaderManager.h>
 #include <Source/Component/Draw/DrawTestRobot.h>
 #include <Source/Component/Update/Torch.h>
 
@@ -24,13 +24,15 @@ void framework::GameApplication::initialize(){
 	SGLT_TASK_MANAGER->initialize();
 	util::WeakPtr<framework::Entity> player = SGLT_ENTITY_MANAGER->addEntity({ "testObject", "player", 0, { 500, 500 } });
 //	const std::string& name, const util::Hash& hash, unsigned int id, const util::Vector2& position;
+	player->addComponent("Torch");
 	player->addComponent("ControllMove");
 	player->addComponent("DrawTestRobot");
-	player->addComponent("Torch");
 
-	util::WeakPtr<framework::Entity> TreasureBox = SGLT_ENTITY_MANAGER->addEntity({ "testObject", "Object", 0,{ 500, 200 } });
-	TreasureBox->addComponent("DrawTestRobot");
+	util::WeakPtr<framework::Entity> TreasureBox = SGLT_ENTITY_MANAGER->addEntity({ "testObject", "object", 0,{ 500, 200 } });
+	TreasureBox->addComponent("DrawTreasureBox");
 
+	util::WeakPtr<framework::Entity> testLight = SGLT_ENTITY_MANAGER->addEntity({ "testLignth", "object", 0,{ 0, 0 } });
+//	testLight->addComponent("Torch");
 }
 
 void framework::GameApplication::update(){

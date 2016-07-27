@@ -4,8 +4,8 @@
 #include <list>
 #include <Source/Utility/Singleton.h>
 #include <Source/Utility/SmartPtr.h>
-#include <Source/Framework/Renderer/ImageRenderer/eDrawLayer.h>
-#include <Source/Framework/Renderer/ImageRenderer/Screen.h>
+#include <Source/Framework/Device/Renderer/ImageRenderer/eDrawLayer.h>
+#include <Source/Framework/Device/Renderer/ImageRenderer/Screen.h>
 
 /**
 * @class		TaskManager

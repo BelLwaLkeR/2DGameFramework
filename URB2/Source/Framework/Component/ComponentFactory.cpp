@@ -6,7 +6,7 @@
 #include <Source/Component/Update/Torch.h>
 #include <Source/Component/Draw/DrawRectangle.h>
 #include <Source/Component/Draw/DrawTestRobot.h>
-
+#include <Source/Component/Draw/DrawTreasureBox.h>
 
 framework::ComponentFactory::ComponentFactory(){
 	setupBlueprintList();
@@ -21,6 +21,7 @@ void framework::ComponentFactory::setupBlueprintList(){
 	addBluePrint(CREATE_BLUEPRINT_ARGS(ControllMove));
 	addBluePrint(CREATE_BLUEPRINT_ARGS(DrawRectangle));
 	addBluePrint(CREATE_BLUEPRINT_ARGS(DrawTestRobot));
+	addBluePrint(CREATE_BLUEPRINT_ARGS(DrawTreasureBox));
 	addBluePrint(CREATE_BLUEPRINT_ARGS(Torch));
 }
 

@@ -1,6 +1,6 @@
 #include "Torch.h"
 #include <Source/Framework/Component/LightComponent.h>
-#include <Source/Framework/Renderer/ImageRenderer/LightingAggregate.h>
+#include <Source/Framework/Device/Renderer/ImageRenderer/LightingAggregate.h>
 
 
 component::Torch::Torch(){

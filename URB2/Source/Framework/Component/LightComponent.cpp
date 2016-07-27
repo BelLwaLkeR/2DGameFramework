@@ -1,6 +1,6 @@
 #include "LightComponent.h"
-#include <Source/Framework/Renderer/ImageRenderer/Light.h>
-#include <Source/Framework/Renderer/ImageRenderer/LightingAggregate.h>
+#include <Source/Framework/Device/Renderer/ImageRenderer/Light.h>
+#include <Source/Framework/Device/Renderer/ImageRenderer/LightingAggregate.h>
 
 framework::LightComponent::LightComponent(){
 	m_pLight = util::makeShared<Light>();

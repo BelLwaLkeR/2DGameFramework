@@ -1,7 +1,7 @@
 #include "DrawTestRobot.h"
-#include <Source/Framework/Renderer/ImageRenderer/eDrawLayer.h>
-#include <Source/Framework/Renderer/ImageRenderer/Shader/ShaderManager.h>
-#include <Source/Framework/Renderer/ImageRenderer/Shader/NormalMapShader.h>
+#include <Source/Framework/Device/Renderer/ImageRenderer/eDrawLayer.h>
+#include <Source/Framework/Device/Renderer/ImageRenderer/Shader/ShaderManager.h>
+#include <Source/Framework/Device/Renderer/ImageRenderer/Shader/NormalMapShader.h>
 
 
 component::DrawTestRobot::DrawTestRobot(){
@@ -13,6 +13,4 @@ component::DrawTestRobot::~DrawTestRobot(){
 
 void component::DrawTestRobot::draw(){
 	SGLT_SHADER_MANAGER->attachShader<framework::NormalMapShader>(&m_pImageData);
-//	DrawComponent::draw();
-//	SGLT_SHADER_MANAGER->deleteShader<framework::NormalMapShader>();
 }

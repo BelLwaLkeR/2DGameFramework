@@ -2,8 +2,8 @@
 #pragma once
 #include <vector>
 #include <Source/Framework/Component/Component.h>
-#include <Source/Framework/Renderer/ImageRenderer/eDrawLayer.h>
-#include <Source/Framework/Renderer/ImageRenderer/Shader/IPixelShader.h>
+#include <Source/Framework/Device/Renderer/ImageRenderer/eDrawLayer.h>
+#include <Source/Framework/Device/Renderer/ImageRenderer/Shader/IPixelShader.h>
 #include <Source/Utility/Type/Vector2.h>
 
 /**

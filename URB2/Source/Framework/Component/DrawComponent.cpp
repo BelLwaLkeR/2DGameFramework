@@ -1,7 +1,7 @@
 #include "DrawComponent.h"
 #include <Source/Framework/Task/TaskManager.h>
 #include <Source/Framework/Entity/Entity.h>
-#include <Source/Framework/Renderer/ImageRenderer/ImageRenderer.h>
+#include <Source/Framework/Device/Renderer/ImageRenderer/ImageRenderer.h>
 
 framework::DrawComponent::DrawComponent(){
 }

@@ -7,7 +7,7 @@ util::ImageData::ImageData(){
 }
 
 util::ImageData::ImageData(WeakPtr<Vector2> pPosition, const std::string & imageName, const Vector2 & oneImageSize, int imageNum){
-	m_Texture			= util::DxLibImageLoader::loadImageDiv(IMAGEDATA_DIR + imageName + TEXTURE_FOOTER		, oneImageSize, imageNum);
+	m_Texture		= util::DxLibImageLoader::loadImageDiv(IMAGEDATA_DIR + imageName + TEXTURE_FOOTER		, oneImageSize, imageNum);
 	m_NormalMap		= util::DxLibImageLoader::loadImageDiv(IMAGEDATA_DIR + imageName + NORMALMAP_FOOTER		, oneImageSize, imageNum);
 	m_ReflectionMap	= util::DxLibImageLoader::loadImageDiv(IMAGEDATA_DIR + imageName + REFLECTIONMAP_FOOTER	, oneImageSize, imageNum);
 	m_Size			= oneImageSize;

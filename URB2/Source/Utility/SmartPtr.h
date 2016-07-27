@@ -100,7 +100,7 @@ namespace util {
 		}
 
 		T&	operator*() const {
-			return *m_pPtr.lock();
+			return *m_pPtr.lock().get();
 		}
 
 		std::weak_ptr<T> m_pPtr;
