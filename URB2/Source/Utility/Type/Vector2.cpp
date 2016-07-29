@@ -1,39 +1,24 @@
 #include "Vector2.h"
+#include <cassert>
 
  util::Vector2::Vector2(float x, float y) : X(x), Y(y) {
 	
  }
 
- util::Vector2 util::Vector2::Zero() {
+ util::Vector2 util::Vector2::zero() {
 	return {0, 0};
 }
 
-util::Vector2 util::Vector2::One() {
+util::Vector2 util::Vector2::one() {
 	return {1, 1};
 }
 
-util::Vector2 util::Vector2::Left(){
-	return {-1, 0};
-}
-
-util::Vector2 util::Vector2::Right(){
-	return {1, 0};
-}
-
-util::Vector2 util::Vector2::Top(){
-	return {0, -1};
-}
-
-util::Vector2 util::Vector2::Bottom(){
-	return {0, 1};
-}
-
 int	util::Vector2::getIntX() const{
-	return (int)X;
+	return static_cast<int>(X);
 }
 
 int	util::Vector2::getIntY() const{
-	return (int)Y;
+	return static_cast<int>(Y);
 }
 
 util::Vector2& util::Vector2::operator+=(const util::Vector2& other) {
@@ -63,67 +48,52 @@ util::Vector2& util::Vector2::operator*=(float other) {
 
 
 util::Vector2& util::Vector2::operator/=(const util::Vector2& other) {
-	X = (other.X == 0) ? 0 : X / other.X;
-	Y = (other.Y == 0) ? 0 : Y / other.Y;
+	assert(other.X != 0 && other.Y != 0 && "Vector2‚Ìoperator/=‚ÅAƒ[ƒœZ‚ğŒŸ’m‚µ‚Ü‚µ‚½B");
+	X /= other.X;
+	Y /= other.Y;
 	return *this;
 }
 
 util::Vector2& util::Vector2::operator/=(float other) {
-	X = (other == 0) ? 0 : X / other;
-	Y = (other == 0) ? 0 : Y / other;
+	assert(other!= 0 && "Vector2‚Ìoperator/=‚ÅAƒ[ƒœZ‚ğŒŸ’m‚µ‚Ü‚µ‚½B");
+	X /= other;
+	Y /= other;
 	return *this;
 }
 
 util::Vector2 util::Vector2::operator+(const util::Vector2& other) const{
-	util::Vector2 tmp(1.f, 1.f);
-	tmp.X = X + other.X;
-	tmp.Y = Y + other.Y;
-	return tmp;
+	return Vector2(X + other.X, Y + other.Y);
 }
 
 
 util::Vector2 util::Vector2::operator-(const util::Vector2& other) const{
-	util::Vector2 tmp(0, 0);
-	tmp.X = X - other.X;
-	tmp.Y = Y - other.Y;
-	return tmp;
+	return Vector2(X - other.X, Y - other.Y);
 }
 
 
 util::Vector2 util::Vector2::operator*(const util::Vector2& other) const {
-	util::Vector2 tmp(0, 0);
-	tmp.X = X * other.X;
-	tmp.Y = Y * other.Y;
-	return tmp;
+	return Vector2(X * other.X, Y * other.Y);
 }
 
 util::Vector2 util::Vector2::operator*(float other) const {
-	util::Vector2 tmp(0, 0);
-	tmp.X = X * other;
-	tmp.Y = Y * other;
-	return tmp;
+	return Vector2(X * other, Y * other);
 }
 
 
 util::Vector2 util::Vector2::operator/(const util::Vector2& other) const {
-	util::Vector2 tmp(0, 0);
-	tmp.X = X / other.X;
-	tmp.Y = Y / other.Y;
-	return tmp;
+	assert(other.X != 0 && other.Y != 0 && "Vector2‚Ìoperator/‚ÅAƒ[ƒœZ‚ğŒŸ’m‚µ‚Ü‚µ‚½B");
+	return Vector2(X / other.X, Y / other.Y);
 }
 
 util::Vector2 util::Vector2::operator/(float other) const {
-	util::Vector2 tmp(0, 0);
-	tmp.X = X / other;
-	tmp.Y = Y / other;
-	return tmp;
+	assert(other != 0 && "Vector2‚Ìoperator/=‚ÅAƒ[ƒœZ‚ğŒŸ’m‚µ‚Ü‚µ‚½B");
+	return Vector2(X / other, Y / other);
 }
 
 bool util::Vector2::operator==(const util::Vector2& other) const{
 	return (X == other.X
 		&& Y == other.Y);
 }
-
 
 bool util::Vector2::operator!=(const util::Vector2& other) const{
 	return !(*this == other);

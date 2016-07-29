@@ -3,6 +3,14 @@
 #include <list>
 #include <Source/Utility/SmartPtr.h>
 
+/**
+* @struct		TaskList
+* @namespace	util
+* @brief		タスクの追加・削除を一括で行うためのクラス
+* @author		大森 健司
+*/
+
+
 namespace util {
 	template<typename TaskType>
 	class TaskList {
@@ -25,8 +33,6 @@ namespace util {
 		void clearRemoveList();
 		void registorTask();
 		void deregistorTask();
-
-
 	};
 
 
@@ -84,16 +90,16 @@ namespace util {
 
 	template<typename TaskType>
 	inline void TaskList<TaskType>::registorTask(){
+		if (m_pAddList.empty()) { return; }
 		for (auto& task : m_pAddList) {
 			m_pTaskList.emplace_back(task);
 		}
-//		m_pTaskList.sort();
 		clearAddList();
 	}
 
 	template<typename TaskType>
 	inline void TaskList<TaskType>::deregistorTask(){
-//		m_pRemoveList.sort();
+		if (m_pRemoveList.empty()) { return; }
 		for (auto& task : m_pRemoveList) {
 			auto& itr = std::find(m_pTaskList, task);
 			if (itr == m_pTaskList.end()) { continue; }

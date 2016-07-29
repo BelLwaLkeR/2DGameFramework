@@ -7,6 +7,7 @@
 #include <Source/Component/Draw/DrawRectangle.h>
 #include <Source/Component/Draw/DrawTestRobot.h>
 #include <Source/Component/Draw/DrawTreasureBox.h>
+#include <Source/Component/Update/WhiteLight.h>
 
 framework::ComponentFactory::ComponentFactory(){
 	setupBlueprintList();
@@ -23,6 +24,7 @@ void framework::ComponentFactory::setupBlueprintList(){
 	addBluePrint(CREATE_BLUEPRINT_ARGS(DrawTestRobot));
 	addBluePrint(CREATE_BLUEPRINT_ARGS(DrawTreasureBox));
 	addBluePrint(CREATE_BLUEPRINT_ARGS(Torch));
+	addBluePrint(CREATE_BLUEPRINT_ARGS(WhiteLight));
 }
 
 void framework::ComponentFactory::addBluePrint(const std::string & componentName, util::SharedPtr<framework::IComponentCreator> componentPointer){

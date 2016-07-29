@@ -11,14 +11,12 @@
 */
 
 namespace util {
-	struct Color;
-	class ImageData;
+	struct	Color;
+	struct	Vector3;
+	class	ImageData;
 }
 
 namespace framework {
-	using float4 = FLOAT4;
-	using float3 = FLOAT3;
-
 	class DxLibShaderFunction{
 	public:
 		DxLibShaderFunction();
@@ -29,10 +27,11 @@ namespace framework {
 		static void setTexture			(int valueIndex, const util::ImageData&	imageData		);
 		static void setValue			(int valueIndex, float value							);
 		static void setValue			(int valueIndex, const util::Vector2&	value			);
+		static void setValue			(int valueIndex, const util::Vector3&	value			);
 		static void setValue			(int valueIndex, const util::Color&		value			);
 		static void setValueArray		(int valueIndex, std::vector<float>		valueList		);
 		static void setLightColor		(int valueIndex, const util::Vector2&	imagePosition	);
-		static void setAmbientLight		(int valueIndex);
+		static void setAmbientLight		(int valueIndex											);
 		static void setRelativePosition	(int valueIndex, const util::ImageData&	imageData		, util::Vector2& targetPosition);
 		static void setRelativePosition	(int valueIndex, const util::Vector2&	imagePosition	, util::Vector2& targetPosition);
 

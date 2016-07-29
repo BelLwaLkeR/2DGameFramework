@@ -5,6 +5,9 @@
 #include <Source/Framework/Define.h>
 #include <Source/Framework/Device/Renderer/ImageRenderer/LightingAggregate.h>
 #include <Source/Utility/Type/Color.h>
+#include <Source/Utility/Type/Vector3.h>
+#include <Source/Utility/DxLibUtility/DxLibConverter.h>
+
 
 
 framework::DxLibShaderFunction::DxLibShaderFunction(){
@@ -32,13 +35,15 @@ void framework::DxLibShaderFunction::setValue(int valueIndex, float value){
 }
 
 void framework::DxLibShaderFunction::setValue(int valueIndex, const util::Vector2 & value){
-	std::vector<float> valueList = { value.X, value.Y };
-	setValueArray(valueIndex, valueList);
+	SetPSConstF(valueIndex, util::DxLibConverter::convertToFLOAT4(value));
+}
+
+void framework::DxLibShaderFunction::setValue(int valueIndex, const util::Vector3 & value){
+	SetPSConstF(valueIndex, util::DxLibConverter::convertToFLOAT4(value));
 }
 
 void framework::DxLibShaderFunction::setValue(int valueIndex, const util::Color& value){
-	std::vector<float> valueList = { value.getRedF(), value.getGreenF(), value.getBlueF() };
-	setValueArray(valueIndex, valueList);
+	SetPSConstF(valueIndex, util::DxLibConverter::convertToFLOAT4(value));
 }
 
 void framework::DxLibShaderFunction::setValueArray(int valueIndex, std::vector<float> valueList){

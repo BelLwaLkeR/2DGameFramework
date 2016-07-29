@@ -16,12 +16,8 @@ namespace util {
 
 		Vector2(float x = 0.0f, float y = 0.0f);
 
-		static	Vector2	Zero();
-		static	Vector2	One();
-		static	Vector2	Left();
-		static	Vector2	Right();
-		static	Vector2	Top();
-		static	Vector2	Bottom();
+		static	Vector2	zero();
+		static	Vector2	one();
 
 		int		getIntX() const;
 		int		getIntY() const;

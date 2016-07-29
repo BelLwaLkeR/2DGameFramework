@@ -4,6 +4,7 @@
 #include <Source/Framework/Device/Renderer/ImageRenderer/Shader/ShaderManager.h>
 #include <Source/Framework/Device/Renderer/ImageRenderer/Shader/DxLibShader.h>
 #include <Source/Framework/Device/Renderer/ImageRenderer/LightingAggregate.h>
+#include <Source/Utility/Type/Vector3.h>
 #include <Source/Utility/Type/Color.h>
 #include <Source/Utility/DxLibUtility/DxLibPixelShaderLoader.h>
 
@@ -29,18 +30,17 @@ void framework::NormalMapShader::attachShader(util::SharedPtr<util::ImageData>* 
 	const util::Vector2&			lightPosition				= *(pLight->pPosition);
 	const util::Vector2&			targetPosition				= pTargetImage->getPosition();
 	float							lightPositionZ				= 10.f;
-	std::vector<float>				relativeLightPosition		= { lightPosition.X - targetPosition.X, lightPosition.Y - targetPosition.Y, lightPositionZ };
+	util::Vector3					relativeLightPosition		= { lightPosition.X - targetPosition.X, lightPosition.Y - targetPosition.Y, lightPositionZ };
 
 	const util::Color&				ambientLight				= *SGLT_LIGHT_AGGREGATE->getAmbientLight();
 	std::vector<float>				toShaderAmbientLightColor	= { ambientLight.getRedF()	, ambientLight.getGreenF()	, ambientLight.getBlueF() };
-	std::vector<float>				toShaderLightColor			= { lightColor.getRedF()	, lightColor.getGreenF()	, lightColor.getBlueF() };
+	util::Vector3					toShaderLightColor			= { lightColor.getRedF()	, lightColor.getGreenF()	, lightColor.getBlueF() };
 
-	DxLibShaderFunction::setValue		(0	, pTargetImage->getSize().X	);
-	DxLibShaderFunction::setValue		(1	, pTargetImage->getSize().Y	);
-	DxLibShaderFunction::setValueArray	(2	, toShaderAmbientLightColor	);
-	DxLibShaderFunction::setValueArray	(5	, toShaderLightColor		);
-	DxLibShaderFunction::setValueArray	(8	, relativeLightPosition		);
-	DxLibShaderFunction::setValue		(11	, pLight->intencity);
+	DxLibShaderFunction::setValue(0	, pTargetImage->getSize()	);
+	DxLibShaderFunction::setValue(1	, ambientLight				);
+	DxLibShaderFunction::setValue(3	, toShaderLightColor		);
+	DxLibShaderFunction::setValue(4	, relativeLightPosition		);
+	DxLibShaderFunction::setValue(5	, pLight->intencity			);
 
 	DxLibImageRenderer::drawImage(*pTargetImage);
 }

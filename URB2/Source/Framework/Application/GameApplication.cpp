@@ -19,19 +19,21 @@ framework::GameApplication::~GameApplication(){
 void framework::GameApplication::run(){
 	DxLibApplication::run();
 }
-
+#include <random>
 void framework::GameApplication::initialize(){
 	SGLT_SHADER_MANAGER->initialize();
 	SGLT_TASK_MANAGER->initialize();
 	util::WeakPtr<framework::Entity> player = SGLT_ENTITY_MANAGER->addEntity({ "testObject", "player", 0, { 500, 500 } });
 //	const std::string& name, const util::Hash& hash, unsigned int id, const util::Vector2& position;
-	player->addComponent("Torch");
+	player->addComponent("WhiteLight");
 	player->addComponent("ControllMove");
-	player->addComponent("DrawTestRobot");
 
-	util::WeakPtr<framework::Entity> TreasureBox = SGLT_ENTITY_MANAGER->addEntity({ "testObject", "object", 0,{ 500, 200 } });
-	TreasureBox->addComponent("DrawTreasureBox");
-
+	for (int i = 0; i < 25; ++i) {
+		float posX = 400 + (i%5)*60;
+		float posY = 200 + (i/5)*60;
+		util::WeakPtr<framework::Entity> TreasureBox = SGLT_ENTITY_MANAGER->addEntity({ "testObject", "object", 0,{ posX, posY } });
+		TreasureBox->addComponent("DrawTreasureBox");
+	}
 	util::WeakPtr<framework::Entity> testLight = SGLT_ENTITY_MANAGER->addEntity({ "testLignth", "object", 0,{ 0, 0 } });
 //	testLight->addComponent("Torch");
 }
