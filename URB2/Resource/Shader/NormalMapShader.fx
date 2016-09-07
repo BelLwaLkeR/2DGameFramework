@@ -33,14 +33,16 @@ float clamp0to1(float value) {
 }
 
 PS_OUTPUT main(PS_INPUT PSInput){	
-1	PS_OUTPUT output;
+	PS_OUTPUT output;
 	float	correctionDefuseLength	=  1.2f;
 	float	offsetDefuseLightPower	=  1.5f;
 	float	correctionAmbientPower	=  2.0f;
 	float	correctionSpecularPower	= 10.0f;
 
-	float3	lightPosition = _lightPosition;
+	float3	lightPosition	= _lightPosition;
 	lightPosition.y			*= -1;
+	lightPosition.z			= 10;
+
 	float3	texPosition		= float3(PSInput.TextureCoord1.x, PSInput.TextureCoord1.y, 0);
 	float4	textureColor	= tex2D(Texture, PSInput.TextureCoord0);
 	float4	bumpMapColor	= normalize(tex2D(BumpMap, PSInput.TextureCoord0) * 2 - 1);

@@ -24,7 +24,6 @@ void framework::GameApplication::initialize(){
 	SGLT_SHADER_MANAGER->initialize();
 	SGLT_TASK_MANAGER->initialize();
 	util::WeakPtr<framework::Entity> player = SGLT_ENTITY_MANAGER->addEntity({ "testObject", "player", 0, { 500, 500 } });
-//	const std::string& name, const util::Hash& hash, unsigned int id, const util::Vector2& position;
 	player->addComponent("WhiteLight");
 	player->addComponent("ControllMove");
 
@@ -35,7 +34,6 @@ void framework::GameApplication::initialize(){
 		TreasureBox->addComponent("DrawTreasureBox");
 	}
 	util::WeakPtr<framework::Entity> testLight = SGLT_ENTITY_MANAGER->addEntity({ "testLignth", "object", 0,{ 0, 0 } });
-//	testLight->addComponent("Torch");
 }
 
 void framework::GameApplication::update(){
