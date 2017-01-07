@@ -10,6 +10,7 @@
 #define DEBUG_MODE
 #endif // DEBUG || _DEBUG
 
+#define WINDOW_TITLE			"2DGameFramework"
 #define WINDOW_WIDTH			1280
 #define WINDOW_HEIGHT			720
 #define SCREEN_WIDTH			1280
@@ -30,5 +31,15 @@
 #define SHADER_DIR				std::string("./Resource/Shader/")
 #define SHADER_FOOTER			std::string(".pso")
 
+typedef unsigned char		uint8;
+typedef unsigned short		uint16;
+typedef unsigned int		uint32;
+typedef unsigned __int64	uint64;
 
+typedef signed char			int8;
+typedef signed short		int16;
+typedef signed int			int32;
+typedef signed __int64		int64;
 
+typedef float				float32;
+typedef double				float64;

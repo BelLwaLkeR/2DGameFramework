@@ -144,6 +144,7 @@
     <ClCompile Include="Source\Framework\Component\DrawComponent.cpp" />
     <ClCompile Include="Source\Framework\Component\LightComponent.cpp" />
     <ClCompile Include="Source\Framework\Component\UpdateComponent.cpp" />
+    <ClCompile Include="Source\Framework\CSV\CSVLoad.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\GamePad\DxLibGamePad.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\GamePad\DxLibGamePadInfomation.cpp" />
     <ClCompile Include="Source\Framework\Device\Input\GamePad\GamePad.cpp" />
@@ -174,6 +175,7 @@
     <ClCompile Include="Source\Utility\Type\Color.cpp" />
     <ClCompile Include="Source\Utility\Type\Hash.cpp" />
     <ClCompile Include="Source\Utility\Type\ImageData.cpp" />
+    <ClCompile Include="Source\Utility\Type\Quaternion.cpp" />
     <ClCompile Include="Source\Utility\Type\Vector2.cpp" />
     <ClCompile Include="Source\Utility\Type\Vector3.cpp" />
   </ItemGroup>
@@ -194,6 +196,8 @@
     <ClInclude Include="Source\Framework\Component\DrawComponent.h" />
     <ClInclude Include="Source\Framework\Component\LightComponent.h" />
     <ClInclude Include="Source\Framework\Component\UpdateComponent.h" />
+    <ClInclude Include="Source\Framework\CSV\CSVLoad.h" />
+    <ClInclude Include="Source\Framework\CSV\CSVSave.h" />
     <ClInclude Include="Source\Framework\Define.h" />
     <ClInclude Include="Source\Framework\Device\Input\eInputCode.h" />
     <ClInclude Include="Source\Framework\Device\Input\eInputDeviceCode.h" />
@@ -222,6 +226,7 @@
     <ClInclude Include="Source\Framework\Device\Renderer\ImageRenderer\Shader\NormalMapShader.h" />
     <ClInclude Include="Source\Framework\Device\Renderer\ImageRenderer\Shader\ShaderManager.h" />
     <ClInclude Include="Source\Framework\Device\Renderer\SoundRenderer\DxLibSoundRenderer.h" />
+    <ClInclude Include="Source\Framework\Entity\Type\ActorEntity.h" />
     <ClInclude Include="Source\Framework\Scene\SceneManager.h" />
     <ClInclude Include="Source\Utility\DxLibUtility\DxLibConverter.h" />
     <ClInclude Include="Source\Utility\DxLibUtility\DxLibImageLoader.h" />
@@ -233,6 +238,7 @@
     <ClInclude Include="Source\Utility\TaskList.h" />
     <ClInclude Include="Source\Utility\Type\Color.h" />
     <ClInclude Include="Source\Utility\Type\ImageData.h" />
+    <ClInclude Include="Source\Utility\Type\Quaternion.h" />
     <ClInclude Include="Source\Utility\Type\Transform.h" />
     <ClInclude Include="Source\Utility\Type\Vector2.h" />
     <ClInclude Include="Source\Framework\Task\TaskManager.h" />

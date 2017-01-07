@@ -23,8 +23,7 @@ namespace util {
 	struct TWrapper : public T{
 		template<typename... Param>
 		TWrapper(Param&&... param) :
-			T(std::forward<Param>(param)...)
-		{
+			T(std::forward<Param>(param)...) {
 
 		}
 	};
@@ -62,13 +61,11 @@ namespace util {
 			return m_pPtr.expired();
 		}
 
-		bool ownerBefore(const SharedPtr<T>& ptr) const
-		{
+		bool ownerBefore(const SharedPtr<T>& ptr) const {
 			return m_pPtr.owner_before(ptr);
 		}
 
-		bool ownerBefore(const WeakPtr<T>& ptr) const
-		{
+		bool ownerBefore(const WeakPtr<T>& ptr) const {
 			return m_pPtr.owner_before(ptr);
 		}
 
@@ -76,26 +73,22 @@ namespace util {
 			return util::SharedPtr<T>(m_pPtr.lock());
 		}
 
-		WeakPtr<T>& operator=(const SharedPtr<T>& ptr)
-		{
+		WeakPtr<T>& operator=(const SharedPtr<T>& ptr) {
 			assert(ptr.get() != nullptr && "ÉÅÉÇÉäÇ™ämï€Ç≥ÇÍÇƒÇ¢Ç‹ÇπÇÒ");
 			m_pPtr = ptr;
 			return *this;
 		}
 
-		WeakPtr<T>& operator=(const WeakPtr<T>& ptr)
-		{
+		WeakPtr<T>& operator=(const WeakPtr<T>& ptr) {
 			m_pPtr = ptr.m_pPtr;
 			return *this;
 		}
 
-		bool operator==(const WeakPtr<T>& ptr) const
-		{
+		bool operator==(const WeakPtr<T>& ptr) const {
 			return m_pPtr.lock().get() == ptr.m_pPtr.lock().get();
 		}
 
-		std::shared_ptr<T> operator->() const
-		{
+		std::shared_ptr<T> operator->() const {
 			return m_pPtr.lock();
 		}
 

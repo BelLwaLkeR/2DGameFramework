@@ -19,7 +19,7 @@ framework::GameApplication::~GameApplication(){
 void framework::GameApplication::run(){
 	DxLibApplication::run();
 }
-#include <random>
+
 void framework::GameApplication::initialize(){
 	SGLT_SHADER_MANAGER->initialize();
 	SGLT_TASK_MANAGER->initialize();
@@ -60,5 +60,5 @@ bool framework::GameApplication::isEnd(){
 }
 
 void framework::GameApplication::setupWindowConfig(){
-	DxLibApplication::setupWindowConfig(WindowConfig("UnlimitedRespawnBravers2", 1280, 720, 32, 60, false));
+	DxLibApplication::setupWindowConfig(WindowConfig(WINDOW_TITLE, WINDOW_WIDTH, WINDOW_HEIGHT, 32, 60, false));
 }

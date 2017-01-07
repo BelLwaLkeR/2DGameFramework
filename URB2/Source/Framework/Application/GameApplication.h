@@ -30,7 +30,5 @@ namespace framework {
 		void finalize()		override;
 		bool isEnd()		override;
 		void setupWindowConfig() override;
-
-		
 	};
 }

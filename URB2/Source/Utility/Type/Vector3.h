@@ -18,9 +18,24 @@ namespace util {
 		static	Vector3	zero();
 		static	Vector3	one();
 
-		int		getIntX() const;
-		int		getIntY() const;
-		int		getIntZ() const;
+		static	Vector3 forward();
+		static	Vector3 back();
+		static	Vector3 left();
+		static	Vector3 right();
+		static	Vector3 up();
+		static	Vector3 down();
+		static	float	dot(const Vector3& value1, const Vector3& value2);
+		static	Vector3 cross(const Vector3& value1, const Vector3& value2);
+
+
+		float lengthSquared()	const;
+		float length()			const;
+
+		Vector3 normalize()		const;
+
+		int		getIntX()		const;
+		int		getIntY()		const;
+		int		getIntZ()		const;
 
 		Vector3&	operator+=(const Vector3& other);
 		Vector3&	operator-=(const Vector3& other);

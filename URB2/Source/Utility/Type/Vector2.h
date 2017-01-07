@@ -19,6 +19,9 @@ namespace util {
 		static	Vector2	zero();
 		static	Vector2	one();
 
+		static	float dot(const Vector2& value1, const Vector2& value2);
+		static	float cross(const Vector2& value1, const Vector2& value2);
+
 		int		getIntX() const;
 		int		getIntY() const;
 

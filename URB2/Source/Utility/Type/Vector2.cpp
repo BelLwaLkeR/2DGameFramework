@@ -13,6 +13,15 @@ util::Vector2 util::Vector2::one() {
 	return {1, 1};
 }
 
+float util::Vector2::dot(const Vector2 & value1, const Vector2 & value2) {
+	return	value1.X * value2.X + 
+			value1.Y * value2.Y;
+}
+
+float util::Vector2::cross(const Vector2 & value1, const Vector2 & value2) {
+	return value1.X * value2.Y - value1.Y * value2.X;
+}
+
 int	util::Vector2::getIntX() const{
 	return static_cast<int>(X);
 }

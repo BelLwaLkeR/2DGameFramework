@@ -61,7 +61,7 @@ void framework::DxLibApplication::setupGraphicConfig(){
 }
 
 bool framework::DxLibApplication::isApplicationEnd(){
-	return ProcessMessage()!=0;
+	return ProcessMessage() != 0;
 }
 
 void framework::DxLibApplication::teardown(){
